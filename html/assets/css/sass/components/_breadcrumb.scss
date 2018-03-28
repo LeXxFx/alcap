@@ -1,0 +1,53 @@
+﻿.breadcrumbs {
+    margin: 15px 0;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        font-size: 17px;
+        color: $primary-color;
+        font-weight: bold;
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: top;
+
+        a {
+            color: $primary-color;
+            font-size: 17px;
+            font-weight: bold;
+            padding-right: 18px;
+            display: block;
+            position: relative;
+
+            &:after {
+                font: normal normal normal 17px/1 FontAwesome;
+                font-size: inherit;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                position: absolute;
+                font-size: 20px;
+                font-weight: bold;
+                content: "\f105";
+                color: $primary-color;
+                top: 50%;
+                right: 0;
+                margin-top: -10px;
+                opacity: .7;
+            }
+        }
+
+        &:last-of-type {
+            a {
+                padding-right: 0;
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
