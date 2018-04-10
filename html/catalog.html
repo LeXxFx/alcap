@@ -14,78 +14,593 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i&amp;subset=cyrillic" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/plugins/slick/slick.css" />
+	<link rel="stylesheet" href="assets/plugins/slick/slick.css" />
 </head>
 
 <body>
 	<header id="header">
-      <div class="container">
-		  <div class="header">
-			<a class="logo">
-				<img src="assets/images/logo.png"  alt="">
-			</a>
-			<div class="header__main">
-				<nav>
-					<a href="#katalog" title="Каталог товаров" class="link-nav">
-						<i class="icon icon-catalog"></i>
-						<strong>Каталог товаров</strong>
-					</a>
-					<a href="http://www.alcap.ru/personal/" target="_blank" title="Личный кабинет">
-						<i class="icon icon-account"></i>
-						<strong>Личный кабинет</strong>
-					</a>
-				</nav>
-				<div class="phone">
-					<div class="phone__main">
-						<a href="tel:88000034034" class="link-digit">8 (800) 0034-034</a>
-						<a class="link-text" data-dismiss="modal" data-toggle="modal" data-target="#form_call">Заказать обратный звонок</a>
+		<div class="container">
+			<div class="header">
+				<a class="logo">
+					<img src="assets/images/logo.png" alt="">
+				</a>
+				<div class="header__main">
+					<nav>
+						<a href="#katalog" title="Каталог товаров" class="link-nav">
+							<i class="icon icon-catalog"></i>
+							<strong>Каталог товаров</strong>
+						</a>
+						<a href="http://www.alcap.ru/personal/" target="_blank" title="Личный кабинет">
+							<i class="icon icon-account"></i>
+							<strong>Личный кабинет</strong>
+						</a>
+					</nav>
+					<div class="phone">
+						<div class="phone__main">
+							<a href="tel:88000034034" class="link-digit">8 (800) 0034-034</a>
+							<a class="link-text" data-dismiss="modal" data-toggle="modal" data-target="#form_call">Заказать обратный звонок</a>
+						</div>
+						<a class="phone__link" data-dismiss="modal" data-toggle="modal" data-target="#form_call">
+							<i class="icon icon-phone"></i>
+						</a>
 					</div>
-					<a class="phone__link" data-dismiss="modal" data-toggle="modal" data-target="#form_call"><i class="icon icon-phone"></i></a>
 				</div>
 			</div>
 		</div>
+	</header>
+	<div class="container">
+		<div class="breadcrumbs">
+			<ul>
+				<li>
+					<a href="#">Главная страница</a>
+				</li>
+				<li>
+					<a href="#">Каталог товаров</a>
+				</li>
+				<li>
+					<span>Коньки и аксессуары</span>
+				</li>
+			</ul>
 		</div>
-   </header>
-   <div class="container">
-	   <div class="breadcrumbs">
-		   <ul>
-			   <li><a href="#">Главная страница</a></li>
-			   <li><a href="#">Каталог товаров</a></li>
-			   <li><span>Коньки и аксессуары</span></li>
-		   </ul>
-	   </div>
-   </div>
+		<div class="wrapper">
+			<div id="content" role="main">
+				<div class="search">
+					<input class="search__text" type="text" placeholder="Поиск среди 15000 наименований">
+					<button class="search__baton">Найти</button>
+				</div>
+				<div class="page-heading">Коньки и аксессуары
+					<span>— 30 из 199 товаров</span>
+				</div>
+				<div class="product-filter">
+					<div class="product-filter__sorting dropdown">
+						<span>Сортировать:</span>
+						<button class="dropdown-toggle" type="button" id="routeto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							по возрастанию цены
+							<i class="fa fa-angle-down"></i>
+						</button>
+						<div class="dropdown-menu" aria-labelledby="routeto">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Something else here</a>
+							<a class="dropdown-item dropdown-active" href="#">Another action</a>
+							<a class="dropdown-item" href="#">Something else here</a>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</div>
+					</div>
+					<div class="product-filter__counter">
+						<span>Показывать:</span>
+						<a href="#">30</a>
+						<a href="#">60</a>
+						<a href="#">все</a>
+					</div>
+					<div class="product-filter__display clearfix">
+						<a href="shop-list.html" class="display__list display--active">Список</a>
+						<a href="shop-grid.html" class="display__grid">Сетка</a>
+					</div>
+				</div>
+			</div>
+			<div id="sidebar">
+				<aside>
+					<div class="col-catalog">
+						<button class="btn btn-green">
+							<b>
+								<i class="fa fa-angle-down"></i>
+							</b>
+							Каталог
+							<span class="hidden-xs">товаров</span>
+						</button>
+						<div class="catalog-menu">
+							<ul class="clearfix">
+								<li>
+									<a href="shop-list.html">Фитнес</a>
+								</li>
+								<li class="has-child">
+									<a href="shop-list.html">Художественная гимнастика и танцы</a>
+									<div class="submenu">
+										<div class="submenu__inner">
+											<ul>
+												<li class="submenu__title">
+													<a href="#">Художественная гимнастика и танцы</a>
+												</li>
+												<li>
+													<a href="#">Гимнастические купальники</a>
+												</li>
+												<li>
+													<a href="#">Лосины, юбки, топы и шорты</a>
+												</li>
+												<li>
+													<a href="#">Чешки, балетки</a>
+												</li>
+												<li>
+													<a href="#">Обручи</a>
+												</li>
+												<li>
+													<a href="#">Булавы, ленты, скакалки</a>
+												</li>
+												<li>
+													<a href="#">Мячи для художественной гимнастики</a>
+												</li>
+												<li>
+													<a href="#">Колльца, лестницы, трапеции</a>
+												</li>
+											</ul>
+											<ul class="submenu__propose">
+												<li class="submenu__title">Возможно вы искали:</li>
+												<li>
+													<a href="#">Коврики гимнастические</a>
+												</li>
+												<li>
+													<a href="#">Утяжелители</a>
+												</li>
+												<li>
+													<a href="#">Гантели</a>
+												</li>
+												<li>
+													<a href="#">Обручи</a>
+												</li>
+												<li>
+													<a href="#">Скакалки</a>
+												</li>
+												<li>
+													<a href="#">Диск «Здоровье»</a>
+												</li>
+												<li>
+													<a href="#">Ролики гимнастические</a>
+												</li>
+												<li>
+													<a href="#">Упоры для отжиманий</a>
+												</li>
+												<li>
+													<a href="#">Мячи для фитнеса</a>
+												</li>
+											</ul>
+											<button class="submenu__close" data-toggle="tooltip" title="Закрыть">
+												<span>
+													<i class="fa fa-angle-left"></i>
+												</span>
+											</button>
+										</div>
+									</div>
+								</li>
+								<li class="has-child">
+									<a href="shop-list.html">Тренажеры и тяжелая атлетика</a>
+									<div class="submenu">
+										<div class="submenu__inner">
+											<ul>
+												<li class="submenu__title">
+													<a href="#">Домашние тренажеры</a>
+												</li>
+												<li>
+													<a href="#">Беговые дорожки</a>
+												</li>
+												<li>
+													<a href="#">Велотренажеры</a>
+												</li>
+												<li>
+													<a href="#">Степперы, эллепсоиды</a>
+												</li>
+											</ul>
+											<ul>
+												<li class="submenu__title">
+													<a href="#">Тяжелая атлетика</a>
+												</li>
+												<li>
+													<a href="#">Гантели разборные</a>
+												</li>
+												<li>
+													<a href="#">Гири</a>
+												</li>
+												<li>
+													<a href="#">Штанги в наборе</a>
+												</li>
+												<li>
+													<a href="#">Диски для гантелей и штанг</a>
+												</li>
+												<li>
+													<a href="#">Грифы для гантелей и штанг</a>
+												</li>
+												<li>
+													<a href="#">Стойки под штангу со скамьей</a>
+												</li>
+												<li>
+													<a href="#">Скамьи</a>
+												</li>
+												<li>
+													<a href="#">Стойки для гантелей и штанг</a>
+												</li>
+												<li>
+													<a href="#">Перчатки для тяжелой атлетики</a>
+												</li>
+												<li>
+													<a href="#">Пояса для поднятия тяжестей</a>
+												</li>
+											</ul>
+											<ul>
+												<li class="submenu__title">
+													<a href="#">Турники и брусья</a>
+												</li>
+												<li>
+													<a href="#">Турники в проем</a>
+												</li>
+												<li>
+													<a href="#">Турники настенные</a>
+												</li>
+												<li>
+													<a href="#">Турники настенные угловые</a>
+												</li>
+												<li>
+													<a href="#">Турники потолочные</a>
+												</li>
+											</ul>
+											<ul>
+												<li class="submenu__title">
+													<a href="#">Брусья</a>
+												</li>
+												<li>
+													<a href="#">Прямые</a>
+												</li>
+												<li>
+													<a href="#">С широким хватом</a>
+												</li>
+												<li>
+													<a href="#">С тремя хватами</a>
+												</li>
+												<li>
+													<a href="#">Турник Брусья</a>
+												</li>
+												<li>
+													<a href="#">Пресс (3 в 1)</a>
+												</li>
+												<li>
+													<a href="#">Оборудование для шведских стенок</a>
+												</li>
+												<li>
+													<a href="#">Аксессуары к турникам</a>
+												</li>
+											</ul>
+											<ul class="submenu__propose">
+												<li class="submenu__title">Возможно вы искали:</li>
+												<li>
+													<a href="#">Плечевые эспандеры</a>
+												</li>
+												<li>
+													<a href="#">Кистевые эспандеры</a>
+												</li>
+												<li>
+													<a href="#">Эспандеры лыжника/пловца</a>
+												</li>
+												<li>
+													<a href="#">Эспандер боксёра</a>
+												</li>
+												<li>
+													<a href="#">Эспандер восьмёрка</a>
+												</li>
+												<li>
+													<a href="#">Жгуты, ленты, петли</a>
+												</li>
+												<li>
+													<a href="#">Утяжелители</a>
+												</li>
+												<li>
+													<a href="#">Гантели</a>
+												</li>
+											</ul>
+											<button class="submenu__close" data-toggle="tooltip" title="Закрыть">
+												<span>
+													<i class="fa fa-angle-left"></i>
+												</span>
+											</button>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="shop-list.html">Туризм и активный отдых</a>
+								</li>
+								<li>
+									<a href="shop-grid.html">Зимние виды спорта и активный отдых</a>
+								</li>
+								<li>
+									<a href="shop-list.html">Единоборства и бокс</a>
+								</li>
+								<li class="has-child">
+									<a href="shop-grid.html">Командные виды спорта</a>
+									<div class="submenu">
+										<div class="submenu__inner">
+											<ul>
+												<li class="submenu__title">
+													<a href="#">Баскетбол</a>
+												</li>
+												<li>
+													<a href="#">Мячи</a>
+												</li>
+												<li>
+													<a href="#">Кольца</a>
+												</li>
+												<li>
+													<a href="#">Форма</a>
+												</li>
+												<li class="submenu__title">
+													<a href="#">Волейбол</a>
+												</li>
+												<li>
+													<a href="#">Мячи</a>
+												</li>
+												<li>
+													<a href="#">Налокотники и наколенники</a>
+												</li>
+												<li>
+													<a href="#">Форма</a>
+												</li>
+											</ul>
+											<ul>
+												<li class="submenu__title">
+													<a href="#">Футбол</a>
+												</li>
+												<li>
+													<a href="#">Бутсы</a>
+												</li>
+												<li>
+													<a href="#">Гетры</a>
+												</li>
+												<li>
+													<a href="#">Манишки</a>
+												</li>
+												<li>
+													<a href="#">Мячи</a>
+												</li>
+												<li>
+													<a href="#">Перчатки вратаря</a>
+												</li>
+												<li>
+													<a href="#">Форма</a>
+												</li>
+												<li>
+													<a href="#">Щитки</a>
+												</li>
+											</ul>
+											<ul>
+												<li class="submenu__title">
+													<a href="#">Хоккей</a>
+												</li>
+												<li>
+													<a href="#">Коньки</a>
+												</li>
+												<li>
+													<a href="#">Защита</a>
+												</li>
+												<li>
+													<a href="#">Клюшки, шайбы</a>
+												</li>
+												<li>
+													<a href="#">Хоккейный трикотаж</a>
+												</li>
+											</ul>
+											<ul>
+												<li class="submenu__title">
+													<a href="#">Настольные игры</a>
+												</li>
+												<li>
+													<a href="#">Аэрохоккей</a>
+												</li>
+												<li>
+													<a href="#">Бильярд</a>
+												</li>
+												<li>
+													<a href="#">Дартс</a>
+												</li>
+												<li>
+													<a href="#">Настольный футбол</a>
+												</li>
+												<li>
+													<a href="#">Мини теннис</a>
+												</li>
+												<li>
+													<a href="#">Шахматы</a>
+												</li>
+												<li>
+													<a href="#">Нарды</a>
+												</li>
+												<li>
+													<a href="#">Наборы и карточные игры</a>
+												</li>
+												<li class="link-all">
+													<a href="#">Посмотреть всё
+														<i class="fa fa-angle-right"></i>
+													</a>
+												</li>
+											</ul>
+											<ul class="submenu__propose">
+												<li class="submenu__title">Возможно вы искали:</li>
+												<li>
+													<a href="#">Плавание</a>
+												</li>
+												<li>
+													<a href="#">Фигурное катание</a>
+												</li>
+												<li>
+													<a href="#">Бадбинтон</a>
+												</li>
+												<li>
+													<a href="#">Художественная гимнастика и танцы</a>
+												</li>
+												<li>
+													<a href="#">Роликовые коньки</a>
+												</li>
+												<li>
+													<a href="#">Роликовые доски</a>
+												</li>
+											</ul>
+											<button class="submenu__close" data-toggle="tooltip" title="Закрыть">
+												<span>
+													<i class="fa fa-angle-left"></i>
+												</span>
+											</button>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="shop-list.html">Летние виды спорта</a>
+								</li>
+								<li>
+									<a href="shop-grid.html">Водные виды спорта</a>
+								</li>
+								<li>
+									<a href="shop-list.html">Игры</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="catalog-list">
+						<ul>
+							<li>
+								<a href="#">Все (199)</a>
+							</li>
+							<li>
+								<a href="#">Коньки фигурные (15)</a>
+							</li>
+							<li>
+								<a href="#">Коньки хоккейные (19)</a>
+							</li>
+							<li>
+								<a href="#">Коньки раздвижные (21)</a>
+							</li>
+							<li>
+								<a href="#">Коньки трансформеры и наборы с коньками (28)</a>
+							</li>
+							<li>
+								<a href="#">Коньки для проката (5)</a>
+							</li>
+							<li>
+								<a href="#">Коньки детские (10)</a>
+							</li>
+							<li>
+								<a href="#">Аксессуары (102)</a>
+							</li>
+						</ul>
+					</div>
+					<div class="filter-slider">
+						<div class="filter-slider__top">
+							<span>Цена, руб.</span>
+							<a href="#" class="filter-slider__clear">сбросить</a>
+						</div>
+						<div class="filter-slider__slider">
+							<div class="slider-range" data-min-value="0" data-max-value="100"></div>
+							<div class="slider-inputs">
+								<input type="text" class="form-control input-number-min" />
+								<span>&mdash;</span>
+								<input type="text" class="form-control input-number-max" value="100" />
+							</div>
+							<button class="btn btn-range">Показать товары
+								<span>(7)</span>
+							</button>
+						</div>
+					</div>
+					<div class="widget-filters__item filter__size">
+						<div class="filter__top">Размер
+							<a href="#" class="filter__cancel">сбросить</a>
+						</div>
+						<ul class="filter__list">
+							<li>
+								<a href="#">120 см (2)</a>
+							</li>
+							<li class="filter__active">
+								<a href="#">130 см (3)</a>
+							</li>
+							<li>
+								<a href="#">140 см (2)</a>
+							</li>
+							<li>
+								<a href="#">150 см (5)</a>
+							</li>
+							<li>
+								<a href="#">160 см (5)</a>
+							</li>
+							<li>
+								<a href="#">120 см (2)</a>
+							</li>
+							<li>
+								<a href="#">130 см (3)</a>
+							</li>
+							<li>
+								<a href="#">140 см (2)</a>
+							</li>
+							<li>
+								<a href="#">150 см (5)</a>
+							</li>
+							<li>
+								<a href="#">160 см (5)</a>
+							</li>
+						</ul>
+					</div>
+					<a href="#">Показать товары (34)</a>
+					<div class="sales-item">
+						<a href="#">
+							<div class="sales-item__title">Тотальная распродажа!!!</div>
+							<div class="sales-item__value">до - 50%</div>
+							<img src="demo/bb_sale.png">
+							<div class="sales-item__sport">Хоккей</div>
+						</a>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</div>
 	<footer class="footer">
 		<div class="container">
 			<div class="footer-main">
 				<div class="footer-main__column">
-					<div class="top"><i class="icon icon-phone2"></i>Телефон</div>
+					<div class="top">
+						<i class="icon icon-phone2"></i>Телефон</div>
 					<p>+7(495) 707-62-66</p>
 					<p>+7(499) 481-06-01</p>
 					<p>+7(499) 480-22-96</p>
 				</div>
 				<div class="footer-main__column">
-					<div class="top"><i class="icon icon-email"></i>E-mail</div>
+					<div class="top">
+						<i class="icon icon-email"></i>E-mail</div>
 					<p>info@alcap.ru</p>
 				</div>
 				<div class="footer-main__column">
-					<div class="top"><i class="icon icon-map"></i>Адрес</div>
+					<div class="top">
+						<i class="icon icon-map"></i>Адрес</div>
 					<p>127540, г. Москва,</p>
 					<p>ул. Дубнинская, </p>
 					<p>д. 10, корп. 1</p>
 				</div>
 				<div class="footer-main__column">
-					<div class="top"><i class="icon icon-clock"></i>Часы работы</div>
+					<div class="top">
+						<i class="icon icon-clock"></i>Часы работы</div>
 					<p>Пн - Пт с 9.00 -18.00</p>
 					<a href="http://www.alcap.ru/about/partners/" target="_blank" class="btn">Сотрудничество</a>
-				</div>				
+				</div>
 			</div>
 			<div class="footer-bottom">
 				<div class="copyright">© Все права защищены</div>
-				<div class="rules"><a href="#">Политика конфиденциальности</a></div>
+				<div class="rules">
+					<a href="#">Политика конфиденциальности</a>
+				</div>
 			</div>
 		</div>
 	</footer>
@@ -93,21 +608,23 @@
 	<div class="modal fade modal-form" id="form_call" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<a class="btn-close" data-dismiss="modal" aria-hidden="true"><i class="icon icon-close"></i></a>
+				<a class="btn-close" data-dismiss="modal" aria-hidden="true">
+					<i class="icon icon-close"></i>
+				</a>
 				<div class="form-top">Оставьте заявку</div>
 				<div class="form-name">на консультацию специалиста</div>
 				<form class="form-horizontal">
 					<div class="form-group">
 						<div class="input-icon">
 							<i class="icon icon-user"></i>
-							<input type="text" class="form-control" placeholder="Ваше имя"/>
+							<input type="text" class="form-control" placeholder="Ваше имя" />
 						</div>
 					</div>
 					<div class="form-group">
-							<div class="input-icon">
-								<i class="icon icon-mobile"></i>
-								<input type="tel" class="form-control masked-phone" placeholder="Ваш номер телефона"/>
-							</div>
+						<div class="input-icon">
+							<i class="icon icon-mobile"></i>
+							<input type="tel" class="form-control masked-phone" placeholder="Ваш номер телефона" />
+						</div>
 					</div>
 					<div class="form-baton">
 						<button class="btn">Заказать</button>
@@ -128,4 +645,5 @@
 	<script src="assets/js/default.js"></script>
 
 </body>
+
 </html>
