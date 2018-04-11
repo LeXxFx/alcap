@@ -18,6 +18,11 @@
 	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="assets/css/style.css" />
 	<link rel="stylesheet" href="assets/plugins/slick/slick.css" />
+	<link rel="stylesheet" href="assets/plugins/soon-countdown/css/soon.min.css" />
+	<link rel="stylesheet" href="assets/plugins/noUiSlider.10.0.0/nouislider.min.css" />
+	<link rel="stylesheet" href="assets/plugins/magiczoomplus/magiczoomplus.css" />
+	<link rel="stylesheet" href="assets/plugins/jquery.scrollbar/jquery.scrollbar.css" />
+
 </head>
 
 <body>
@@ -75,29 +80,326 @@
 					<span>— 30 из 199 товаров</span>
 				</div>
 				<div class="product-filter">
-					<div class="product-filter__sorting dropdown">
+					<div class="product-filter__sorting">
 						<span>Сортировать:</span>
-						<button class="dropdown-toggle" type="button" id="routeto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							по возрастанию цены
-							<i class="fa fa-angle-down"></i>
-						</button>
-						<div class="dropdown-menu" aria-labelledby="routeto">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Something else here</a>
-							<a class="dropdown-item dropdown-active" href="#">Another action</a>
-							<a class="dropdown-item" href="#">Something else here</a>
-							<a class="dropdown-item" href="#">Something else here</a>
+						<div class="dropdown">
+							<button class="dropdown-toggle" type="button" id="routeto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								по возрастанию цены
+								<i class="fa fa-angle-down"></i>
+							</button>
+							<div class="dropdown-menu" aria-labelledby="routeto">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+								<a class="dropdown-item dropdown-active" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</div>
 						</div>
 					</div>
 					<div class="product-filter__counter">
 						<span>Показывать:</span>
-						<a href="#">30</a>
+						<a class="active" href="#">30</a>
 						<a href="#">60</a>
 						<a href="#">все</a>
 					</div>
 					<div class="product-filter__display clearfix">
-						<a href="shop-list.html" class="display__list display--active">Список</a>
-						<a href="shop-grid.html" class="display__grid">Сетка</a>
+						<a href="shop-grid.html" class="display__grid display--active">Сетка</a>
+						<a href="shop-list.html" class="display__list">Список</a>
+					</div>
+				</div>
+				<div class="product-list">
+					<div class="product-grid">
+						<div class="product-grid__item product__item">
+							<div class="item__wrap">
+								<div class="item-top">
+									<div class="item-top__inner">
+										<div class="item__stick item__stick-discont">
+											<span class="num"></span>
+											<b>- 40%</b>
+										</div>
+										<div class="item__timer">
+											<i class="icon icon-timer"></i>
+											<div class="soon" data-due="2018-04-21T22:05" data-layout="line" data-format="h,m,s" data-labels-days=":" data-labels-hours=":"
+											 data-labels-minutes=":" data-labels-seconds=" ">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item__image">
+									<div class="item-gallery" data-images-count="+2">
+										<div class="gallery-item">
+											<a href="product.html">
+												<img src="demo/img_product1.jpg" alt="" />
+											</a>
+										</div>
+										<div class="gallery-item">
+											<a href="product.html">
+												<img src="demo/img_product2.jpg" alt="" />
+											</a>
+										</div>
+										<div class="gallery-item">
+											<a href="product.html">
+												<img src="demo/img_product3.jpg" alt="" />
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="product.html">
+									<div class="item__name">
+										Коньки хоккейные RGX-Next White
+									</div>
+								</a>
+								<div class="item__price">
+									<span class="old">1805</span>
+									<span class="new">1480</span>
+									<span class="currency">руб.</span>
+								</div>
+								<div class="item__product-options">
+									<div class="prop prop-size clearfix">
+										<div class="name">Размеры в наличии</div>
+										<div class="values">
+											<div class="value">
+												<span>s 37</span>
+											</div>
+											<div class="value active">
+												<span>xl 40</span>
+											</div>
+											<div class="value">
+												<span>xxl 45</span>
+											</div>
+											<div class="value">
+												<span>xxxl 47</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-grid__item product__item">
+							<div class="item__wrap">
+								<div class="item-top">
+									<div class="item-top__inner">
+										Распродажа!!!
+									</div>
+								</div>
+								<a href="product.html">
+									<div class="item__image">
+										<img src="demo/img_product2.jpg" alt="" />
+									</div>
+									<div class="item__name">
+										Коньки хоккейные RGX-Next Red
+									</div>
+								</a>
+								<div class="item__price">
+									<span class="old">1805</span>
+									<span class="new">1480</span>
+									<span class="currency">руб.</span>
+								</div>
+								<div class="item__product-options">
+									<div class="prop prop-size clearfix">
+										<div class="name">Размеры в наличии</div>
+										<div class="values">
+											<div class="value">
+												<span>s 37</span>
+											</div>
+											<div class="value active">
+												<span>xl 40</span>
+											</div>
+											<div class="value">
+												<span>xxl 45</span>
+											</div>
+											<div class="value">
+												<span>xxxl 47</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-grid__item product__item">
+							<div class="item__wrap">
+								<div class="item-top">
+									<div class="item-top__inner item-top-novelty">
+										Новинка!!!
+									</div>
+								</div>
+								<a href="product.html">
+									<div class="item__image">
+										<img src="demo/img_product3.jpg" alt="" />
+									</div>
+									<div class="item__name">
+										Хоккейные коньки RGX-2110
+									</div>
+								</a>
+								<div class="item__price">
+									<span class="new">2490</span>
+									<span class="currency">руб.</span>
+								</div>
+								<div class="item__product-options">
+									<div class="prop prop-size clearfix">
+										<div class="name">Размеры в наличии</div>
+										<div class="values">
+											<div class="value">
+												<span>s 37</span>
+											</div>
+											<div class="value active">
+												<span>xl 40</span>
+											</div>
+											<div class="value">
+												<span>xxl 45</span>
+											</div>
+											<div class="value">
+												<span>xxxl 47</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-grid__item product__item">
+							<div class="item__wrap">
+								<a href="product.html">
+									<div class="item__image">
+										<img src="demo/img_product2.jpg" alt="" />
+									</div>
+									<div class="item__name">
+										Фигурные коньки Julia
+									</div>
+								</a>
+								<div class="item__price">
+									<span class="old">1805</span>
+									<span class="new">1480</span>
+									<span class="currency">руб.</span>
+								</div>
+								<div class="item__product-options">
+									<div class="prop prop-size clearfix">
+										<div class="name">Размеры в наличии</div>
+										<div class="values">
+											<div class="value">
+												<span>s 37</span>
+											</div>
+											<div class="value active">
+												<span>xl 40</span>
+											</div>
+											<div class="value">
+												<span>xxl 45</span>
+											</div>
+											<div class="value">
+												<span>xxxl 47</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-grid__item product__item">
+							<div class="item__wrap">
+								<div class="item__image">
+									<div class="item-gallery" data-images-count="+2">
+										<div class="gallery-item">
+											<a href="product.html">
+												<img src="demo/img_product1.jpg" alt="" />
+											</a>
+										</div>
+										<div class="gallery-item">
+											<a href="product.html">
+												<img src="demo/img_product2.jpg" alt="" />
+											</a>
+										</div>
+										<div class="gallery-item">
+											<a href="product.html">
+												<img src="demo/img_product3.jpg" alt="" />
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="product.html">
+									<div class="item__name">
+										Коньки хоккейные RGX-Next Red
+									</div>
+								</a>
+								<div class="item_lockout">
+									<div class="message-visible">Чтобы увидеть цену, необходимо авторизоваться</div>
+									<div class="message-hidden">
+										<a href="#">Войти в личный кабинет</a>
+									</div>
+								</div>
+								<div class="item__product-options">
+									<div class="prop prop-size clearfix">
+										<div class="name">Размеры в наличии</div>
+										<div class="values">
+											<div class="value">
+												<span>s 37</span>
+											</div>
+											<div class="value active">
+												<span>xl 40</span>
+											</div>
+											<div class="value">
+												<span>xxl 45</span>
+											</div>
+											<div class="value">
+												<span>xxxl 47</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-grid__item product__item">
+							<div class="item__wrap">
+								<a href="product.html">
+									<div class="item__image">
+										<img src="demo/img_product3.jpg" alt="" />
+									</div>
+									<div class="item__name">
+										Хоккейные коньки RGX-2110
+									</div>
+								</a>
+								<div class="item__price">
+									<span class="new">2490</span>
+									<span class="currency">руб.</span>
+								</div>
+								<div class="item__product-options">
+									<div class="prop prop-size clearfix">
+										<div class="name">Размеры в наличии</div>
+										<div class="values">
+											<div class="value">
+												<span>s 37</span>
+											</div>
+											<div class="value active">
+												<span>xl 40</span>
+											</div>
+											<div class="value">
+												<span>xxl 45</span>
+											</div>
+											<div class="value">
+												<span>xxxl 47</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="product-list__more">
+						<a href="#" class="load-more">Показать ещё 30</a>
+					</div>
+				</div>
+				<div class="category__post">
+					<div class="post">
+						<h1>Коньки и аксессуары оптом</h2>
+						<p>Наш интернет-магазин спорттоваров создан на базе нескольких крупных оптовых компаний, обеспечивающих спортивными, туристическими
+							товарами и товарами для активного отдыха более 1000 спортивных магазинов по всей России уже на протяжении более 20
+							лет. Это Компании «Альфа Каприз», «Нова Тур», «Трамп», «Арктика» и другие. На страницах нашего интернет магазина вы
+							можете увидеть более 6000 наименований товаров для спорта и активного отдыха для самого широкого круга пользователей,
+							начиная от детей и заканчивая продвинутыми любителями спорта.
+							<a href="#">Наш ассортимент</a> товаров отработан в течении многих лет успешной работы на российском рынке в условиях жесткой
+							конкуренции. Он производится на крупных фабриках Китая, Пакистана, России и других стран в больших объемах под строгим
+							контролем.
+						</p>
+						<h2>Коньки по системе дропшиппинг</h2>
+						<p>Главной задачей вышеперечисленных компаний, успешно развивающихся на рынке более 20 лет, является обеспечение покупателей
+							хорошим, качественным товаром, полностью отвечающим его функциональному назначению, по реальным обоснованным ценам.</p>
 					</div>
 				</div>
 			</div>
@@ -176,11 +478,6 @@
 													<a href="#">Мячи для фитнеса</a>
 												</li>
 											</ul>
-											<button class="submenu__close" data-toggle="tooltip" title="Закрыть">
-												<span>
-													<i class="fa fa-angle-left"></i>
-												</span>
-											</button>
 										</div>
 									</div>
 								</li>
@@ -307,11 +604,6 @@
 													<a href="#">Гантели</a>
 												</li>
 											</ul>
-											<button class="submenu__close" data-toggle="tooltip" title="Закрыть">
-												<span>
-													<i class="fa fa-angle-left"></i>
-												</span>
-											</button>
 										</div>
 									</div>
 								</li>
@@ -452,11 +744,6 @@
 													<a href="#">Роликовые доски</a>
 												</li>
 											</ul>
-											<button class="submenu__close" data-toggle="tooltip" title="Закрыть">
-												<span>
-													<i class="fa fa-angle-left"></i>
-												</span>
-											</button>
 										</div>
 									</div>
 								</li>
@@ -472,9 +759,9 @@
 							</ul>
 						</div>
 					</div>
-					<div class="catalog-list">
+					<div class="catalog-navi">
 						<ul>
-							<li>
+							<li class="active">
 								<a href="#">Все (199)</a>
 							</li>
 							<li>
@@ -500,66 +787,118 @@
 							</li>
 						</ul>
 					</div>
-					<div class="filter-slider">
-						<div class="filter-slider__top">
-							<span>Цена, руб.</span>
-							<a href="#" class="filter-slider__clear">сбросить</a>
-						</div>
-						<div class="filter-slider__slider">
-							<div class="slider-range" data-min-value="0" data-max-value="100"></div>
-							<div class="slider-inputs">
-								<input type="text" class="form-control input-number-min" />
-								<span>&mdash;</span>
-								<input type="text" class="form-control input-number-max" value="100" />
+					<div class="filters">
+						<div class="filter filter-slider">
+							<div class="filter__top">
+								<span>Цена, руб.</span>
+								<a href="#" class="filter-slider__clear">сбросить</a>
 							</div>
-							<button class="btn btn-range">Показать товары
-								<span>(7)</span>
-							</button>
+							<div class="filter-slider__slider">
+								<div class="slider-range" data-min-value="0" data-max-value="100"></div>
+								<div class="slider-inputs" title="Необходимо авторизироваться">
+									<input type="text" class="form-control input-number-min" disabled />
+									<span>&mdash;</span>
+									<input type="text" class="form-control input-number-max" value="100" disabled />
+								</div>
+							</div>
+						</div>
+						<div class="filter filter-list">
+							<div class="filter__top">
+								<span>Размеры</span>
+								<a href="#" class="filter__cancel">сбросить</a>
+							</div>
+							<div class="scrollbar-rail checkbox-list">
+								<div class="checkbox">
+									<input type="checkbox" id="v-option1" name="selector">
+									<label for="v-option1">120 см (2)</label>
+									<div class="check">
+										<div class="inside"></div>
+									</div>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="v-option2" name="selector">
+									<label for="v-option2">130 см (3)</label>
+									<div class="check">
+										<div class="inside"></div>
+									</div>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="v-option3" name="selector">
+									<label for="v-option3">140 см (2)</label>
+									<div class="check">
+										<div class="inside"></div>
+									</div>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="v-option4" name="selector">
+									<label for="v-option4">150 см (5)</label>
+									<div class="check">
+										<div class="inside"></div>
+									</div>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="v-option5" name="selector">
+									<label for="v-option5">160 см (5)</label>
+									<div class="check">
+										<div class="inside"></div>
+									</div>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="v-option6" name="selector">
+									<label for="v-option6">120 см (2)</label>
+									<div class="check">
+										<div class="inside"></div>
+									</div>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="v-option7" name="selector">
+									<label for="v-option7">130 см (3)</label>
+									<div class="check">
+										<div class="inside"></div>
+									</div>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="v-option8" name="selector">
+									<label for="v-option8">140 см (2)</label>
+									<div class="check">
+										<div class="inside"></div>
+									</div>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="v-option9" name="selector">
+									<label for="v-option9">150 см (5)</label>
+									<div class="check">
+										<div class="inside"></div>
+									</div>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="v-option10" name="selector">
+									<label for="v-option10">160 см (5)</label>
+									<div class="check">
+										<div class="inside"></div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="widget-filters__item filter__size">
-						<div class="filter__top">Размер
-							<a href="#" class="filter__cancel">сбросить</a>
-						</div>
-						<ul class="filter__list">
-							<li>
-								<a href="#">120 см (2)</a>
-							</li>
-							<li class="filter__active">
-								<a href="#">130 см (3)</a>
-							</li>
-							<li>
-								<a href="#">140 см (2)</a>
-							</li>
-							<li>
-								<a href="#">150 см (5)</a>
-							</li>
-							<li>
-								<a href="#">160 см (5)</a>
-							</li>
-							<li>
-								<a href="#">120 см (2)</a>
-							</li>
-							<li>
-								<a href="#">130 см (3)</a>
-							</li>
-							<li>
-								<a href="#">140 см (2)</a>
-							</li>
-							<li>
-								<a href="#">150 см (5)</a>
-							</li>
-							<li>
-								<a href="#">160 см (5)</a>
-							</li>
-						</ul>
-					</div>
-					<a href="#">Показать товары (34)</a>
+					<a class="filters-btn" href="#">Показать товары (34)</a>
 					<div class="sales-item">
 						<a href="#">
-							<div class="sales-item__title">Тотальная распродажа!!!</div>
-							<div class="sales-item__value">до - 50%</div>
+							<div class="sales-item__title">
+								<span>Тотальная распродажа!!!</span>
+								<div class="sales-item__value">до - 50%</div>
+							</div>
 							<img src="demo/bb_sale.png">
+							<div class="sales-item__sport">Санки</div>
+						</a>
+					</div>
+					<div class="sales-item">
+						<a href="#">
+							<div class="sales-item__title">
+								<span>Тотальная распродажа!!!</span>
+								<div class="sales-item__value">до - 60%</div>
+							</div>
+							<img src="demo/bb_sale2.png">
 							<div class="sales-item__sport">Хоккей</div>
 						</a>
 					</div>
@@ -641,9 +980,20 @@
 	<script src="assets/plugins/slick/slick.js"></script>
 	<script src="assets/plugins/jquery.maskedinput/jquery.mask.min.js"></script>
 	<script src="assets/plugins/jquery.smoothscroll.js"></script>
+	<script src="assets/plugins/soon-countdown/js/soon.min.js"></script>
+	<script src="assets/plugins/noUiSlider.10.0.0/nouislider.min.js"></script>
+	<script src="assets/plugins/magiczoomplus/magiczoomplus.js"></script>
+	<script src="assets/plugins/jquery.scrollbar/jquery.scrollbar.min.js"></script>
 
 	<script src="assets/js/default.js"></script>
+	<script src="assets/js/shop.js"></script>
 
+	<script>
+		$(document).ready(function ($) {
+			Main.init();
+			Shop.init();
+		});
+	</script>
 </body>
 
 </html>

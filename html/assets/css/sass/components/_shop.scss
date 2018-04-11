@@ -1,0 +1,87 @@
+﻿.product-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 8px 0;
+    &__sorting {
+        padding: 0 15px;
+        display: flex;
+    }
+    &__counter {
+        flex: 1 1 30%;
+        margin: 0 50px;
+        a {
+            font-weight: bold;
+            color: $primary-color;
+            text-decoration: underline;
+            display: inline-block;
+            margin: 0 12px;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+            &.active {
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &__display {
+        >a {
+            display: inline-block;
+            width: 27px;
+            height: 27px;
+            background: url(../images/sprite.png) no-repeat 0 0;
+            text-indent: -999em;
+            &.display__list {
+                background-position: -30px 0;
+                &.display--active {
+                    background-position: 0 -27px;
+                }
+            }
+            &.display__grid {
+                background-position: -30px -27px;
+                &.display--active {
+                    background-position: 0 0;
+                }
+            }
+        }
+    }
+    .dropdown {
+        margin: 0 5px;
+        .dropdown-toggle {
+            font-weight: bold;
+            color: $primary-color;
+            padding: 0;
+            margin: 0;
+            background: none;
+            border: none;
+            i {
+                font-weight: bold;
+                position: relative;
+                top: 2px;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .dropdown-menu {
+            border: 1px solid #d1cfcf;
+            padding: 0;
+            width: 100%;
+            .dropdown-item {
+                display: block;
+                color: $text-color;
+                font-size: 16px;
+                padding: 6px 10px;
+                &:hover,
+                &.dropdown-active {
+                    background: #eaeaea;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

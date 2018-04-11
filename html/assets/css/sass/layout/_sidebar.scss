@@ -2,4 +2,230 @@
     flex: 0 0 260px;
     order: 0;
     margin: 0 20px 0 0;
+    .catalog-navi {
+        margin-bottom: 40px;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                margin: 0 0 -5px 0;
+                a {
+                    display: block;
+                    padding: 10px 25px;
+                    font-size: 17px;
+                    line-height: 1.2;
+                    color: $text-color;
+                }
+                &.active {
+                    a {
+                        font-weight: bold;
+                        background: #feb703;
+                    }
+                }
+            }
+        }
+    }
+    .filters {
+        margin: 0 0 25px 0;
+        .filter {
+            border-top: 1px solid $second-color;
+            padding: 15px 0 0;
+            margin: 0 10px 20px 10px;
+            &:last-of-type {
+                padding-bottom: 15px;
+                border-bottom: 1px solid $second-color;
+            }
+            &__top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 0 20px 0;
+                padding: 0 15px;
+                span {
+                    font-size: 17px;
+                    font-weight: bold;
+                    color: $text-color;
+                }
+                a {
+                    font-size: 12px;
+                    color: $second-color;
+                    display: inline-block;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            &-slider {
+                .slider-inputs {
+                    @include flexbox();
+                    align-items: center;
+                    margin: 0 15px 15px;
+                    justify-content: center;
+                    color: #5a5a5a;
+                    .form-control {
+                        color: #5a5a5a;
+                        font-size: 15px;
+                        width: 72px;
+                        height: 22px;
+                        padding: 5px 15px;
+                        border: 1px solid #d9d9d9;
+                        border-radius: 1px;
+                        &:focus {
+                            border-color: $second-color;
+                        }
+                    }
+                    span {
+                        margin: 0 5px;
+                    }
+                    .btn {
+                        margin: 0 0 0 10px;
+                        width: 30px;
+                        border-radius: 3px;
+                        padding: 3px;
+                        font-size: 13px;
+                        height: 30px;
+                        background: $second-color;
+                        border: 1px solid $second-color;
+                        &:hover {
+                            background: lighten($second-color, 5%);
+                        }
+                    }
+                }
+                .noUi-target {
+                    border: none;
+                    box-shadow: none;
+                    background: #bbbbbb;
+                    height: 2px;
+                }
+                .noUi-horizontal {
+                    height: 2px;
+                    margin: 0 40px 25px 40px;
+                    .noUi-handle {
+                        width: 11px;
+                        height: 11px;
+                        left: -5px;
+                        top: -5px;
+                        background: $second-color;
+                        border: 2px solid #f8f6f7;
+                        box-shadow: none;
+                        cursor: pointer;
+                        outline: none !important;
+                        border-radius: 50%;
+                        &:before,
+                        &:after {
+                            display: none;
+                        }
+                        &.noUi-active {
+                            width: 18px;
+                            height: 18px;
+                            top: -7px;
+                        }
+                    }
+                }
+                .noUi-connect {
+                    background: $primary-color;
+                    box-shadow: none;
+                    height: 2px;
+                }
+                .btn-range {
+                    margin: 35px auto 0 auto;
+                    width: 190px;
+                    height: 36px;
+                    background: $second-color;
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: bold;
+                    border: 1px solid #c0bebf;
+                    display: block;
+                    transition: .3s;
+                    span {
+                        font-weight: 300;
+                    }
+                    &:hover {
+                        background: darken($second-color, 5%);
+                    }
+                }
+            }
+            &-list {
+                .checkbox-list {
+                    list-style: none;
+                    padding: 0 15px;
+                    max-height: 130px;
+                }
+            }
+        }
+        &-btn {
+            background: $second-color;
+            font-weight: bold;
+            text-align: center;
+            display: block;
+            width: 100%;
+            font-size: 17px;
+            color: $text-color;
+            padding: 10px 15px;
+            text-decoration: none;
+            transition: .3s;
+            margin: 0 0 25px 0;
+            &:hover {
+                background: darken($second-color, 5%);
+            }
+        }
+    }
+    .sales-item {
+        position: relative;
+        margin: 50px 0 25px 0;
+        img {
+            border: 2px solid $second-color;
+            width: 100%;
+            height: auto;
+        }
+        &__title {
+            background: $second-color;
+            font-weight: bold;
+            font-size: 17px;
+            color: $primary-color;
+            text-align: center;
+            color: $primary-color;
+            position: absolute;
+            top: -25px;
+            left: 0;
+            right: 20px;
+            padding: 7px 7px 20px 7px;
+            &:after {
+                content: "";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                position: absolute;
+                top: 0;
+                border-width: 43px 5px 0 0;
+                border-color: $second-color transparent transparent transparent;
+                right: -5px;
+            }
+        }
+        &__value {
+            color: $second-color;
+            background: url(../images/bg_discont.png) no-repeat 0 0;
+            width: 114px;
+            height: 33px;
+            padding: 5px;
+            margin: 0 0 -42px -5px;
+        }
+        &__sport {
+            position: absolute;
+            bottom: 2px;
+            left: 2px;
+            background: url(../images/bg_sale.png) no-repeat right 0;
+            width: 245px;
+            height: 51px;
+            font-size: 17px;
+            text-transform: uppercase;
+            color: $second-color;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }

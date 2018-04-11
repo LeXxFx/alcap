@@ -1,4 +1,5 @@
 .icon {
+    background: url(../images/sprite.png) no-repeat;
     display: inline-block;
     text-indent: -999em;
     &-catalog {
@@ -63,5 +64,10 @@
         background: url(../images/icon_quote.png) no-repeat 0 0;
         width: 24px;
         height: 24px;
+    }
+    &-timer {
+        background-position: -66px -30px;
+        width: 15px;
+        height: 17px;
     }
 }

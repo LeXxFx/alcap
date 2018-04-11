@@ -1,0 +1,39 @@
+﻿.page-heading {
+    background: #fff;
+    font-size: 37px;
+    color: $primary-color;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    margin: 0 0 8px 0;
+    padding: 15px 20px;
+    span {
+        color: #e6e6e6;
+    }
+}
+
+.heading {
+    font-size: 37px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: $primary-color;
+    text-align: center;
+    position: relative;
+    margin: 0 0 50px 0;
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: #feb703;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 0;
+    }
+    span {
+        display: inline-block;
+        background: #e6e6e6;
+        padding: 0 15px;
+        position: relative;
+        z-index: 1;
+    }
+}
