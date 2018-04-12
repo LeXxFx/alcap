@@ -39,6 +39,19 @@ body {
             color: $second-color;
         }
     }
+    &-yellow {
+        background: $second-color;
+        color: $text-color;
+        text-align: center;
+        border-radius: 0;
+        font-size: 17px;
+        font-weight: bold;
+        padding: 7px 15px;
+        transition: .3s;
+        &:hover {
+            background: darken($second-color, 5%);
+        }
+    }
 }
 
 #wrapper {

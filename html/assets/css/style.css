@@ -257,6 +257,21 @@ body {
   color: #feb703;
 }
 
+.btn-yellow {
+  background: #feb703;
+  color: #131313;
+  text-align: center;
+  border-radius: 0;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 7px 15px;
+  transition: .3s;
+}
+
+.btn-yellow:hover {
+  background: #e7a601;
+}
+
 #wrapper {
   background: #e6e6e6 url(../images/bg_sport.jpg) no-repeat center top;
 }
@@ -1150,6 +1165,7 @@ body.modal-open,
 .modal.product-preview .product__item .item__info .item__product-options .prop {
   display: none;
   max-width: 290px;
+  margin-bottom: 10px;
 }
 
 .modal.product-preview .product__item .item__info .item__product-options .prop.prop-size {
@@ -1169,6 +1185,7 @@ body.modal-open,
 }
 
 .modal.product-preview .product__item .item__info .item__input-counter .counter-name {
+  font-size: 16px;
   color: #feb703;
 }
 
@@ -3777,37 +3794,16 @@ body.modal-open,
 }
 
 .product__item .item__buttons .btn {
-  width: 60px;
-  height: 38px;
-  border: none;
-  color: #fff;
-  text-align: center;
-  padding: 0;
-  margin: 0 10px 5px 10px;
-}
-
-.product__item .item__buttons .btn-quick-buy {
-  background: #676767;
-  padding: 4px 5px 2px 5px;
-}
-
-.product__item .item__buttons .btn-quick-buy:hover {
-  background: #feb703;
-}
-
-.product__item .item__buttons .btn-add-to-cart {
-  background: #feb703;
-  padding: 5px 5px 2px 5px;
-}
-
-.product__item .item__buttons .btn-add-to-cart:hover {
-  background: #e7a601;
+  width: 100%;
+  max-width: 220px;
+  height: 42px;
+  font-size: 14px;
 }
 
 .product__item .item__input-counter {
   color: #032c7c;
   font-size: 18px;
-  margin: 0 0 30px 0;
+  margin: 10px 0 5px 0;
   text-align: center;
   vertical-align: top;
 }
@@ -3863,22 +3859,27 @@ body.modal-open,
 }
 
 .product__item .item__input-counter .counter-name {
+  font-size: 14px;
   font-weight: bold;
   color: #032c7c;
   margin: 0 0 10px 0;
   white-space: nowrap;
 }
 
+.product__item .item__product-options {
+  overflow: hidden;
+}
+
 .product__item .item__product-options .prop {
   font-weight: bold;
-  margin: 0 0 10px 0;
+  margin: 0 0 5px 0;
 }
 
 .product__item .item__product-options .prop .name {
   display: block;
   margin: 0 0 10px 0;
   color: #032c7c;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .product__item .item__product-options .prop .values .value {
@@ -4155,6 +4156,10 @@ body.modal-open,
 .product-grid .item__preview:hover {
   color: #131313;
   border-color: #131313;
+}
+
+.product-grid .item__buttons {
+  margin: 0 -20px;
 }
 
 .product-list__item {
@@ -4470,7 +4475,7 @@ body.modal-open,
   opacity: 0;
   visibility: hidden;
   transform: translate3d(5ch, 0.4in, 5em);
-  position: absolute;
+  position: fixed;
   z-index: 10001;
   background: #fff;
   width: 310px;

@@ -158,33 +158,16 @@
     .item__buttons {
         margin-bottom: 17px;
         .btn {
-            width: 60px;
-            height: 38px;
-            border: none;
-            color: #fff;
-            text-align: center;
-            padding: 0;
-            margin: 0 10px 5px 10px;
-            &-quick-buy {
-                background: #676767;
-                padding: 4px 5px 2px 5px;
-                &:hover {
-                    background: $second-color;
-                }
-            }
-            &-add-to-cart {
-                background: $second-color;
-                padding: 5px 5px 2px 5px;
-                &:hover {
-                    background: darken($second-color, 5%);
-                }
-            }
+            width: 100%;
+            max-width: 220px;
+            height: 42px;
+            font-size: 14px;
         }
     }
     .item__input-counter {
         color: $primary-color;
         font-size: 18px;
-        margin: 0 0 30px 0;
+        margin: 10px 0 5px 0;
         text-align: center;
         vertical-align: top;
         .btn {
@@ -232,6 +215,7 @@
             padding: 10px 0 0;
         }
         .counter-name {
+            font-size: 14px;
             font-weight: bold;
             color: $primary-color;
             margin: 0 0 10px 0;
@@ -239,14 +223,15 @@
         }
     }
     .item__product-options {
+        overflow: hidden;
         .prop {
             font-weight: bold;
-            margin: 0 0 10px 0;
+            margin: 0 0 5px 0;
             .name {
                 display: block;
                 margin: 0 0 10px 0;
                 color: $primary-color;
-                font-size: 16px;
+                font-size: 14px;
             }
             .values {
                 .value {
@@ -499,6 +484,9 @@
             color: $text-color;
             border-color: $text-color;
         }
+    }
+    .item__buttons {
+        margin: 0 -20px;
     }
 }
 

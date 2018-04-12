@@ -333,6 +333,7 @@ body.modal-open,
                 .item__product-options .prop {
                     display: none;
                     max-width: 290px;
+                    margin-bottom: 10px;
                     &.prop-size {
                         display: block;
                     }
@@ -347,6 +348,7 @@ body.modal-open,
                     margin: 0 0 10px 0;
                     max-width: 160px;
                     .counter-name {
+                        font-size: 16px;
                         color: $second-color;
                     }
                 }
