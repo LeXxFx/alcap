@@ -4618,3 +4618,16 @@ body.modal-open,
   visibility: visible;
   transform: translate3d(0, 0, 0);
 }
+
+.auth-info {
+  display: flex;
+}
+
+.auth-info__manager {
+  flex: 0 0 260px;
+  margin: 0 25px 0 0;
+}
+
+.auth-info__contacts {
+  display: flex;
+}
