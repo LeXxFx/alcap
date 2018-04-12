@@ -142,10 +142,12 @@
                 margin: 0 5px 0 5px;
                 position: relative;
                 bottom: -3px;
-                color: $second-color;
             }
             &.old {
                 text-decoration: line-through;
+                +.new {
+                    color: $second-color;
+                }
             }
         }
     }
@@ -180,43 +182,60 @@
         }
     }
     .item__input-counter {
-        color: #010101;
-        font-size: 16px;
+        color: $primary-color;
+        font-size: 18px;
         margin: 0 0 30px 0;
         text-align: center;
+        vertical-align: top;
         .btn {
+            vertical-align: top;
             padding: 0;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
-            line-height: 36px;
+            line-height: 37px;
             border-radius: 0;
-            width: 40px;
-            height: 36px;
+            width: 37px;
+            height: 37px;
             text-align: center;
             border: none;
-            background: #e9e9eb;
+            color: #fff;
+            background: $primary-color;
             &:hover {
-                background: darken(#e9e9eb, 5%);
+                background: darken($primary-color, 5%);
             }
         }
         .input-group-text {
             display: inline-block;
             .form-control {
-                background: #fff;
-                font-size: 16px;
+                background: #f7f7f7;
+                font-size: 18px;
                 font-weight: bold;
+                color: $primary-color;
                 padding: 0;
                 display: inline-block;
-                width: 52px;
-                height: 36px;
-                margin: 0 -3px;
+                width: 83px;
+                height: 37px;
+                margin: 0 -4px;
                 border-radius: 0;
                 border: none;
                 text-align: center;
+                box-shadow: none;
                 &:disabled {
                     cursor: default;
                 }
             }
+        }
+        .counter-help {
+            color: #5a5a5a;
+            font-size: 12px;
+            text-align: center;
+            padding: 10px 0 0;
+        }
+        .counter-name {
+            font-weight: bold;
+            color: $primary-color;
+            margin: 0 0 10px 0;
+            white-space: nowrap;
         }
     }
     .item__product-options {
@@ -266,6 +285,53 @@
             }
         }
     }
+    .item_lockout {
+        position: relative;
+        overflow: hidden;
+        height: 75px;
+        margin-bottom: 5px;
+        >div {
+            line-height: 1.1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            padding: 10px 25px;
+            transition: .3s;
+            &.message-visible {
+                background: url(../images/bg_visible.png) no-repeat 0 0 / cover;
+                color: $primary-color;
+            }
+            &.message-hidden {
+                background: url(../images/bg_hidden.png) no-repeat 0 0 / cover;
+                color: $second-color;
+                opacity: 0;
+                visibility: hidden;
+                a {
+                    color: $second-color;
+                    display: block;
+                }
+            }
+        }
+        &:hover {
+            >div {
+                &.message-visible {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                &.message-hidden {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
 }
 
 .product-grid {
@@ -299,6 +365,7 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
+            position: relative;
             img {
                 max-width: 100%;
                 max-height: 100%;
@@ -378,7 +445,7 @@
             animation: anim .2s ease-in-out;
             opacity: 0;
             border-top: 1px solid $second-color;
-            padding: 30px 30px 10px 30px;
+            padding: 30px 15px 10px 15px;
             margin: 25px 10px 0 10px;
             .prop {
                 .name {
@@ -402,52 +469,35 @@
                     transform: translateY(0);
                 }
             }
+            .item__preview {
+                opacity: 1;
+                visibility: visible;
+                bottom: 40%;
+            }
         }
-        .item_lockout {
-            position: relative;
-            overflow: hidden;
-            height: 75px;
-            margin-bottom: 5px;
-            >div {
-                line-height: 1.1;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                text-align: center;
-                display: flex;
-                justify-content: center;
-                align-content: center;
-                align-items: center;
-                padding: 10px 25px;
-                transition: .3s;
-                &.message-visible {
-                    background: url(../images/bg_visible.png) no-repeat 0 0 / cover;
-                    color: $primary-color;
-                }
-                &.message-hidden {
-                    background: url(../images/bg_hidden.png) no-repeat 0 0 / cover;
-                    color: $second-color;
-                    opacity: 0;
-                    visibility: hidden;
-                    a {
-                        color: $second-color;
-                    }
-                }
-            }
-            &:hover {
-                >div {
-                    &.message-visible {
-                        opacity: 0;
-                        visibility: hidden;
-                    }
-                    &.message-hidden {
-                        opacity: 1;
-                        visibility: visible;
-                    }
-                }
-            }
+    }
+    .item__preview {
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid $primary-color;
+        display: block;
+        color: $primary-color;
+        position: absolute;
+        top: auto;
+        bottom: 35%;
+        right: auto;
+        left: auto;
+        width: 200px;
+        height: 36px;
+        transition: .3s;
+        padding: 5px 10px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 4px;
+        opacity: 0;
+        visibility: hidden;
+        &:hover {
+            color: $text-color;
+            border-color: $text-color;
         }
     }
 }
@@ -637,3 +687,75 @@
         }
     }
 }
+
+@media screen and (max-width: 1680px) {
+    .product-list {
+        &__item {
+            .item__panel {
+                .checksum {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .product-grid {
+        text-align: center;
+        &__item {
+            display: inline-block;
+            width: 260px;
+            height: 470px;
+            margin: 5px;
+            float: none;
+        }
+    }
+    .product__item {
+        .item__buttons {
+            .btn {
+                margin: 0 5px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .product-grid {
+        display: flex;
+        flex-wrap: wrap;
+        &__item {
+            vertical-align: top;
+            height: auto;
+            flex: 1 1 260px;
+            .item {
+                &__wrap {
+                    height: auto;
+                    min-height: 100%;
+                }
+                &__product-options {
+                    display: block;
+                    opacity: 1
+                }
+            }
+        }
+        .item__preview {
+            display: none;
+        }
+    }
+    .product-list {
+        .item__wrap {
+            flex-wrap: wrap;
+        }
+        &__item {
+            .item__panel {
+                width: 100%;
+                min-width: 100%;
+                border-top: 1px solid #e5e5e5;
+                border-left: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {}

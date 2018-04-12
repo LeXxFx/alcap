@@ -1,0 +1,304 @@
+#sl {
+    .slider {
+        &__item {
+            height: 600px;
+            .slide-info {
+                overflow: hidden;
+                &__top {
+                    margin: 60px 0 30px 0;
+                    span {
+                        font-weight: 500;
+                        font-size: 29px;
+                        line-height: 39px;
+                        color: #fff;
+                        display: inline-block;
+                        background: $primary-color;
+                        height: 50px;
+                        position: relative;
+                        padding: 5px 25px;
+                        transition: 1.2s;
+                        &:after {
+                            content: "";
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 50px 10px 0 0;
+                            border-color: $primary-color transparent transparent transparent;
+                            position: absolute;
+                            top: 0;
+                            right: -10px;
+                        }
+                        &.s1 {
+                            margin-bottom: -7px;
+                            transform: translateX(-250px);
+                            z-index: 10;
+                        }
+                        &.s2 {
+                            margin: -7px 0 0 310px;
+                            transform: translateX(250px);
+                        }
+                    }
+                    p {
+                        color: $primary-color;
+                        font-weight: 600;
+                        font-size: 64px;
+                        line-height: 87px;
+                        padding: 5px 0 0 40px;
+                        margin: 0 0 0 15px;
+                        display: block;
+                        width: 655px;
+                        height: 109px;
+                        background: url(../images/sl_bg_slider.png) no-repeat 0 0;
+                        transition: 1s;
+                        transform: translateY(150px);
+                    }
+                }
+                &__text {
+                    background: rgba(255, 255, 255, 0.8);
+                    padding: 20px 25px;
+                    font-size: 19px;
+                    font-weight: 600;
+                    color: #1e1e1e;
+                    max-width: 780px;
+                    position: relative;
+                    margin: 0 40px 0 0;
+                    transition: 1.3s;
+                    transform: translateX(-300px);
+                    &:after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 30px;
+                        height: 100%;
+                        background: url(../images/traingle.png) no-repeat 0 0 / 100% 100%;
+                        top: 0;
+                        right: -30px;
+                    }
+                }
+            }
+            &.slick-active {
+                .slide-info {
+                    &__top {
+                        span {
+                            transform: translateX(0);
+                        }
+                        p {
+                            transform: translateX(0);
+                        }
+                    }
+                    &__text {
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slider-nav {
+    padding: 70px 0;
+    .items {
+        margin-top: -180px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 25px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 5px 0 20px 5px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            z-index: 1;
+        }
+        .slick-list {
+            z-index: 5;
+        }
+        .slick-track {
+            display: flex;
+            padding-top: 25px;
+        }
+        .navi-item {
+            background: #fff;
+            position: relative;
+            flex-grow: 1;
+            flex-basis: 0;
+            cursor: pointer;
+            float: none;
+            height: auto;
+            min-height: auto;
+            outline: none !important;
+            transition: .2s;
+            &:before {
+                content: "";
+                position: absolute;
+                top: -25px;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 2;
+                background: url(../images/sl_nav_hover.png) no-repeat center 0;
+                opacity: 0;
+                visibility: hidden;
+                transition: .2s;
+            }
+            &__inner {
+                position: relative;
+                z-index: 10;
+            }
+            .img {
+                height: 40px;
+                text-align: center;
+                margin: 15px 0;
+                img {
+                    display: inline-block;
+                }
+            }
+            .text {
+                padding: 0 10px 15px 10px;
+                font-size: 16px;
+                line-height: 1.3;
+                color: #0f0f0f;
+                text-align: center;
+                strong {
+                    @extend %label_yellow;
+                }
+            }
+            &:after {
+                content: '';
+                display: block;
+                width: 1px;
+                height: 100%;
+                background: #b3bfd7;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 10;
+            }
+            &:last-of-type {
+                &:after {
+                    display: none;
+                }
+            }
+            &:hover,
+            &.slick-current {
+                background: none;
+                &:before {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .text {
+                    strong {
+                        @extend %label_blue;
+                    }
+                }
+            }
+        }
+    }
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        margin: -34px 0 0 0;
+        width: 28px;
+        height: 88px;
+        background: url(../images/sl_arrows.png) no-repeat;
+        border: none;
+        text-indent: -999em;
+        transition: .3s;
+        outline: none !important;
+        z-index: 100;
+        &:hover {
+            opacity: 0.7;
+        }
+        &.slick-prev {
+            background-position: -29px 0;
+            left: 5px;
+        }
+        &.slick-next {
+            background-position: 0 0;
+            right: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: $small-desktop) {
+    .slider-nav {
+        .slick-list {
+            position: relative;
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                width: 1px;
+                background: #b3bfd7;
+                position: absolute;
+                top: 25px;
+                bottom: 0;
+                z-index: 10;
+            }
+            &:before {
+                right: 0;
+            }
+            &:after {
+                left: 0;
+            }
+        }
+        .items {
+            padding: 0 40px;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    #sl {
+        .slider {
+            &__item {
+                height: 480px;
+                .slide-info {
+                    &__top {
+                        margin: 20px 0;
+                        span {
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 1.1;
+                            height: 30px;
+                            padding: 3px 15px;
+                            &:after {
+                                border-width: 30px 5px 0 0;
+                                right: -5px;
+                            }
+                            &.s2 {
+                                float: none;
+                                margin-left: 20px;
+                            }
+                        }
+                        p {
+                            font-size: 24px;
+                            line-height: 1.1;
+                            width: auto;
+                            max-width: 60%;
+                            padding: 10px;
+                            margin-left: 5px;
+                            background-position: right 0;
+                            height: auto;
+                        }
+                    }
+                    &__text {
+                        padding: 10px 5px;
+                        font-size: 13px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    .slider-nav {
+        padding: 10px 0 30px 0;
+        .items {
+            margin-top: -30px;
+        }
+    }
+}

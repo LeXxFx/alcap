@@ -1,4 +1,4 @@
-﻿var Main = function () {
+﻿var Home = function () {
 
 	var mainSlider = function () {
         var slNav = $('.slider-nav__items');
@@ -118,5 +118,5 @@
 }();
 
 $(document).ready(function ($) {
-    Main.init();
+    Home.init();
 });

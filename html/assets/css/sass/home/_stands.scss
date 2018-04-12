@@ -1,0 +1,215 @@
+.stands {
+    padding: 80px 0 120px 0;
+    background: url(../images/bg_stands.jpg) no-repeat center 0 / cover;
+    background-attachment: fixed;
+    margin: 0 0 80px 0;
+    text-align: center;
+    &__heading {
+        font-size: 40px;
+        line-height: 1.5;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+        margin: 0 0 10px 0;
+        display: block;
+        background: url(../images/stands_heading.png) no-repeat center top /cover;
+    }
+    &__desc {
+        color: $primary-color;
+        font-size: 30px;
+        background: #feb703;
+        display: inline-block;
+        height: 55px;
+        padding: 5px 10px;
+        position: relative;
+        margin: 0 0 60px 0;
+        &:before, &:after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            position: absolute;
+            top: 0;
+        }
+        &:before {
+            border-width: 0 0 55px 10px;
+            border-color: transparent transparent #feb703 transparent;
+            left: -10px;
+        }
+        &:after {
+            border-width: 55px 10px 0 0;
+            border-color: #feb703 transparent transparent transparent;
+            right: -10px;
+        }
+    }
+    .stands-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 45px;
+        &__item {
+            flex: 0 0 320px;
+            margin: 0 10px 20px 10px;
+            img {
+                width: 100%;
+            }
+            a {
+                display: block;
+                text-decoration: none;
+                .item-info {
+                    height: 83px;
+                    background: url(../images/stand_info_bg.jpg) repeat-x 0 0;
+                    color: #fff;
+                    font-size: 14px;
+                    line-height: 1.1;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: space-between;
+                    .item-model {
+                        font-size: 64px;
+                        position: relative;
+                        flex: 0 0 130px;
+                        padding: 5px 10px 0 10px;
+                        &:after {
+                            content: "";
+                            width: 1px;
+                            height: 47px;
+                            background: #ffd5bd;
+                            display: block;
+                            position: absolute;
+                            right: 5px;
+                            top: 17px;
+                        }               
+                    }
+                    .item-options {
+                        flex: 1 1 auto;
+                        padding: 12px 15px 0 15px;
+                        .option-item {
+                            display: flex;
+                            justify-content: space-between;
+                            margin: 0 0 4px 0;
+                            &__name {
+                                flex: 1 1 100px;
+                                text-align: left;
+                            }
+                            &__value {
+                                flex: 0 0 auto;
+                                span {
+                                    color: #feb205;
+                                    font-size: 12px;
+                                    margin-right: 5px;
+                                    float: left;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        margin: -54px 0 0 0;
+        width: 28px;
+        height: 88px;
+        background: url(../images/stands_arrow.png) no-repeat;
+        border: none;
+        text-indent:-999em;
+        transition: .3s;
+        outline: none !important;
+        z-index: 100;
+        &:hover {
+            opacity: 0.7;
+        }
+        &.slick-prev {
+            background-position: right 0;
+            left: 0;
+        }
+        &.slick-next {
+            background-position: 0 0;
+            right: 0;
+        }
+    }
+    .slick-dots {
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 1;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          display: inline-block;
+          margin: 0 3px;
+          button {
+            background: #feb703;
+            border: 2px solid #feb703;
+            border-radius: 50%;
+            padding: 0;
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            text-indent: -999em;
+            position: relative;
+            z-index: 2;
+            transition: 0.1s ease;
+            outline: none !important;
+    
+            &:hover {
+              background: $primary-color;
+            }
+          }
+          &.slick-active {
+            button {
+              cursor: default;
+              background: $primary-color;
+            }
+          }
+        }
+      }
+}
+
+
+@media screen and (max-width: $mobile) {
+    .stands {
+        margin-bottom: 30px;
+        &__heading {
+            font-size: 26px;
+            line-height: 1.3;
+            padding: 10px;
+        }
+        &__desc {
+            font-size: 18px;
+            height: auto;
+            &:before, &:after {
+                display: none;
+            }
+        }
+        .stands-list {
+            padding: 0 20px;
+            &__item a .item-info {
+                font-size: 13px;
+                .item-model {
+                    font-size: 38px;
+                    flex: 0 0 70px;
+                    padding-top: 20px;
+                }
+                .item-options {
+                    padding: 15px 10px 10px 5px;
+                }
+            }
+            .slick-arrow {
+                &.slick-prev {
+                    left: -5px;
+                }
+                &.slick-next {
+                    right: -5px;
+                }
+            }
+        }
+    }
+}

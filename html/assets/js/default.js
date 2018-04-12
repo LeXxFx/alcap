@@ -1,5 +1,5 @@
 ﻿var Main = function () {
-	var CatalogNavigation = function () {
+	var catalogNavigation = function () {
 		var timer,
 			timeIn = [],
 			timeOut = [];
@@ -45,8 +45,7 @@
 		});
 	}
 
-	var Tooltips = function () {
-		$('[title]').attr("data-rel", "tooltip");
+	var tooltips = function () {
 		$("[data-rel='tooltip']")
 			.attr("data-placement", "top")
 			.attr("data-content", function () {
@@ -66,17 +65,42 @@
 		}).click(showPopover).hover(showPopover, hidePopover);
 	}
 
-	var ScrollbarRail = function() {
+	var scrollbarRail = function() {
 		$(document).ready(function(){
 			$('.scrollbar-rail').scrollbar();
 		});
 	}
 
+	var searchBox = function () {
+		$('.search .search-input .search-input__text').on("keyup", function (e) {
+			var that = $(this);
+			var currentVal = that.val();
+
+			if (that.attr('data-val') != currentVal) {
+				that.attr('data-val', currentVal);
+				that.closest('.search').addClass('search--open');
+			}
+		});
+		$(document).mouseup(function (e) {
+			var container = $('.search--open');
+			if (!container.is(e.target)
+				&& container.has(e.target).length === 0) {
+				$(".search").removeClass('search--open')
+			}
+		});
+		$(document).keyup(function(e) {
+			if (e.keyCode == 27) {
+				$(".search").removeClass('search--open')
+			}
+		});
+	};
+
 	return {
 		init: function () {
-			CatalogNavigation();
-			Tooltips();
-			ScrollbarRail();
+			catalogNavigation();
+			tooltips();
+			scrollbarRail();
+			searchBox();
 		}
 	};
 }();

@@ -1,0 +1,109 @@
+.sample-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    padding-bottom: 70px;
+    &__col {
+        margin: 0 10px;
+    }
+    &__item {
+        box-shadow: 0 0 3px 2px rgba(0,0,0,0.3);
+        position: relative;
+        transition: .6s;
+        margin: 0 0 20px 0;
+        .details {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: url(../images/primer_hover.jpg) no-repeat center top;
+            z-index: 5;
+            transition: .3s;
+            opacity: 0;
+            visibility: hidden;
+            a {
+                cursor: pointer;
+                display: block;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                left: 10px;
+                bottom: 10px;
+                border: 1px solid #fff;
+                z-index: 10;
+                text-align: center;
+                font-size: 29px;
+                line-height: 1.4;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                text-decoration: none;
+                span {
+                    max-width: 180px;
+                    transition: .5s;
+                    transform: translateY(20px);
+                }
+            }
+        }
+        img {
+            width: 100%;
+        }
+        .item-info {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            display: inline-block;
+            background: $primary-color;
+            color: #fff;
+            font-weight: bold;
+            line-height: 1.1;
+            padding: 10px 20px;
+            height: 90px;
+            &:after {
+                content: "";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 90px 10px 0 0;
+                border-color: $primary-color transparent transparent transparent;
+                position: absolute;
+                top: 0;
+                right: -10px;
+            }
+            p {
+                margin: 0;
+                &.item-price {
+                    margin: 0 0 5px 0;
+                    font-size: 35px;
+                    color: #feb603;
+                    span {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+        &:hover {
+            transform: translateY(-10px);
+            .details {
+                opacity: 1;
+                visibility: visible;
+                a {
+                    span {
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .sample-list {
+        margin: 0;
+    }
+}
