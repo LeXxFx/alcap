@@ -39,17 +39,21 @@
 							<strong>Каталог товаров</strong>
 						</a>
 						<a href="http://www.alcap.ru/personal/" target="_blank" title="Личный кабинет">
-							<i class="icon icon-account"></i>
-							<strong>Личный кабинет</strong>
+							<i class="icon icon-cart"></i>
+							<strong>Сделать заказ</strong>
 						</a>
 					</nav>
-					<div class="phone">
-						<div class="phone__main">
-							<a href="tel:88000034034" class="link-digit">8 (800) 0034-034</a>
-							<a class="link-text" data-dismiss="modal" data-toggle="modal" data-target="#form_call">Заказать обратный звонок</a>
-						</div>
-						<a class="phone__link" data-dismiss="modal" data-toggle="modal" data-target="#form_call">
-							<i class="icon icon-phone"></i>
+					<div class="short-cart">
+						<a href="tel:88000034034" class="link-digit">
+							<i class="icon icon-cart2"></i>
+							354000 р. (54)</a>
+					</div>
+					<div class="account-link">
+						<a href="#">
+							<i class="icon icon-profile"></i>
+							Спортивный инстркутор</a>
+						<a href="#">
+							<i class="icon icon-exit"></i>
 						</a>
 					</div>
 				</div>
@@ -73,8 +77,86 @@
 		<div class="wrapper">
 			<div id="content" role="main">
 				<div class="search">
-					<input class="search__text" type="text" placeholder="Поиск среди 15000 наименований">
-					<button class="search__baton">Найти</button>
+					<div class="search-input">
+						<input class="search-input__text" type="text" placeholder="Поиск среди 15000 наименований">
+						<button class="search-input__baton">Найти</button>
+					</div>
+					<div class="search-menu clearfix">
+						<div class="search-menu__body">
+							<div class="head">Найдено в разделах каталога:</div>
+							<ul>
+								<li>
+									<a href="#">Кимоно для карате</a>
+								</li>
+								<li>
+									<a href="#">Кимоно для дзюдо</a>
+								</li>
+							</ul>
+							<div class="head">Найдены товары (всего 35):</div>
+							<div class="products-list clearfix">
+								<div class="item">
+									<a href="product.html">
+										<div class="img" href="product.html">
+											<img src="demo/img_product1.jpg" alt="" />
+										</div>
+										<div class="name">
+											Кимоно для карате Golden Scorpion "PKM-885"
+										</div>
+									</a>
+									<div class="price">
+										<span class="new">1502</span>
+										<span class="currency">руб.</span>
+									</div>
+								</div>
+								<div class="item">
+									<a href="product.html">
+										<div class="img">
+											<img src="demo/img_product2.jpg" alt="" />
+										</div>
+										<div class="name">
+											Кимоно для карате Alpha Caprice GS-KK01
+										</div>
+									</a>
+									<div class="price">
+										<span class="old">1805</span>
+										<span class="new">1480</span>
+										<span class="currency">руб.</span>
+									</div>
+								</div>
+								<div class="item">
+									<a href="product.html">
+										<div class="img" href="product.html">
+											<img src="demo/img_product1.jpg" alt="" />
+										</div>
+										<div class="name">
+											Кимоно для карате Golden Scorpion "PKM-885"
+										</div>
+									</a>
+									<div class="price">
+										<span class="new">1502</span>
+										<span class="currency">руб.</span>
+									</div>
+								</div>
+								<div class="item">
+									<a href="product.html">
+										<div class="img">
+											<img src="demo/img_product3.jpg" alt="" />
+										</div>
+										<div class="name">
+											Кимоно для карате Golden Scorpion "PKM-1200" те Golden Scorpion "PKM-1200"
+										</div>
+									</a>
+									<div class="price">
+										<span class="new">1479</span>
+										<span class="currency">руб.</span>
+									</div>
+								</div>
+							</div>
+							<div class="search-menu__button">
+								<a href="#" class="btn">Посмотреть все товары</a>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="page-heading">Коньки и аксессуары
 					<span>— 30 из 199 товаров</span>
@@ -265,8 +347,39 @@
 												<li class="submenu__title">
 													<a href="#">Художественная гимнастика и танцы</a>
 												</li>
-												<li>
+												<li class="has-child">
 													<a href="#">Гимнастические купальники</a>
+													<div class="submenu">
+														<div class="submenu__inner">
+															<ul>
+																<li class="submenu__title">
+																	<a href="#">Художественная гимнастика и танцы</a>
+																</li>
+																<li>
+																	<a href="#">Гимнастические купальники</a>
+
+																</li>
+																<li>
+																	<a href="#">Лосины, юбки, топы и шорты</a>
+																</li>
+																<li>
+																	<a href="#">Чешки, балетки</a>
+																</li>
+																<li>
+																	<a href="#">Обручи</a>
+																</li>
+																<li>
+																	<a href="#">Булавы, ленты, скакалки</a>
+																</li>
+																<li>
+																	<a href="#">Мячи для художественной гимнастики</a>
+																</li>
+																<li>
+																	<a href="#">Колльца, лестницы, трапеции</a>
+																</li>
+															</ul>
+														</div>
+													</div>
 												</li>
 												<li>
 													<a href="#">Лосины, юбки, топы и шорты</a>
@@ -274,8 +387,39 @@
 												<li>
 													<a href="#">Чешки, балетки</a>
 												</li>
-												<li>
+												<li class="has-child">
 													<a href="#">Обручи</a>
+													<div class="submenu">
+														<div class="submenu__inner">
+															<ul>
+																<li class="submenu__title">
+																	<a href="#">Художественная гимнастика и танцы</a>
+																</li>
+																<li>
+																	<a href="#">Гимнастические купальники</a>
+
+																</li>
+																<li>
+																	<a href="#">Лосины, юбки, топы и шорты</a>
+																</li>
+																<li>
+																	<a href="#">Чешки, балетки</a>
+																</li>
+																<li>
+																	<a href="#">Обручи</a>
+																</li>
+																<li>
+																	<a href="#">Булавы, ленты, скакалки</a>
+																</li>
+																<li>
+																	<a href="#">Мячи для художественной гимнастики</a>
+																</li>
+																<li>
+																	<a href="#">Колльца, лестницы, трапеции</a>
+																</li>
+															</ul>
+														</div>
+													</div>
 												</li>
 												<li>
 													<a href="#">Булавы, ленты, скакалки</a>
@@ -285,36 +429,6 @@
 												</li>
 												<li>
 													<a href="#">Колльца, лестницы, трапеции</a>
-												</li>
-											</ul>
-											<ul class="submenu__propose">
-												<li class="submenu__title">Возможно вы искали:</li>
-												<li>
-													<a href="#">Коврики гимнастические</a>
-												</li>
-												<li>
-													<a href="#">Утяжелители</a>
-												</li>
-												<li>
-													<a href="#">Гантели</a>
-												</li>
-												<li>
-													<a href="#">Обручи</a>
-												</li>
-												<li>
-													<a href="#">Скакалки</a>
-												</li>
-												<li>
-													<a href="#">Диск «Здоровье»</a>
-												</li>
-												<li>
-													<a href="#">Ролики гимнастические</a>
-												</li>
-												<li>
-													<a href="#">Упоры для отжиманий</a>
-												</li>
-												<li>
-													<a href="#">Мячи для фитнеса</a>
 												</li>
 											</ul>
 										</div>
@@ -336,11 +450,6 @@
 												</li>
 												<li>
 													<a href="#">Степперы, эллепсоиды</a>
-												</li>
-											</ul>
-											<ul>
-												<li class="submenu__title">
-													<a href="#">Тяжелая атлетика</a>
 												</li>
 												<li>
 													<a href="#">Гантели разборные</a>
@@ -372,11 +481,6 @@
 												<li>
 													<a href="#">Пояса для поднятия тяжестей</a>
 												</li>
-											</ul>
-											<ul>
-												<li class="submenu__title">
-													<a href="#">Турники и брусья</a>
-												</li>
 												<li>
 													<a href="#">Турники в проем</a>
 												</li>
@@ -388,11 +492,6 @@
 												</li>
 												<li>
 													<a href="#">Турники потолочные</a>
-												</li>
-											</ul>
-											<ul>
-												<li class="submenu__title">
-													<a href="#">Брусья</a>
 												</li>
 												<li>
 													<a href="#">Прямые</a>
@@ -415,9 +514,6 @@
 												<li>
 													<a href="#">Аксессуары к турникам</a>
 												</li>
-											</ul>
-											<ul class="submenu__propose">
-												<li class="submenu__title">Возможно вы искали:</li>
 												<li>
 													<a href="#">Плечевые эспандеры</a>
 												</li>
@@ -472,9 +568,6 @@
 												<li>
 													<a href="#">Форма</a>
 												</li>
-												<li class="submenu__title">
-													<a href="#">Волейбол</a>
-												</li>
 												<li>
 													<a href="#">Мячи</a>
 												</li>
@@ -483,11 +576,6 @@
 												</li>
 												<li>
 													<a href="#">Форма</a>
-												</li>
-											</ul>
-											<ul>
-												<li class="submenu__title">
-													<a href="#">Футбол</a>
 												</li>
 												<li>
 													<a href="#">Бутсы</a>
@@ -510,11 +598,6 @@
 												<li>
 													<a href="#">Щитки</a>
 												</li>
-											</ul>
-											<ul>
-												<li class="submenu__title">
-													<a href="#">Хоккей</a>
-												</li>
 												<li>
 													<a href="#">Коньки</a>
 												</li>
@@ -526,11 +609,6 @@
 												</li>
 												<li>
 													<a href="#">Хоккейный трикотаж</a>
-												</li>
-											</ul>
-											<ul>
-												<li class="submenu__title">
-													<a href="#">Настольные игры</a>
 												</li>
 												<li>
 													<a href="#">Аэрохоккей</a>
@@ -556,14 +634,6 @@
 												<li>
 													<a href="#">Наборы и карточные игры</a>
 												</li>
-												<li class="link-all">
-													<a href="#">Посмотреть всё
-														<i class="fa fa-angle-right"></i>
-													</a>
-												</li>
-											</ul>
-											<ul class="submenu__propose">
-												<li class="submenu__title">Возможно вы искали:</li>
 												<li>
 													<a href="#">Плавание</a>
 												</li>

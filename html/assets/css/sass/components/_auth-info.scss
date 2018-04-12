@@ -1,10 +1,162 @@
 ﻿.auth-info {
     display: flex;
+    padding: 25px 0 0;
     &__manager {
         flex: 0 0 260px;
         margin: 0 25px 0 0;
+        border: 1px solid $primary-color;
+        border-radius: 3px;
+        background: #fff;
+        position: relative;
+        z-index: 1001;
+        height: 80px;
+        .manager-info {
+            color: $primary-color;
+            position: relative;
+            padding: 6px;
+            padding-bottom: 20px;
+            cursor: pointer;
+            .img {
+                float: left;
+                width: 48px;
+                margin: 0 20px 0 0;
+                img {
+                    width: 100%;
+                }
+            }
+            p {
+                margin: 0;
+                color: $text-color;
+                &.name {
+                    font-weight: 600;
+                    color: $primary-color;
+                }
+            }
+            span {
+                font-weight: 600;
+                color: $primary-color;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+            }
+        }
+        .manager-contacts {
+            border-top: 1px solid $border-color;
+            padding: 6px 10px;
+            border: 1px solid $primary-color;
+            border-top: none;
+            border-radius: 0 0 3px 3px;
+            background: #fff;
+            margin: 0 -1px;
+            transition: .3s;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            &:before {
+                content: "";
+                display: block;
+                margin: 5px 10px 10px;
+                height: 1px;
+                background: $border-color;
+            }
+            p {
+                margin: 0;
+                font-size: 14px;
+                span {
+                    float: right;
+                    font-weight: bold;
+                }
+            }
+        }
+        &:hover {
+            .manager-contacts {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
     }
     &__contacts {
         display: flex;
+        justify-content: center;
+        .col-info {
+            background: #fff;
+            border: 1px solid $second-color;
+            border-radius: 3px;
+            padding: 10px 10px 10px 40px;
+            position: relative;
+            flex: 0 0 24.5%;
+            margin: 0 2px 0;
+            font-size: 13px;
+            color: $primary-color;
+            height: 80px;
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 6px;
+                top: 50%;
+                background: url(../images/sprite.png) no-repeat;
+            }
+            &:last-of-type {
+                margin-right: 0;
+            }
+            &:hover {
+                background: url(../images/bg_col.png) no-repeat 0 0 /cover;
+            }
+            strong {
+                font-size: 18px;
+            }
+            p {
+                margin: 0;
+            }
+            a {
+                text-decoration: underline;
+                color: $primary-color;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            &.col-phone {
+                &:before {
+                    background-position: -172px -31px;
+                    width: 16px;
+                    height: 24px;
+                    left: 10px;
+                    margin-top: -12px;
+                }
+            }
+            &.col-email {
+                padding-top: 18px;
+                &:before {
+                    background-position: -134px -34px;
+                    width: 24px;
+                    height: 18px;
+                    margin-top: -9px;
+                }
+            }
+            &.col-skype {
+                &:before {
+                    background-position: -98px -31px;
+                    width: 24px;
+                    height: 24px;
+                    margin-top: -12px;
+                }
+            }
+            &.col-director {
+                &:before {
+                    background-position: -167px -1px;
+                    width: 25px;
+                    height: 26px;
+                    margin-top: -13px;
+                }
+                a {
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
     }
 }

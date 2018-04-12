@@ -94,6 +94,30 @@
   height: 24px;
 }
 
+.icon-cart {
+  background-position: -71px -57px;
+  width: 22px;
+  height: 22px;
+}
+
+.icon-cart2 {
+  background-position: -99px -58px;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-profile {
+  background-position: -148px -58px;
+  width: 20px;
+  height: 19px;
+}
+
+.icon-exit {
+  background-position: -125px -59px;
+  width: 18px;
+  height: 18px;
+}
+
 .product__item .item__rate {
   height: 13px;
 }
@@ -4570,6 +4594,14 @@ body.modal-open,
   opacity: 0.8;
 }
 
+.quick-buy__botom a:hover .icon-letter {
+  background-position: -1px -58px;
+}
+
+.quick-buy__botom a:hover .icon-print {
+  background-position: -38px -57px;
+}
+
 .quick-buy .delivary-list {
   margin: 5px 0 20px 0;
 }
@@ -4621,13 +4653,183 @@ body.modal-open,
 
 .auth-info {
   display: flex;
+  padding: 25px 0 0;
 }
 
 .auth-info__manager {
   flex: 0 0 260px;
   margin: 0 25px 0 0;
+  border: 1px solid #032c7c;
+  border-radius: 3px;
+  background: #fff;
+  position: relative;
+  z-index: 1001;
+  height: 80px;
+}
+
+.auth-info__manager .manager-info {
+  color: #032c7c;
+  position: relative;
+  padding: 6px;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
+.auth-info__manager .manager-info .img {
+  float: left;
+  width: 48px;
+  margin: 0 20px 0 0;
+}
+
+.auth-info__manager .manager-info .img img {
+  width: 100%;
+}
+
+.auth-info__manager .manager-info p {
+  margin: 0;
+  color: #131313;
+}
+
+.auth-info__manager .manager-info p.name {
+  font-weight: 600;
+  color: #032c7c;
+}
+
+.auth-info__manager .manager-info span {
+  font-weight: 600;
+  color: #032c7c;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.auth-info__manager .manager-contacts {
+  border-top: 1px solid #d9d9d9;
+  padding: 6px 10px;
+  border: 1px solid #032c7c;
+  border-top: none;
+  border-radius: 0 0 3px 3px;
+  background: #fff;
+  margin: 0 -1px;
+  transition: .3s;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+}
+
+.auth-info__manager .manager-contacts:before {
+  content: "";
+  display: block;
+  margin: 5px 10px 10px;
+  height: 1px;
+  background: #d9d9d9;
+}
+
+.auth-info__manager .manager-contacts p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.auth-info__manager .manager-contacts p span {
+  float: right;
+  font-weight: bold;
+}
+
+.auth-info__manager:hover .manager-contacts {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .auth-info__contacts {
   display: flex;
+  justify-content: center;
+}
+
+.auth-info__contacts .col-info {
+  background: #fff;
+  border: 1px solid #feb703;
+  border-radius: 3px;
+  padding: 10px 10px 10px 40px;
+  position: relative;
+  flex: 0 0 24.5%;
+  margin: 0 2px 0;
+  font-size: 13px;
+  color: #032c7c;
+  height: 80px;
+}
+
+.auth-info__contacts .col-info:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  background: url(../images/sprite.png) no-repeat;
+}
+
+.auth-info__contacts .col-info:last-of-type {
+  margin-right: 0;
+}
+
+.auth-info__contacts .col-info:hover {
+  background: url(../images/bg_col.png) no-repeat 0 0/cover;
+}
+
+.auth-info__contacts .col-info strong {
+  font-size: 18px;
+}
+
+.auth-info__contacts .col-info p {
+  margin: 0;
+}
+
+.auth-info__contacts .col-info a {
+  text-decoration: underline;
+  color: #032c7c;
+}
+
+.auth-info__contacts .col-info a:hover {
+  text-decoration: none;
+}
+
+.auth-info__contacts .col-info.col-phone:before {
+  background-position: -172px -31px;
+  width: 16px;
+  height: 24px;
+  left: 10px;
+  margin-top: -12px;
+}
+
+.auth-info__contacts .col-info.col-email {
+  padding-top: 18px;
+}
+
+.auth-info__contacts .col-info.col-email:before {
+  background-position: -134px -34px;
+  width: 24px;
+  height: 18px;
+  margin-top: -9px;
+}
+
+.auth-info__contacts .col-info.col-skype:before {
+  background-position: -98px -31px;
+  width: 24px;
+  height: 24px;
+  margin-top: -12px;
+}
+
+.auth-info__contacts .col-info.col-director:before {
+  background-position: -167px -1px;
+  width: 25px;
+  height: 26px;
+  margin-top: -13px;
+}
+
+.auth-info__contacts .col-info.col-director a {
+  text-decoration: none;
+}
+
+.auth-info__contacts .col-info.col-director a:hover {
+  text-decoration: underline;
 }

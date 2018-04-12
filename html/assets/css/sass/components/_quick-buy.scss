@@ -79,6 +79,12 @@
             transition: .3s;
             &:hover {
                 opacity: 0.8;
+                .icon-letter {
+                    background-position: -1px -58px;
+                }
+                .icon-print {
+                    background-position: -38px -57px;
+                }
             }
         }
     }
