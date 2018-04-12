@@ -1267,6 +1267,62 @@
 		</div>
 	</div>
 
+	<div class="quick-buy">
+		<div class="quick-buy-inner">
+			<button class="quick-buy__close">Закрыть</button>
+			<div class="quick-buy__sum">
+				<div class="quick-buy__title">
+					Итого:
+				</div>
+
+				<p>Количество товаров
+					<strong>100</strong>
+				</p>
+				<p>Количество позиций
+					<strong>1</strong>
+				</p>
+				<p>На сумму
+					<strong>169000 р.</strong>
+				</p>
+				<p>
+					<strong class="yellow">Экономия</strong>
+					<strong>30000 р.</strong>
+				</p>
+			</div>
+			<div class="quick-buy__order">
+				<div class="quick-buy__title">
+					Быстрый заказ
+				</div>
+				<p>
+					<strong>Укажите способ доставки:</strong>
+				</p>
+				<div class="delivary-list">
+					<div class="checkbox">
+						<input type="checkbox" id="delivary-1" name="delivary-1">
+						<label for="delivary-1">самовывоз</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="delivary-2" name="delivary-2">
+						<label for="delivary-2">транспортная компания</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="delivary-3" name="delivary-3">
+						<label for="delivary-3">доставка</label>
+					</div>
+				</div>
+				<button class="btn btn-blue">Оформить</button>
+			</div>
+			<div class="quick-buy__botom">
+				<a href="#">
+					<i class="icon icon-letter"></i>
+				</a>
+				<span></span>
+				<a href="#">
+					<i class="icon icon-print"></i>
+				</a>
+			</div>
+		</div>
+	</div>
 	<script src="assets/js/jquery-2.2.4.min.js"></script>
 	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 	<script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script>
@@ -1286,7 +1342,7 @@
 		$(document).ready(function ($) {
 			Main.init();
 			Shop.init();
-			$('.product-preview').modal('show');
+			//	$('.product-preview').modal('show');
 		});
 	</script>
 </body>

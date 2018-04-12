@@ -279,6 +279,24 @@ var Shop = function () {
 		});
 	};
 
+	var quickBuy = function () {
+		$('.btn-quick-buy').on('click', function (e) {
+			e.preventDefault();
+			var pos = $(this).position();
+
+			$('.quick-buy').css({
+				'top': pos.top - 30,
+				'left': pos.left - 5
+			}).addClass('quick-buy--open');
+		});
+		$(document).on('click', '.quick-buy__close', function (e) {
+			e.preventDefault();
+			var that = $(this);
+
+			that.closest('.quick-buy').removeClass('quick-buy--open');
+		});
+	}
+
 	return {
 		init: function () {
 			inputCounter();
@@ -286,6 +304,7 @@ var Shop = function () {
 			itemGallery();
 			productsCatalog();
 			itemPreview();
+			quickBuy();
 		}
 	};
 }();

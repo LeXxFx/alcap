@@ -1,0 +1,140 @@
+.quick-buy {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(5ch, 0.4in, 5em);
+    position: absolute;
+    z-index: 10001;
+    background: #fff;
+    width: 310px;
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    transition: .3s;
+    &-inner {
+        position: relative;
+    }
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: url(../images/bg_close.png) no-repeat 0 0;
+        width: 109px;
+        height: 32px;
+        color: #fff;
+        text-align: center;
+        border: none;
+        margin: 0;
+        padding: 5px;
+        font-size: 16px;
+        &:hover {
+            color: $second-color;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    &__title {
+        color: $second-color;
+        font-size: 21px;
+        font-weight: bold;
+        margin: 15px 0 6px 0;
+    }
+    strong {
+        &.yellow {
+            color: $second-color;
+        }
+    }
+    &__sum {
+        border-bottom: 5px solid #e6e6e6;
+        padding: 10px 15px 10px;
+        p {
+            margin: 0;
+        }
+    }
+    &__order {
+        border-bottom: 5px solid #e6e6e6;
+        padding: 10px 15px 10px;
+        p {
+            margin: 0;
+        }
+        .btn {
+            display: block;
+            margin: 0 auto;
+            width: 220px;
+            height: 42px;
+        }
+    }
+    &__botom {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            display: inline-block;
+            height: 38px;
+            width: 1px;
+            background: $border-color;
+            margin: 0 20px;
+        }
+        a {
+            transition: .3s;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+    .delivary-list {
+        margin: 5px 0 20px 0;
+        .checkbox {
+            label {
+                &:before {
+                    content: "";
+                    width: 23px;
+                    height: 23px;
+                    border: 1px solid #d9d9d9;
+                    position: absolute;
+                    top: 2px;
+                    left: 0;
+                    background: #fff;
+                    z-index: 1;
+                    transition: .3s;
+                }
+                &:after {
+                    content: "";
+                    width: 17px;
+                    height: 17px;
+                    border: 1px solid $border-color;
+                    position: absolute;
+                    top: 5px;
+                    left: 3px;
+                    background: $primary-color;
+                    z-index: 2;
+                    transition: .3s;
+                    transform: scale(0);
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+            &:hover {
+                &:before {
+                    border-color: $primary-color;
+                }
+            }
+            input[type=checkbox] {
+                &:checked {
+                    ~label {
+                        &:after {
+                            transform: scale(1);
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &--open {
+        opacity: 1;
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+    }
+}

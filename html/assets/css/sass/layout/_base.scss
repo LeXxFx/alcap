@@ -16,7 +16,6 @@ body {
     max-width: $container-width + 30px;
 }
 
-
 .slick-slide {
     &:focus {
         outline: none;
@@ -26,6 +25,19 @@ body {
 .btn {
     &:focus {
         outline: none;
+    }
+    &-blue {
+        background: url(../images/catalog_title.png) no-repeat 0 0;
+        color: #fff;
+        text-align: center;
+        border-radius: 0;
+        font-size: 17px;
+        font-weight: bold;
+        padding: 7px 15px;
+        transition: .3s;
+        &:hover {
+            color: $second-color;
+        }
     }
 }
 

@@ -164,6 +164,12 @@ body.modal-open,
             margin: 0;
             padding: 5px;
             font-size: 16px;
+            &:hover {
+                color: $second-color;
+            }
+            &:focus {
+                outline: none;
+            }
         }
         .preview-arrows {
             button {
