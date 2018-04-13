@@ -288,7 +288,7 @@ var Shop = function () {
 	};
 
 	var itemPreview = function () {
-		$('.item__preview').on('click', function (e) {
+		$(document).on('click', '.item__preview', function (e) {
 			e.preventDefault();
 			var that = $(this),
 				$modal = $('.product-preview');
@@ -296,7 +296,7 @@ var Shop = function () {
 			$modal.modal('show');
 
 			$modal.on('hidden', function () {
-				$('.quick-buy').removeClass('quick-buy--open');
+				$('.quick-buy').removeClass('alcap-popup--open');
 			})
 		});
 	};
@@ -324,6 +324,23 @@ var Shop = function () {
 		});
 	}
 
+	var itemAvaliable = function () {
+		var progress = $('.products').find('.avaliable');
+
+		progress.each(function () {
+			var that = $(this),
+				procent = that.data('procent'),
+				part = 11,
+				value = 1;
+
+			if (procent > 0) {
+				value = Math.floor(procent / part);
+			}
+
+			that.find('div').animate({ width: part * value + 'px' });
+		});
+	};
+
 	return {
 		init: function () {
 			inputCounter();
@@ -334,6 +351,7 @@ var Shop = function () {
 			itemPreview();
 			quickBuy();
 			alcapPopup();
+			itemAvaliable();
 		}
 	};
 }();

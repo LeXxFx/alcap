@@ -368,43 +368,7 @@ body.modal-open,
                     .panel-price {
                         width: 190px;
                         margin: 90px 0 20px 0;
-                        background: #f1f1f1;
-                        border-radius: 3px;
-                        position: relative;
                         padding: 10px 40px 10px 25px;
-                        text-align: center;
-                        .save-proc {
-                            font-weight: bold;
-                            color: $text-color;
-                            display: block;
-                            padding: 4px 12px;
-                            background: url(../images/bg_info.png) no-repeat center 0;
-                            position: absolute;
-                            top: 0;
-                            right: 0;
-                        }
-                        .old-price {
-                            text-decoration: line-through;
-                            font-size: 16px;
-                            font-weight: bold;
-                            color: $text-color;
-                            margin: 0;
-                        }
-                        .current-price {
-                            font-size: 30px;
-                            line-height: 1.2;
-                            font-weight: bold;
-                            color: $second-color;
-                            margin: 0;
-                        }
-                        &__save {
-                            span {
-                                display: inline-block;
-                                padding: 5px 20px;
-                                background: $second-color;
-                                border-radius: 3px;
-                            }
-                        }
                     }
                 }
             }

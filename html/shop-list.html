@@ -26,7 +26,7 @@
 </head>
 
 <body>
-	<header id="header">
+	<header id="header" class="is-auth">
 		<div class="container">
 			<div class="header">
 				<a class="logo">
@@ -37,23 +37,30 @@
 						<a href="#katalog" title="Каталог товаров" class="link-nav">
 							<i class="icon icon-catalog"></i>
 							<strong>Каталог товаров</strong>
+							<span class="mobile-label">Каталог</span>
 						</a>
-						<a href="http://www.alcap.ru/personal/" target="_blank" title="Личный кабинет">
+						<a href="http://www.alcap.ru/personal/" target="_blank" title="Сделать заказ">
 							<i class="icon icon-cart"></i>
 							<strong>Сделать заказ</strong>
+							<span class="mobile-label">Заказ</span>
 						</a>
 					</nav>
 					<div class="short-cart">
-						<a href="tel:88000034034" class="link-digit">
+						<a href="tel:88000034034" class="link-digit" title="Корзина">
 							<i class="icon icon-cart2"></i>
-							354000 р. (54)</a>
+							<strong>354000 р. (54)</strong>
+							<span class="mobile-label">Корзина</span>
+						</a>
 					</div>
 					<div class="account-link">
-						<a href="#">
+						<a href="#" title="Перейти в кабинет">
 							<i class="icon icon-profile"></i>
-							Спортивный инстркутор</a>
-						<a href="#">
+							<span>Спортивный инстркутор</span>
+							<span class="mobile-label">Кабинет</span>
+						</a>
+						<a href="#" title="Выйти">
 							<i class="icon icon-exit"></i>
+							<span class="mobile-label">Выйти</span>
 						</a>
 					</div>
 				</div>
@@ -210,8 +217,8 @@
 									</div>
 									<div class="imgs-list">
 										<div class="item current">
-											<a href="demo/img_product1.jpg" data-preview="demo/img_product1.jpg" data-source="image">
-												<img src="demo/img_product1.jpg" alt="" />
+											<a href="demo/img_product4.jpg" data-preview="demo/img_product4.jpg" data-source="image">
+												<img src="demo/img_product4.jpg" alt="" />
 											</a>
 										</div>
 										<div class="item">
@@ -224,10 +231,15 @@
 												<img src="demo/img_product3.jpg" alt="" />
 											</a>
 										</div>
+										<div class="item">
+											<a href="demo/img_product1.jpg" data-preview="demo/img_product1.jpg" data-source="image">
+												<img src="demo/img_product1.jpg" alt="" />
+											</a>
+										</div>
 									</div>
 									<div class="image__preview">
-										<a href="demo/img_product1.jpg" class="MagicZoomPlus" rel="preload-selectors-small:false;preload-selectors-big:false;initialize-on:mouseover;smoothing-speed:70;fps:40;selectors-effect:false;show-title:false;loading-msg:Загрузка...;background-opacity:10;zoom-width:420;zoom-height:420;zoom-distance:5;hint-text:;selectors-class:current;buttons:hide;caption-source:span;">
-											<img src="demo/img_product1.jpg" alt="" />
+										<a href="demo/img_product4.jpg" class="MagicZoomPlus" rel="preload-selectors-small:false;preload-selectors-big:false;initialize-on:mouseover;smoothing-speed:70;fps:40;selectors-effect:false;show-title:false;loading-msg:Загрузка...;background-opacity:10;zoom-width:420;zoom-height:420;zoom-distance:5;hint-text:;selectors-class:current;buttons:hide;caption-source:span;">
+											<img src="demo/img_product4.jpg" alt="" />
 										</a>
 									</div>
 								</div>
@@ -270,12 +282,126 @@
 									</div>
 								</div>
 								<div class="item__panel">
-									<div class="item__price">
-										<span class="old">1505</span>
-										<span class="new">1480</span>
-										<span class="currency">руб.</span>
+									<div class="panel-price">
+										<span class="save-proc">-20%</span>
+										<p class="old-price">1990 р.</p>
+										<p class="current-price">1690 р.</p>
+										<div class="panel-price__save">
+											<p>Вы экономите</p>
+											<span>300 руб.</span>
+										</div>
+									</div>
+									<div class="item__avaliable">
+										<p>Наличие:</p>
+										<div class="avaliable" data-procent="65">
+											<div class="avaliable__indicator"></div>
+										</div>
+									</div>
+									<div class="item_lockout">
+										<div class="message-visible">Чтобы увидеть цену, необходимо авторизоваться</div>
+										<div class="message-hidden">
+											<a href="#">Войти в личный кабинет</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item product__item">
+							<div class="item__wrap">
+								<div class="item__image">
+									<div class="item-top">
+										<div class="item-top__inner">
+											<div class="item__stick item__stick-discont">
+												<span class="num"></span>
+												<b>- 40%</b>
+											</div>
+											<div class="item__timer">
+												<i class="icon icon-timer"></i>
+												<div class="soon" data-due="2018-04-21T22:05" data-layout="line" data-format="h,m,s" data-labels-days=":" data-labels-hours=":"
+												 data-labels-minutes=":" data-labels-seconds=" ">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="imgs-list">
+										<div class="item current">
+											<a href="demo/img_product3.jpg" data-preview="demo/img_product3.jpg" data-source="image">
+												<img src="demo/img_product3.jpg" alt="" />
+											</a>
+										</div>
+										<div class="item">
+											<a href="demo/img_product2.jpg" data-preview="demo/img_product2.jpg" data-source="image">
+												<img src="demo/img_product2.jpg" alt="" />
+											</a>
+										</div>
+										<div class="item">
+											<a href="demo/img_product3.jpg" data-preview="demo/img_product3.jpg" data-source="image">
+												<img src="demo/img_product3.jpg" alt="" />
+											</a>
+										</div>
+									</div>
+									<div class="image__preview">
+										<a href="demo/img_product3.jpg" class="MagicZoomPlus" rel="preload-selectors-small:false;preload-selectors-big:false;initialize-on:mouseover;smoothing-speed:70;fps:40;selectors-effect:false;show-title:false;loading-msg:Загрузка...;background-opacity:10;zoom-width:420;zoom-height:420;zoom-distance:5;hint-text:;selectors-class:current;buttons:hide;caption-source:span;">
+											<img src="demo/img_product3.jpg" alt="" />
+										</a>
+									</div>
+								</div>
+								<div class="item__info">
+									<div class="item__name">
+										<a href="product.html">Кимоно для карате БОЕЦЪ</a>
+									</div>
+									<div class="item__product-options">
+										<div class="prop prop-size clearfix">
+											<div class="name">Размеры в наличии</div>
+											<div class="values">
+												<div class="value">
+													<span>s 37</span>
+												</div>
+												<div class="value active">
+													<span>xl 40</span>
+												</div>
+												<div class="value">
+													<span>xxl 45</span>
+												</div>
+												<div class="value">
+													<span>xxxl 47</span>
+												</div>
+											</div>
+										</div>
+										<div class="prop prop-color clearfix">
+											<div class="name">Цвет (вторая хар-ка)</div>
+											<div class="values">
+												<div class="value">
+													<img src="assets/images/color_white.png" alt="" />
+												</div>
+												<div class="value active">
+													<img src="assets/images/color_grey.png" alt="" />
+												</div>
+												<div class="value">
+													<img src="assets/images/color_darkgrey.png" alt="" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item__avaliable">
+										<p>Наличие:</p>
+										<div class="avaliable" data-procent="65">
+											<div class="avaliable__indicator"></div>
+										</div>
+									</div>
+								</div>
+								<div class="item__panel">
+									<div class="panel-price">
+										<span class="save-proc">-20%</span>
+										<p class="old-price">1990 р.</p>
+										<p class="current-price">1690 р.</p>
+										<div class="panel-price__save">
+											<p>Вы экономите</p>
+											<span>300 руб.</span>
+										</div>
 									</div>
 									<div class="item__input-counter">
+										<p class="counter-help">МЕ 1 уп. </p>
 										<button type="button" class="btn btn-minus btn-number" data-type="minus" data-field="quant[2]">
 											-
 										</button>
@@ -288,15 +414,152 @@
 										</button>
 									</div>
 									<div class="item__buttons">
-										<button class="btn btn-quick-buy" title="Купить в один клик">
-											<i class="icon icon-hand"></i>
+										<button class="btn btn-add-to-cart" title="Купить в один клик">
+											Добавить в корзину
 										</button>
-										<button class="btn btn-add-to-cart" title="Положить в корзину">
-											<i class="icon icon-cart-white"></i>
+										<button class="btn btn-quick-buy" title="Положить в корзину">
+											Быстрый заказ
 										</button>
 									</div>
-									<div class="item__delivary">
-										<b>Доставка:</b> 19 февраля
+								</div>
+							</div>
+						</div>
+						<div class="product-list__item product__item">
+							<div class="item__wrap">
+								<div class="item__image">
+									<div class="item-top">
+										<div class="item-top__inner">
+											<div class="item__stick item__stick-discont">
+												<span class="num"></span>
+												<b>- 40%</b>
+											</div>
+											<div class="item__timer">
+												<i class="icon icon-timer"></i>
+												<div class="soon" data-due="2018-04-21T22:05" data-layout="line" data-format="h,m,s" data-labels-days=":" data-labels-hours=":"
+												 data-labels-minutes=":" data-labels-seconds=" ">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="imgs-list">
+										<div class="item current">
+											<a href="demo/img_product1.jpg" data-preview="demo/img_product1.jpg" data-source="image">
+												<img src="demo/img_product1.jpg" alt="" />
+											</a>
+										</div>
+										<div class="item">
+											<a href="demo/img_product2.jpg" data-preview="demo/img_product2.jpg" data-source="image">
+												<img src="demo/img_product2.jpg" alt="" />
+											</a>
+										</div>
+										<div class="item">
+											<a href="demo/img_product3.jpg" data-preview="demo/img_product3.jpg" data-source="image">
+												<img src="demo/img_product3.jpg" alt="" />
+											</a>
+										</div>
+										<div class="item">
+											<a href="demo/img_product2.jpg" data-preview="demo/img_product2.jpg" data-source="image">
+												<img src="demo/img_product2.jpg" alt="" />
+											</a>
+										</div>
+										<div class="item">
+											<a href="demo/img_product3.jpg" data-preview="demo/img_product3.jpg" data-source="image">
+												<img src="demo/img_product3.jpg" alt="" />
+											</a>
+										</div>
+									</div>
+									<div class="image__preview">
+										<a href="demo/img_product1.jpg" class="MagicZoomPlus" rel="preload-selectors-small:false;preload-selectors-big:false;initialize-on:mouseover;smoothing-speed:70;fps:40;selectors-effect:false;show-title:false;loading-msg:Загрузка...;background-opacity:10;zoom-width:420;zoom-height:420;zoom-distance:5;hint-text:;selectors-class:current;buttons:hide;caption-source:span;">
+											<img src="demo/img_product1.jpg" alt="" />
+										</a>
+									</div>
+								</div>
+								<div class="item__info">
+									<div class="item__name">
+										<a href="product.html">Кимоно для карате БОЕЦЪ</a>
+									</div>
+									<div class="item__product-options">
+										<div class="prop prop-size clearfix">
+											<div class="name">Размеры в наличии</div>
+											<div class="values">
+												<div class="value">
+													<span>s 37</span>
+												</div>
+												<div class="value active">
+													<span>xl 40</span>
+												</div>
+												<div class="value">
+													<span>xxl 45</span>
+												</div>
+												<div class="value">
+													<span>xxxl 47</span>
+												</div>
+												<div class="value active">
+													<span>xl 40</span>
+												</div>
+												<div class="value">
+													<span>xxl 45</span>
+												</div>
+												<div class="value">
+													<span>xxxl 47</span>
+												</div>
+											</div>
+										</div>
+										<div class="prop prop-color clearfix">
+											<div class="name">Цвет (вторая хар-ка)</div>
+											<div class="values">
+												<div class="value">
+													<img src="assets/images/color_white.png" alt="" />
+												</div>
+												<div class="value active">
+													<img src="assets/images/color_grey.png" alt="" />
+												</div>
+												<div class="value">
+													<img src="assets/images/color_darkgrey.png" alt="" />
+												</div>
+												<div class="value">
+													<img src="assets/images/color_white.png" alt="" />
+												</div>
+												<div class="value active">
+													<img src="assets/images/color_grey.png" alt="" />
+												</div>
+												<div class="value">
+													<img src="assets/images/color_darkgrey.png" alt="" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item__avaliable">
+										<p>Наличие:</p>
+										<div class="avaliable" data-procent="80">
+											<div class="avaliable__indicator"></div>
+										</div>
+									</div>
+								</div>
+								<div class="item__panel">
+									<div class="panel-price">
+										<p class="current-price">1690 р.</p>
+									</div>
+									<div class="item__input-counter">
+										<p class="counter-help">МЕ 1 уп. </p>
+										<button type="button" class="btn btn-minus btn-number" data-type="minus" data-field="quant[2]">
+											-
+										</button>
+										<div class="input-group-text">
+											<input type="text" name="quant[2]" class="form-control input-number input-area" value="1" min="1" max="100000" data-step="1"
+											 data-unit="">
+										</div>
+										<button type="button" class="btn btn-plus btn-number" data-type="plus" data-field="quant[2]">
+											+
+										</button>
+									</div>
+									<div class="item__buttons">
+										<button class="btn btn-add-to-cart" title="Купить в один клик">
+											Добавить в корзину
+										</button>
+										<button class="btn btn-quick-buy" title="Положить в корзину">
+											Быстрый заказ
+										</button>
 									</div>
 								</div>
 							</div>
@@ -696,101 +959,106 @@
 							</li>
 						</ul>
 					</div>
-					<div class="filters">
-						<div class="filter filter-slider">
-							<div class="filter__top">
-								<span>Цена, руб.</span>
-								<a href="#" class="filter-slider__clear">сбросить</a>
+					<a class="filters-toggle">Фильтр
+						<i class="fa fa-angle-down"></i>
+					</a>
+					<div class="filters-wrapper">
+						<div class="filters">
+							<div class="filter filter-slider">
+								<div class="filter__top">
+									<span>Цена, руб.</span>
+									<a href="#" class="filter-slider__clear">сбросить</a>
+								</div>
+								<div class="filter-slider__slider">
+									<div class="slider-range" data-min-value="0" data-max-value="100"></div>
+									<div class="slider-inputs">
+										<input type="text" class="form-control input-number-min" />
+										<span>&mdash;</span>
+										<input type="text" class="form-control input-number-max" value="100" />
+									</div>
+								</div>
 							</div>
-							<div class="filter-slider__slider">
-								<div class="slider-range" data-min-value="0" data-max-value="100"></div>
-								<div class="slider-inputs" title="Необходимо авторизироваться">
-									<input type="text" class="form-control input-number-min" disabled />
-									<span>&mdash;</span>
-									<input type="text" class="form-control input-number-max" value="100" disabled />
+							<div class="filter filter-list">
+								<div class="filter__top">
+									<span>Размеры</span>
+									<a href="#" class="filter__cancel">сбросить</a>
+								</div>
+								<div class="scrollbar-rail checkbox-list">
+									<div class="checkbox">
+										<input type="checkbox" id="v-option1" name="selector">
+										<label for="v-option1">120 см (2)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="v-option2" name="selector">
+										<label for="v-option2">130 см (3)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="v-option3" name="selector">
+										<label for="v-option3">140 см (2)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="v-option4" name="selector">
+										<label for="v-option4">150 см (5)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="v-option5" name="selector">
+										<label for="v-option5">160 см (5)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="v-option6" name="selector">
+										<label for="v-option6">120 см (2)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="v-option7" name="selector">
+										<label for="v-option7">130 см (3)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="v-option8" name="selector">
+										<label for="v-option8">140 см (2)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="v-option9" name="selector">
+										<label for="v-option9">150 см (5)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="v-option10" name="selector">
+										<label for="v-option10">160 см (5)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="filter filter-list">
-							<div class="filter__top">
-								<span>Размеры</span>
-								<a href="#" class="filter__cancel">сбросить</a>
-							</div>
-							<div class="scrollbar-rail checkbox-list">
-								<div class="checkbox">
-									<input type="checkbox" id="v-option1" name="selector">
-									<label for="v-option1">120 см (2)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" id="v-option2" name="selector">
-									<label for="v-option2">130 см (3)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" id="v-option3" name="selector">
-									<label for="v-option3">140 см (2)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" id="v-option4" name="selector">
-									<label for="v-option4">150 см (5)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" id="v-option5" name="selector">
-									<label for="v-option5">160 см (5)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" id="v-option6" name="selector">
-									<label for="v-option6">120 см (2)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" id="v-option7" name="selector">
-									<label for="v-option7">130 см (3)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" id="v-option8" name="selector">
-									<label for="v-option8">140 см (2)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" id="v-option9" name="selector">
-									<label for="v-option9">150 см (5)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" id="v-option10" name="selector">
-									<label for="v-option10">160 см (5)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-							</div>
-						</div>
+						<a class="filters-btn" href="#">Показать товары (34)</a>
 					</div>
-					<a class="filters-btn" href="#">Показать товары (34)</a>
 					<div class="sales-item">
 						<a href="#">
 							<div class="sales-item__title">
@@ -879,6 +1147,71 @@
 					</div>
 				</form>
 			</div>
+		</div>
+	</div>
+	<div class="alcap-popup quick-buy">
+		<div class="alcap-popup-inner">
+			<button class="alcap-popup__close">Закрыть</button>
+			<div class="quick-buy__sum">
+				<div class="quick-buy__title">
+					Итого:
+				</div>
+
+				<p>Количество товаров
+					<strong>100</strong>
+				</p>
+				<p>Количество позиций
+					<strong>1</strong>
+				</p>
+				<p>На сумму
+					<strong>169000 р.</strong>
+				</p>
+				<p>
+					<strong class="yellow">Экономия</strong>
+					<strong>30000 р.</strong>
+				</p>
+			</div>
+			<div class="quick-buy__order">
+				<div class="quick-buy__title">
+					Быстрый заказ
+				</div>
+				<p>
+					<strong>Укажите способ доставки:</strong>
+				</p>
+				<div class="delivary-list">
+					<div class="checkbox">
+						<input type="checkbox" id="delivary-1" name="delivary-1">
+						<label for="delivary-1">самовывоз</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="delivary-2" name="delivary-2">
+						<label for="delivary-2">транспортная компания</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="delivary-3" name="delivary-3">
+						<label for="delivary-3">доставка</label>
+					</div>
+				</div>
+				<button class="btn btn-blue">Оформить</button>
+			</div>
+			<div class="quick-buy__botom">
+				<a href="#">
+					<i class="icon icon-letter"></i>
+				</a>
+				<span></span>
+				<a href="#">
+					<i class="icon icon-print"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="alcap-popup alert-counter alert-counter--open">
+		<div class="alcap-popup-inner">
+			<button class="alcap-popup__close">Закрыть</button>
+			<p>Извините, доступное количество на нашем складе:
+				<strong>18 шт.</strong>
+			</p>
+			<button class="btn btn-yellow">Хорошо</button>
 		</div>
 	</div>
 

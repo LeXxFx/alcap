@@ -7,10 +7,9 @@
     right: 0;
     top: 0;
     z-index: 1000;
-
     a {
         &:visited {
-            color:#800080;
+            color: #800080;
         }
     }
     .header {
@@ -44,7 +43,6 @@
                     display: flex;
                     align-items: center;
                     margin: 0 0 0 80px;
-
                     strong {
                         text-decoration: underline;
                         font-weight: 600;
@@ -67,7 +65,6 @@
                     line-height: 1.1;
                     position: relative;
                     padding-right: 20px;
-
                     &:after {
                         content: "";
                         height: 38px;
@@ -105,12 +102,88 @@
             }
         }
     }
+    &.is-auth {
+        .header {
+            &__main {
+                flex: 1 1 auto;
+                .mobile-label {
+                    display: none;
+                    font-size: 9px;
+                    text-transform: uppercase;
+                }
+                nav {
+                    justify-content: flex-start;
+                    a {
+                        flex: 0 0 45%;
+                        margin: 0 0 0 35px;
+                        white-space: nowrap;
+                    }
+                }
+                .short-cart {
+                    flex: 0 0 180px;
+                    position: relative;
+                    padding: 0 0 0 20px;
+                    margin: 0 0 0 30px;
+                    &:before {
+                        content: "";
+                        display: block;
+                        height: 43px;
+                        width: 1px;
+                        background: $primary-color;
+                        position: absolute;
+                        left: 0;
+                        top: -10px;
+                    }
+                    a {
+                        display: flex;
+                        align-items: center;
+                        color: $primary-color;
+                        text-decoration: none;
+                        >strong {
+                            margin: 0 0 0 15px;
+                            text-decoration: underline;
+                        }
+                        &:hover {
+                            >strong {
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+                .account-link {
+                    flex: 0 0 150px;
+                    border: 1px solid $primary-color;
+                    border-radius: 3px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 5px;
+                    margin: 0 0 0 30px;
+                    a {
+                        display: flex;
+                        align-items: center;
+                        color: $primary-color;
+                        >span:not(.mobile-label) {
+                            display: inline-block;
+                            width: 80px;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            margin: 0 0 0 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
 .modal-open {
     #header {
         padding-right: 17px;
     }
 }
+
 @media screen and (max-width: $small-desktop) {
     #header {
         .header {
@@ -122,7 +195,22 @@
                     }
                 }
             }
-        }    
+        }
+        &.is-auth {
+            .header {
+                &__main {
+                    nav {
+                        justify-content: flex-end;
+                        a {
+                            flex: 0 0 auto;
+                            &:last-child {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -140,8 +228,86 @@
                     }
                 }
             }
-        }    
-    }    
+        }
+        &.is-auth {
+            .header {
+                &__main {
+                    padding: 20px 0;
+                    align-items: center;
+                    .mobile-label {
+                        display: block !important;
+                    }
+                    nav {
+                        display: inline-block;
+                        margin: 0;
+                        padding: 0;
+                        a {
+                            margin: 0 0;
+                            width: 45px;
+                            display: inline-block;
+                            i {
+                                margin: 0;
+                                position: relative;
+                                bottom: -3px;
+                            }
+                            &:last-child {
+                                display: inline-block;
+                            }
+                            &:hover {
+                                text-decoration: underline;
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                    .short-cart {
+                        display: inline-block;
+                        margin: 0;
+                        padding: 0;
+                        &:before {
+                            display: none;
+                        }
+                        a {
+                            margin: 0 0;
+                            width: 45px;
+                            display: inline-block;
+                            i {
+                                height: 22px;
+                            }
+                            >strong {
+                                display: none;
+                            }
+                            &:hover {
+                                text-decoration: underline;
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                    .account-link {
+                        display: inline-block;
+                        border: none;
+                        padding: 0;
+                        margin: 0;
+                        a {
+                            display: inline-block;
+                            margin: 0 0;
+                            width: 45px;
+                            text-align: center;
+                            i {
+                                height: 21px;
+                            }
+                            >span:not(.mobile-label) {
+                                display: none;
+                            }
+                            &:hover {
+                                text-decoration: underline;
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $mobile) {
@@ -186,6 +352,6 @@
                     }
                 }
             }
-        }    
+        }
     }
 }
