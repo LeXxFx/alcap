@@ -1,39 +1,68 @@
-.quick-buy {
-    opacity: 0;
-    visibility: hidden;
-    transform: translate3d(5ch, 0.4in, 5em);
+.alcap-popup {
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 10001;
     background: #fff;
-    width: 310px;
-    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.1);
-    border-radius: 3px;
-    transition: transform .3s, opacity .3s, visability .3s;
+    opacity: 0;
+    visibility: hidden;
     &-inner {
         position: relative;
     }
     &__close {
         position: absolute;
-        top: 0;
-        right: 0;
-        background: url(../images/bg_close.png) no-repeat 0 0;
-        width: 109px;
-        height: 32px;
-        color: #fff;
-        text-align: center;
+        top: 5px;
+        right: 5px;
+        background: url(../images/sprite.png) no-repeat -4px -86px;
+        width: 17px;
+        height: 18px;
+        display: block;
+        transition: .3s;
         border: none;
-        margin: 0;
-        padding: 5px;
-        font-size: 16px;
+        text-indent: -999em;
         &:hover {
-            color: $second-color;
+            opacity: 0.8;
         }
         &:focus {
             outline: none;
         }
     }
+    &--open {
+        opacity: 1;
+        visibility: visible;
+        transform: translate3d(0, 0, 0) !important;
+    }
+}
+
+.alert-counter {
+    width: 330px;
+    transform: translate3d(5ch, 0.4in, 5em);
+    transition: transform .3s, opacity .3s, visability .3s;
+    .alcap-popup-inner {
+        padding: 30px 20px 25px 20px;
+    }
+    p {
+        margin: 0 0 20px 0;
+        text-align: center;
+        font-weight: 600;
+        strong {
+            color: $primary-color;
+        }
+    }
+    .btn {
+        display: block;
+        margin: 0 auto;
+        width: 220px;
+        height: 42px;
+    }
+}
+
+.quick-buy {
+    width: 310px;
+    transform: translate3d(5ch, 0.4in, 5em);
+    transition: transform .3s, opacity .3s, visability .3s;
     &__title {
         color: $second-color;
         font-size: 21px;
@@ -139,11 +168,6 @@
                 }
             }
         }
-    }
-    &--open {
-        opacity: 1;
-        visibility: visible;
-        transform: translate3d(0, 0, 0);
     }
 }
 

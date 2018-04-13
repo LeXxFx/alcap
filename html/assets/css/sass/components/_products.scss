@@ -183,8 +183,9 @@
             border: none;
             color: #fff;
             background: $primary-color;
+            transition: .3s;
             &:hover {
-                background: darken($primary-color, 5%);
+                background: $second-color;
             }
         }
         .input-group-text {

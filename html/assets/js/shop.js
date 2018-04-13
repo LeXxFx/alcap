@@ -1,10 +1,18 @@
 ﻿var CheckMaxQuantity = function (el) {
+
 	var $val = el.val(),
 		$max = el.attr('max'),
 		$min = el.attr('min'),
 		$trimVal = $val.trim(),
 		btnPlus = el.parent().find('.btn-minus'),
-		btnMinus = el.parent().find('.btn-minus');
+		btnMinus = el.parent().find('.btn-minus'),
+		$form = $('.alert-counter'),
+		pos = el.offset();
+
+	$form.removeAttr("style").css({
+		'top': pos.top - ($form.height() + 20),
+		'left': pos.left - ($form.width() / 2 - 40)
+	}).addClass('alcap-popup--open');
 
 	if (+($trimVal) > $max) {
 		el.val($max);
@@ -122,12 +130,12 @@ var Shop = function () {
 	};
 
 	var filters = function () {
-        $('.filters-toggle').on('click', function (e) {
-            e.preventDefault();
-            $('.filters-wrapper').toggleClass('filters-wrapper--open');
-            $(this).toggleClass('active');
-        });
-    }
+		$('.filters-toggle').on('click', function (e) {
+			e.preventDefault();
+			$('.filters-wrapper').toggleClass('filters-wrapper--open');
+			$(this).toggleClass('active');
+		});
+	}
 
 	var itemGallery = function () {
 		var galeries = $('.products').find('.item-gallery');
@@ -303,14 +311,16 @@ var Shop = function () {
 			$form.removeAttr("style").css({
 				'top': pos.top - ($form.height() / 2 - 30),
 				'left': pos.left - $form.width()
-			}).addClass('quick-buy--open');
+			}).addClass('alcap-popup--open');
 		});
+	}
 
-		$(document).on('click', '.quick-buy__close', function (e) {
+	var alcapPopup = function () {
+		$(document).on('click', '.alcap-popup__close', function (e) {
 			e.preventDefault();
 			var that = $(this);
 
-			that.closest('.quick-buy').removeClass('quick-buy--open');
+			that.closest('.alcap-popup').removeClass('alcap-popup--open');
 		});
 	}
 
@@ -323,6 +333,7 @@ var Shop = function () {
 			productsCatalog();
 			itemPreview();
 			quickBuy();
+			alcapPopup();
 		}
 	};
 }();
