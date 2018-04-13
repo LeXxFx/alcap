@@ -26,6 +26,33 @@
             }
         }
     }
+    .filters-toggle {
+        display: none;
+        margin: 0 0 15px 0;
+        text-decoration: none;
+        color: $primary-color;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        display: none;
+        border-bottom: 1px solid $second-color;
+        padding: 0 0 15px 0;
+        text-align: center;
+        &:hover {
+            color: $second-color;
+        }
+        i {
+            font-size: 18px;
+            margin: 0 0 0 5px;
+            position: relative;
+            top: 2px;
+        }
+        &.active {
+            i {
+                transform: rotate(180deg);
+            }
+        }
+    }
     .filters {
         margin: 0 0 25px 0;
         .filter {
@@ -217,7 +244,8 @@
             bottom: 2px;
             left: 2px;
             background: url(../images/bg_sale.png) no-repeat right 0;
-            width: 245px;
+            max-width: 245px;
+            width: 95%;
             height: 51px;
             font-size: 17px;
             text-transform: uppercase;
@@ -226,6 +254,55 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #sidebar {
+        flex: 1 1 260px;
+        .catalog-navi {
+            ul {
+                li {
+                    margin: 0;
+                    a {
+                        padding: 8px 15px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #sidebar {
+        flex: 1 1 100%;
+        margin: 0;
+        .sales-item {
+            display: none;
+        }
+        .catalog-navi {
+            margin-bottom: 20px;
+        }
+        .filters {
+            max-width: 260px;
+            margin: 0 auto;
+            .filter {
+                margin: 0 0 20px 0;
+                &:first-of-type {
+                    border-top: none;
+                }
+            }
+        }
+        .filters-toggle {
+            display: block;
+        }
+        .filters-wrapper {
+            display: none;
+            &--open {
+                display: block;
+            }
         }
     }
 }

@@ -8,7 +8,7 @@
         border-radius: 3px;
         background: #fff;
         position: relative;
-        z-index: 1001;
+        z-index: 200;
         height: 80px;
         .manager-info {
             color: $primary-color;
@@ -55,7 +55,7 @@
             &:before {
                 content: "";
                 display: block;
-                margin: 5px 10px 10px;
+                margin: 5px 0 20px;
                 height: 1px;
                 background: $border-color;
             }
@@ -158,5 +158,47 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .auth-info {
+        &__contacts {
+            .col-info {
+                font-size: 12px;
+                strong {
+                    font-size: 16px;
+                }
+                &.col-phone {
+                    min-width: 180px;
+                }
+                &.col-director {
+                    flex: 1 1 24.5%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .auth-info {
+        &__contacts {
+            .col-info {
+                flex: 0 0 49.5%;
+                text-align: center;
+                &.col-skype {
+                    display: none;
+                }
+                &.col-director {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .auth-info {
+        display: none;
     }
 }

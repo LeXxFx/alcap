@@ -37,3 +37,15 @@
         z-index: 1;
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .page-heading {
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-heading {
+        font-size: 22px;
+    }
+}

@@ -5,7 +5,6 @@
         padding: 0;
         list-style: none;
     }
-
     li {
         font-size: 17px;
         color: $primary-color;
@@ -13,7 +12,6 @@
         display: inline-block;
         margin-right: 10px;
         vertical-align: top;
-
         a {
             color: $primary-color;
             font-size: 17px;
@@ -21,7 +19,6 @@
             padding-right: 18px;
             display: block;
             position: relative;
-
             &:after {
                 font: normal normal normal 17px/1 FontAwesome;
                 font-size: inherit;
@@ -39,15 +36,30 @@
                 opacity: .7;
             }
         }
-
         &:last-of-type {
             a {
                 padding-right: 0;
-
                 &:after {
                     display: none;
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .breadcrumbs {
+        li {
+            font-size: 13px;
+            a {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $small-mobile) {
+    .breadcrumbs {
+        display: none;
     }
 }

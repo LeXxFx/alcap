@@ -121,6 +121,14 @@ var Shop = function () {
 		}
 	};
 
+	var filters = function () {
+        $('.filters-toggle').on('click', function (e) {
+            e.preventDefault();
+            $('.filters-wrapper').toggleClass('filters-wrapper--open');
+            $(this).toggleClass('active');
+        });
+    }
+
 	var itemGallery = function () {
 		var galeries = $('.products').find('.item-gallery');
 		if (galeries.length > 0) {
@@ -274,21 +282,30 @@ var Shop = function () {
 	var itemPreview = function () {
 		$('.item__preview').on('click', function (e) {
 			e.preventDefault();
-			var that = $(this);
-			$('.product-preview').modal('show');
+			var that = $(this),
+				$modal = $('.product-preview');
+
+			$modal.modal('show');
+
+			$modal.on('hidden', function () {
+				$('.quick-buy').removeClass('quick-buy--open');
+			})
 		});
 	};
 
 	var quickBuy = function () {
 		$('.btn-quick-buy').on('click', function (e) {
 			e.preventDefault();
-			var pos = $(this).position();
+			var that = $(this),
+				$form = $('.quick-buy'),
+				pos = that.offset();
 
-			$('.quick-buy').css({
-				'top': pos.top - 30,
-				'left': pos.left - 5
+			$form.removeAttr("style").css({
+				'top': pos.top - ($form.height() / 2 - 30),
+				'left': pos.left - $form.width()
 			}).addClass('quick-buy--open');
 		});
+
 		$(document).on('click', '.quick-buy__close', function (e) {
 			e.preventDefault();
 			var that = $(this);
@@ -301,6 +318,7 @@ var Shop = function () {
 		init: function () {
 			inputCounter();
 			filterRange();
+			filters();
 			itemGallery();
 			productsCatalog();
 			itemPreview();

@@ -172,7 +172,7 @@
                             }
                         }
                         &.submenu__title {
-                          font-size: 16px;
+                            font-size: 16px;
                             font-weight: bold;
                             line-height: 1;
                             text-decoration: underline;
@@ -271,10 +271,7 @@
                 display: block;
             }
         }
-        >.btn {
-            height: 42px;
-            line-height: 28px;
-        }
+        >.btn {}
         .catalog-menu {
             display: none;
             visibility: visible;
@@ -334,12 +331,11 @@
 
 @media screen and (max-width: 767px) {
     .col-catalog {
-        position: static;
         >.btn {
-            width: 130px;
+            background-size: cover;
         }
         .catalog-menu {
-            margin: -17px 0 0 0;
+            position: static;
         }
     }
 }

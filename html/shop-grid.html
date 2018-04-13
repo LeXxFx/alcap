@@ -89,7 +89,7 @@
 					<p>Позвоните бесплатно</p>
 					<strong>8 (800) 0034-034</strong>
 					или
-					<a href="#">закажите звонок</a>
+					<a data-dismiss="modal" data-toggle="modal" data-target="#form_call">закажите звонок</a>
 				</div>
 				<div class="col-info col-email">
 					<p>Напишите письмо</p>
@@ -942,101 +942,104 @@
 							</li>
 						</ul>
 					</div>
-					<div class="filters">
-						<div class="filter filter-slider">
-							<div class="filter__top">
-								<span>Цена, руб.</span>
-								<a href="#" class="filter-slider__clear">сбросить</a>
+					<a class="filters-toggle">Фильтр <i class="fa fa-angle-down"></i></a>
+					<div class="filters-wrapper">
+						<div class="filters">
+							<div class="filter filter-slider">
+								<div class="filter__top">
+									<span>Цена, руб.</span>
+									<a href="#" class="filter-slider__clear">сбросить</a>
+								</div>
+								<div class="filter-slider__slider">
+									<div class="slider-range" data-min-value="0" data-max-value="100"></div>
+									<div class="slider-inputs" data-rel="tooltip" title="Необходимо авторизироваться">
+										<input type="text" class="form-control input-number-min" disabled />
+										<span>&mdash;</span>
+										<input type="text" class="form-control input-number-max" value="100" disabled />
+									</div>
+								</div>
 							</div>
-							<div class="filter-slider__slider">
-								<div class="slider-range" data-min-value="0" data-max-value="100"></div>
-								<div class="slider-inputs" data-rel="tooltip" title="Необходимо авторизироваться">
-									<input type="text" class="form-control input-number-min" disabled />
-									<span>&mdash;</span>
-									<input type="text" class="form-control input-number-max" value="100" disabled />
+							<div class="filter filter-list">
+								<div class="filter__top">
+									<span>Размеры</span>
+									<a href="#" class="filter__cancel">сбросить</a>
+								</div>
+								<div class="scrollbar-rail checkbox-list">
+									<div class="checkbox">
+										<input type="checkbox" id="v-option1" name="selector">
+										<label for="v-option1">120 см (2)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="v-option2" name="selector">
+										<label for="v-option2">130 см (3)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="v-option3" name="selector">
+										<label for="v-option3">140 см (2)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="v-option4" name="selector">
+										<label for="v-option4">150 см (5)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="v-option5" name="selector">
+										<label for="v-option5">160 см (5)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="v-option6" name="selector">
+										<label for="v-option6">120 см (2)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="v-option7" name="selector">
+										<label for="v-option7">130 см (3)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="v-option8" name="selector">
+										<label for="v-option8">140 см (2)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="v-option9" name="selector">
+										<label for="v-option9">150 см (5)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="v-option10" name="selector">
+										<label for="v-option10">160 см (5)</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="filter filter-list">
-							<div class="filter__top">
-								<span>Размеры</span>
-								<a href="#" class="filter__cancel">сбросить</a>
-							</div>
-							<div class="scrollbar-rail checkbox-list">
-								<div class="checkbox">
-									<input type="checkbox" id="v-option1" name="selector">
-									<label for="v-option1">120 см (2)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" id="v-option2" name="selector">
-									<label for="v-option2">130 см (3)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" id="v-option3" name="selector">
-									<label for="v-option3">140 см (2)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" id="v-option4" name="selector">
-									<label for="v-option4">150 см (5)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" id="v-option5" name="selector">
-									<label for="v-option5">160 см (5)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" id="v-option6" name="selector">
-									<label for="v-option6">120 см (2)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" id="v-option7" name="selector">
-									<label for="v-option7">130 см (3)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" id="v-option8" name="selector">
-									<label for="v-option8">140 см (2)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" id="v-option9" name="selector">
-									<label for="v-option9">150 см (5)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" id="v-option10" name="selector">
-									<label for="v-option10">160 см (5)</label>
-									<div class="check">
-										<div class="inside"></div>
-									</div>
-								</div>
-							</div>
-						</div>
+						<a class="filters-btn" href="#">Показать товары (34)</a>
 					</div>
-					<a class="filters-btn" href="#">Показать товары (34)</a>
 					<div class="sales-item">
 						<a href="#">
 							<div class="sales-item__title">

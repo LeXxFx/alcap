@@ -6,3 +6,18 @@
     order: 1;
     flex: 1 1 auto;
 }
+
+@media screen and (max-width: $mobile) {
+    .wrapper {
+        flex-wrap: wrap;
+    }
+    #content {
+        flex: 1 1 100%;
+    }
+}
+
+@media screen and (max-width: $small-mobile) {
+    .wrapper {
+        padding-top: 20px;
+    }
+}
