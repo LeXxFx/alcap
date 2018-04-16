@@ -66,9 +66,7 @@
 	}
 
 	var scrollbarRail = function() {
-		$(document).ready(function(){
-			$('.scrollbar-rail').scrollbar();
-		});
+		$('.scrollbar-rail').scrollbar();
 	}
 
 	var searchBox = function () {
