@@ -1,0 +1,741 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Корзина</title>
+	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+
+	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="stylesheet" href="assets/plugins/slick/slick.css" />
+	<link rel="stylesheet" href="assets/plugins/soon-countdown/css/soon.min.css" />
+	<link rel="stylesheet" href="assets/plugins/noUiSlider.10.0.0/nouislider.min.css" />
+	<link rel="stylesheet" href="assets/plugins/magiczoomplus/magiczoomplus.css" />
+	<link rel="stylesheet" href="assets/plugins/jquery.scrollbar/jquery.scrollbar.css" />
+
+</head>
+
+<body>
+	<header id="header" class="is-auth">
+		<div class="container">
+			<div class="header">
+				<a class="logo">
+					<img src="assets/images/logo.png" alt="">
+				</a>
+				<div class="header__main">
+					<nav>
+						<a href="#katalog" title="Каталог товаров" class="link-nav">
+							<i class="icon icon-catalog"></i>
+							<strong>Каталог товаров</strong>
+							<span class="mobile-label">Каталог</span>
+						</a>
+						<a href="http://www.alcap.ru/personal/" target="_blank" title="Сделать заказ">
+							<i class="icon icon-cart"></i>
+							<strong>Сделать заказ</strong>
+							<span class="mobile-label">Заказ</span>
+						</a>
+					</nav>
+					<div class="short-cart">
+						<a href="tel:88000034034" class="link-digit" title="Корзина">
+							<i class="icon icon-cart2"></i>
+							<strong>354000 р. (54)</strong>
+							<span class="mobile-label">Корзина</span>
+						</a>
+					</div>
+					<div class="account-link">
+						<a href="#" title="Перейти в кабинет">
+							<i class="icon icon-profile"></i>
+							<span>Спортивный инстркутор</span>
+							<span class="mobile-label">Кабинет</span>
+						</a>
+						<a href="#" title="Выйти">
+							<i class="icon icon-exit"></i>
+							<span class="mobile-label">Выйти</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="auth-info">
+			<div class="auth-info__manager">
+				<div class="manager-info">
+					<div class="img">
+						<img src="demo/avatar.png">
+					</div>
+					<p>Ваш менеджер:</p>
+					<p class="name">Андрей Митяев</p>
+					<span>
+						<i class="fa fa-angle-down"></i>
+					</span>
+				</div>
+				<div class="manager-contacts">
+					<p>Моб. тел.:
+						<span>+7 (900) 000-00-00</span>
+					</p>
+					<p>Эл.почта:
+						<span>mityaev@mail.ru</span>
+					</p>
+					<p>Skype:
+						<span>mityaev_а</span>
+					</p>
+					<p>Vk:
+						<span>vk.ru/mityaev_а</span>
+					</p>
+				</div>
+			</div>
+			<div class="auth-info__contacts">
+				<div class="col-info col-phone">
+					<p>Позвоните бесплатно</p>
+					<strong>8 (800) 0034-034</strong>
+					или
+					<a data-dismiss="modal" data-toggle="modal" data-target="#form_call">закажите звонок</a>
+				</div>
+				<div class="col-info col-email">
+					<p>Напишите письмо</p>
+					<a href="mailto:info@alcap.ru">
+						<strong>info@alcap.ru</strong>
+					</a>
+				</div>
+				<div class="col-info col-skype">
+					<p>Напишите или позвоните в скайп</p>
+					<strong>mityakov_a</strong>
+				</div>
+				<div class="col-info col-director">
+					<p>
+						<a href="#">Напишите
+							<br>нашему
+							<br>директору</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="breadcrumbs">
+			<ul>
+				<li>
+					<a href="#">Главная страница</a>
+				</li>
+				<li>
+					<a href="cabinet.html">Личный кабинет</a>
+				</li>
+				<li>
+					<span>Корзина</span>
+				</li>
+			</ul>
+		</div>
+		<div class="wrapper">
+			<div id="content" role="main">
+				<div class="wrapper__top">
+					<div class="col-catalog">
+						<button class="btn btn-green">
+							<b>
+								<i class="fa fa-angle-down"></i>
+							</b>
+							Каталог
+							<span class="hidden-xs">товаров</span>
+						</button>
+						<div class="catalog-menu">
+							<ul class="clearfix">
+								<li>
+									<a href="shop-list.html">Фитнес</a>
+								</li>
+								<li class="has-child">
+									<a href="shop-list.html">Художественная гимнастика и танцы</a>
+									<div class="submenu">
+										<div class="submenu__inner">
+											<ul>
+												<li class="submenu__title">
+													<a href="#">Художественная гимнастика и танцы</a>
+												</li>
+												<li class="has-child">
+													<a href="#">Гимнастические купальники</a>
+													<div class="submenu">
+														<div class="submenu__inner">
+															<ul>
+																<li class="submenu__title">
+																	<a href="#">Художественная гимнастика и танцы</a>
+																</li>
+																<li>
+																	<a href="#">Гимнастические купальники</a>
+
+																</li>
+																<li>
+																	<a href="#">Лосины, юбки, топы и шорты</a>
+																</li>
+																<li>
+																	<a href="#">Чешки, балетки</a>
+																</li>
+																<li>
+																	<a href="#">Обручи</a>
+																</li>
+																<li>
+																	<a href="#">Булавы, ленты, скакалки</a>
+																</li>
+																<li>
+																	<a href="#">Мячи для художественной гимнастики</a>
+																</li>
+																<li>
+																	<a href="#">Колльца, лестницы, трапеции</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</li>
+												<li>
+													<a href="#">Лосины, юбки, топы и шорты</a>
+												</li>
+												<li>
+													<a href="#">Чешки, балетки</a>
+												</li>
+												<li class="has-child">
+													<a href="#">Обручи</a>
+													<div class="submenu">
+														<div class="submenu__inner">
+															<ul>
+																<li class="submenu__title">
+																	<a href="#">Художественная гимнастика и танцы</a>
+																</li>
+																<li>
+																	<a href="#">Гимнастические купальники</a>
+
+																</li>
+																<li>
+																	<a href="#">Лосины, юбки, топы и шорты</a>
+																</li>
+																<li>
+																	<a href="#">Чешки, балетки</a>
+																</li>
+																<li>
+																	<a href="#">Обручи</a>
+																</li>
+																<li>
+																	<a href="#">Булавы, ленты, скакалки</a>
+																</li>
+																<li>
+																	<a href="#">Мячи для художественной гимнастики</a>
+																</li>
+																<li>
+																	<a href="#">Колльца, лестницы, трапеции</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</li>
+												<li>
+													<a href="#">Булавы, ленты, скакалки</a>
+												</li>
+												<li>
+													<a href="#">Мячи для художественной гимнастики</a>
+												</li>
+												<li>
+													<a href="#">Колльца, лестницы, трапеции</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="has-child">
+									<a href="shop-list.html">Тренажеры и тяжелая атлетика</a>
+									<div class="submenu">
+										<div class="submenu__inner">
+											<ul>
+												<li class="submenu__title">
+													<a href="#">Домашние тренажеры</a>
+												</li>
+												<li>
+													<a href="#">Беговые дорожки</a>
+												</li>
+												<li>
+													<a href="#">Велотренажеры</a>
+												</li>
+												<li>
+													<a href="#">Степперы, эллепсоиды</a>
+												</li>
+												<li>
+													<a href="#">Гантели разборные</a>
+												</li>
+												<li>
+													<a href="#">Гири</a>
+												</li>
+												<li>
+													<a href="#">Штанги в наборе</a>
+												</li>
+												<li>
+													<a href="#">Диски для гантелей и штанг</a>
+												</li>
+												<li>
+													<a href="#">Грифы для гантелей и штанг</a>
+												</li>
+												<li>
+													<a href="#">Стойки под штангу со скамьей</a>
+												</li>
+												<li>
+													<a href="#">Скамьи</a>
+												</li>
+												<li>
+													<a href="#">Стойки для гантелей и штанг</a>
+												</li>
+												<li>
+													<a href="#">Перчатки для тяжелой атлетики</a>
+												</li>
+												<li>
+													<a href="#">Пояса для поднятия тяжестей</a>
+												</li>
+												<li>
+													<a href="#">Турники в проем</a>
+												</li>
+												<li>
+													<a href="#">Турники настенные</a>
+												</li>
+												<li>
+													<a href="#">Турники настенные угловые</a>
+												</li>
+												<li>
+													<a href="#">Турники потолочные</a>
+												</li>
+												<li>
+													<a href="#">Прямые</a>
+												</li>
+												<li>
+													<a href="#">С широким хватом</a>
+												</li>
+												<li>
+													<a href="#">С тремя хватами</a>
+												</li>
+												<li>
+													<a href="#">Турник Брусья</a>
+												</li>
+												<li>
+													<a href="#">Пресс (3 в 1)</a>
+												</li>
+												<li>
+													<a href="#">Оборудование для шведских стенок</a>
+												</li>
+												<li>
+													<a href="#">Аксессуары к турникам</a>
+												</li>
+												<li>
+													<a href="#">Плечевые эспандеры</a>
+												</li>
+												<li>
+													<a href="#">Кистевые эспандеры</a>
+												</li>
+												<li>
+													<a href="#">Эспандеры лыжника/пловца</a>
+												</li>
+												<li>
+													<a href="#">Эспандер боксёра</a>
+												</li>
+												<li>
+													<a href="#">Эспандер восьмёрка</a>
+												</li>
+												<li>
+													<a href="#">Жгуты, ленты, петли</a>
+												</li>
+												<li>
+													<a href="#">Утяжелители</a>
+												</li>
+												<li>
+													<a href="#">Гантели</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="shop-list.html">Туризм и активный отдых</a>
+								</li>
+								<li>
+									<a href="shop-grid.html">Зимние виды спорта и активный отдых</a>
+								</li>
+								<li>
+									<a href="shop-list.html">Единоборства и бокс</a>
+								</li>
+								<li class="has-child">
+									<a href="shop-grid.html">Командные виды спорта</a>
+									<div class="submenu">
+										<div class="submenu__inner">
+											<ul>
+												<li class="submenu__title">
+													<a href="#">Баскетбол</a>
+												</li>
+												<li>
+													<a href="#">Мячи</a>
+												</li>
+												<li>
+													<a href="#">Кольца</a>
+												</li>
+												<li>
+													<a href="#">Форма</a>
+												</li>
+												<li>
+													<a href="#">Мячи</a>
+												</li>
+												<li>
+													<a href="#">Налокотники и наколенники</a>
+												</li>
+												<li>
+													<a href="#">Форма</a>
+												</li>
+												<li>
+													<a href="#">Бутсы</a>
+												</li>
+												<li>
+													<a href="#">Гетры</a>
+												</li>
+												<li>
+													<a href="#">Манишки</a>
+												</li>
+												<li>
+													<a href="#">Мячи</a>
+												</li>
+												<li>
+													<a href="#">Перчатки вратаря</a>
+												</li>
+												<li>
+													<a href="#">Форма</a>
+												</li>
+												<li>
+													<a href="#">Щитки</a>
+												</li>
+												<li>
+													<a href="#">Коньки</a>
+												</li>
+												<li>
+													<a href="#">Защита</a>
+												</li>
+												<li>
+													<a href="#">Клюшки, шайбы</a>
+												</li>
+												<li>
+													<a href="#">Хоккейный трикотаж</a>
+												</li>
+												<li>
+													<a href="#">Аэрохоккей</a>
+												</li>
+												<li>
+													<a href="#">Бильярд</a>
+												</li>
+												<li>
+													<a href="#">Дартс</a>
+												</li>
+												<li>
+													<a href="#">Настольный футбол</a>
+												</li>
+												<li>
+													<a href="#">Мини теннис</a>
+												</li>
+												<li>
+													<a href="#">Шахматы</a>
+												</li>
+												<li>
+													<a href="#">Нарды</a>
+												</li>
+												<li>
+													<a href="#">Наборы и карточные игры</a>
+												</li>
+												<li>
+													<a href="#">Плавание</a>
+												</li>
+												<li>
+													<a href="#">Фигурное катание</a>
+												</li>
+												<li>
+													<a href="#">Бадбинтон</a>
+												</li>
+												<li>
+													<a href="#">Художественная гимнастика и танцы</a>
+												</li>
+												<li>
+													<a href="#">Роликовые коньки</a>
+												</li>
+												<li>
+													<a href="#">Роликовые доски</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="shop-list.html">Летние виды спорта</a>
+								</li>
+								<li>
+									<a href="shop-grid.html">Водные виды спорта</a>
+								</li>
+								<li>
+									<a href="shop-list.html">Игры</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="search">
+						<div class="search-input">
+							<input class="search-input__text" type="text" placeholder="Поиск среди 15000 наименований">
+							<button class="search-input__baton">Найти</button>
+						</div>
+						<div class="search-menu clearfix">
+							<div class="search-menu__body">
+								<div class="head">Найдено в разделах каталога:</div>
+								<ul>
+									<li>
+										<a href="#">Кимоно для карате</a>
+									</li>
+									<li>
+										<a href="#">Кимоно для дзюдо</a>
+									</li>
+								</ul>
+								<div class="head">Найдены товары (всего 35):</div>
+								<div class="products-list clearfix">
+									<div class="item">
+										<a href="product.html">
+											<div class="img" href="product.html">
+												<img src="demo/img_product1.jpg" alt="" />
+											</div>
+											<div class="name">
+												Кимоно для карате Golden Scorpion "PKM-885"
+											</div>
+										</a>
+										<div class="price">
+											<span class="new">1502</span>
+											<span class="currency">руб.</span>
+										</div>
+									</div>
+									<div class="item">
+										<a href="product.html">
+											<div class="img">
+												<img src="demo/img_product2.jpg" alt="" />
+											</div>
+											<div class="name">
+												Кимоно для карате Alpha Caprice GS-KK01
+											</div>
+										</a>
+										<div class="price">
+											<span class="old">1805</span>
+											<span class="new">1480</span>
+											<span class="currency">руб.</span>
+										</div>
+									</div>
+									<div class="item">
+										<a href="product.html">
+											<div class="img" href="product.html">
+												<img src="demo/img_product1.jpg" alt="" />
+											</div>
+											<div class="name">
+												Кимоно для карате Golden Scorpion "PKM-885"
+											</div>
+										</a>
+										<div class="price">
+											<span class="new">1502</span>
+											<span class="currency">руб.</span>
+										</div>
+									</div>
+									<div class="item">
+										<a href="product.html">
+											<div class="img">
+												<img src="demo/img_product3.jpg" alt="" />
+											</div>
+											<div class="name">
+												Кимоно для карате Golden Scorpion "PKM-1200" те Golden Scorpion "PKM-1200"
+											</div>
+										</a>
+										<div class="price">
+											<span class="new">1479</span>
+											<span class="currency">руб.</span>
+										</div>
+									</div>
+								</div>
+								<div class="search-menu__button">
+									<a href="#" class="btn">Посмотреть все товары</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="wrapper__body page-cart">
+					<div class="area-main">
+						<div class="page-cart__panel">
+							<div class="heading">Корзина</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-main">
+				<div class="footer-main__column">
+					<div class="top">
+						<i class="icon icon-phone2"></i>Телефон</div>
+					<p>+7(495) 707-62-66</p>
+					<p>+7(499) 481-06-01</p>
+					<p>+7(499) 480-22-96</p>
+				</div>
+				<div class="footer-main__column">
+					<div class="top">
+						<i class="icon icon-email"></i>E-mail</div>
+					<p>info@alcap.ru</p>
+				</div>
+				<div class="footer-main__column">
+					<div class="top">
+						<i class="icon icon-map"></i>Адрес</div>
+					<p>127540, г. Москва,</p>
+					<p>ул. Дубнинская, </p>
+					<p>д. 10, корп. 1</p>
+				</div>
+				<div class="footer-main__column">
+					<div class="top">
+						<i class="icon icon-clock"></i>Часы работы</div>
+					<p>Пн - Пт с 9.00 -18.00</p>
+					<a href="http://www.alcap.ru/about/partners/" target="_blank" class="btn">Сотрудничество</a>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="copyright">© Все права защищены</div>
+				<div class="rules">
+					<a href="#">Политика конфиденциальности</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="modal fade modal-form" id="form_call" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<a class="btn-close" data-dismiss="modal" aria-hidden="true">
+					<i class="icon icon-close"></i>
+				</a>
+				<div class="form-top">Оставьте заявку</div>
+				<div class="form-name">на консультацию специалиста</div>
+				<form class="form-horizontal">
+					<div class="form-group">
+						<div class="input-icon">
+							<i class="icon icon-user"></i>
+							<input type="text" class="form-control" placeholder="Ваше имя" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="input-icon">
+							<i class="icon icon-mobile"></i>
+							<input type="tel" class="form-control masked-phone" placeholder="Ваш номер телефона" />
+						</div>
+					</div>
+					<div class="form-baton">
+						<button class="btn">Заказать</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="alcap-popup quick-buy">
+		<div class="alcap-popup-inner">
+			<button class="alcap-popup__close">Закрыть</button>
+			<div class="quick-buy__sum">
+				<div class="quick-buy__title">
+					Итого:
+				</div>
+
+				<p>Количество товаров
+					<strong>100</strong>
+				</p>
+				<p>Количество позиций
+					<strong>1</strong>
+				</p>
+				<p>На сумму
+					<strong>169000 р.</strong>
+				</p>
+				<p>
+					<strong class="yellow">Экономия</strong>
+					<strong>30000 р.</strong>
+				</p>
+			</div>
+			<div class="quick-buy__order">
+				<div class="quick-buy__title">
+					Быстрый заказ
+				</div>
+				<p>
+					<strong>Укажите способ доставки:</strong>
+				</p>
+				<div class="delivary-list">
+					<div class="checkbox">
+						<input type="checkbox" id="delivary-1" name="delivary-1">
+						<label for="delivary-1">самовывоз</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="delivary-2" name="delivary-2">
+						<label for="delivary-2">транспортная компания</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="delivary-3" name="delivary-3">
+						<label for="delivary-3">доставка</label>
+					</div>
+				</div>
+				<button class="btn btn-blue">Оформить</button>
+			</div>
+			<div class="quick-buy__botom">
+				<a href="#">
+					<i class="icon icon-letter"></i>
+				</a>
+				<span></span>
+				<a href="#">
+					<i class="icon icon-print"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="alcap-popup alert-counter alert-counter--open">
+		<div class="alcap-popup-inner">
+			<button class="alcap-popup__close">Закрыть</button>
+			<p>Извините, доступное количество на нашем складе:
+				<strong>18 шт.</strong>
+			</p>
+			<button class="btn btn-yellow">Хорошо</button>
+		</div>
+	</div>
+
+	<div class="modal fade modal-alert" id="form_alert" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<a class="btn-close" data-dismiss="modal" aria-hidden="true">
+					<i class="icon icon-close"></i>
+				</a>
+				<div class="alert-top">Ваш заказ успешно оформлен.</div>
+				<div class="alert-top alert-top--blue">Ваша заяка принята.</div>
+				<p>Ваш заказ подтверждён и уже собирается на нашем складе.
+					<br> Благодарим Вас за выбор Альфа Каприз.</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/js/jquery-2.2.4.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script>
+	<script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"></script>
+	<script src="assets/plugins/slick/slick.js"></script>
+	<script src="assets/plugins/jquery.maskedinput/jquery.mask.min.js"></script>
+	<script src="assets/plugins/jquery.smoothscroll.js"></script>
+	<script src="assets/plugins/soon-countdown/js/soon.min.js"></script>
+	<script src="assets/plugins/noUiSlider.10.0.0/nouislider.min.js"></script>
+	<script src="assets/plugins/magiczoomplus/magiczoomplus.js"></script>
+	<script src="assets/plugins/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+	<script src="assets/js/jquery.sticky-kit.min.js"></script>
+
+	<script src="assets/js/default.js"></script>
+	<script src="assets/js/shop.js"></script>
+
+	<script>
+		$(document).ready(function ($) {
+			Main.init();
+			Shop.init();
+		});
+	</script>
+</body>
+
+</html>

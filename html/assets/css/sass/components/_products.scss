@@ -401,63 +401,6 @@
             }
             .item-gallery {
                 max-width: 240px;
-                .gallery-item {
-                    a {
-                        display: block;
-                        text-align: center;
-                        &:focus {
-                            outline: none;
-                        }
-                        img {
-                            margin: 0 auto;
-                        }
-                    }
-                }
-                .slick-dots {
-                    position: absolute;
-                    bottom: -20px;
-                    left: 0;
-                    right: 0;
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-                    text-align: center;
-                    z-index: 101;
-                    opacity: 0;
-                    visibility: hidden;
-                    transition: .3s;
-                    transform: translateY(-5px);
-                    li {
-                        display: inline-block;
-                        color: #5a5a5a;
-                        font-size: 12px;
-                        line-height: 1;
-                        button {
-                            background: #fff;
-                            border: 2px solid $border-color;
-                            width: 10px;
-                            height: 10px;
-                            border-radius: 50%;
-                            text-indent: -999em;
-                            padding: 0;
-                            margin: 0 2px;
-                            &:focus {
-                                outline: none;
-                            }
-                        }
-                        &.slick-active {
-                            button {
-                                background: $second-color;
-                            }
-                        }
-                        span {
-                            display: inline-block;
-                            margin: 0 2px;
-                            position: relative;
-                            top: -2px;
-                        }
-                    }
-                }
             }
         }
         .item__name {
@@ -531,6 +474,67 @@
     }
     .item__buttons {
         margin: 0 -20px;
+    }
+}
+
+.item-gallery {
+    max-width: 240px;
+    .gallery-item {
+        a {
+            display: block;
+            text-align: center;
+            &:focus {
+                outline: none;
+            }
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+    .slick-dots {
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        right: 0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        z-index: 101;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        transform: translateY(-5px);
+        li {
+            display: inline-block;
+            color: #5a5a5a;
+            font-size: 12px;
+            line-height: 1;
+            button {
+                background: #fff;
+                border: 2px solid $border-color;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                text-indent: -999em;
+                padding: 0;
+                margin: 0 2px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            &.slick-active {
+                button {
+                    background: $second-color;
+                }
+            }
+            span {
+                display: inline-block;
+                margin: 0 2px;
+                position: relative;
+                top: -2px;
+            }
+        }
     }
 }
 
