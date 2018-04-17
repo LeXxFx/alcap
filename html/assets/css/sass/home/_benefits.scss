@@ -3,7 +3,19 @@
     background: url(../images/fon-sport-tovar-1.jpg) no-repeat center 0 / cover;
     background-attachment: fixed;
     margin: 0 0 80px 0;
-    box-shadow: 0 0 20px 5px rgba(0,0,0,0.4);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
+    &.benefits-page {
+        background: url(../images/bg_sport.jpg) no-repeat center top;
+        box-shadow: none;
+        margin: 0;
+        .benefits-top {
+            font-weight: bold;
+            font-size: 21px;
+            color: $primary-color;
+            margin: 10px 20px 50px 20px;
+        }
+        .benefits-list {}
+    }
     .benefits-list {
         display: flex;
         justify-content: center;
@@ -16,7 +28,7 @@
             transition: .6s;
             line-height: 1.1;
             margin: 0 5px 20px 5px;
-            > span {
+            >span {
                 font-size: 72px;
                 display: block;
                 font-weight: 600;
@@ -49,7 +61,4 @@
     }
 }
 
-
-@media screen and (max-width: $small-desktop) {
-    
-}
+@media screen and (max-width: $small-desktop) {}

@@ -325,7 +325,7 @@ var Shop = function () {
 	}
 
 	var itemAvaliable = function () {
-		var progress = $('.products').find('.avaliable');
+		var progress = $('.product__item').find('.avaliable');
 
 		progress.each(function () {
 			var that = $(this),
@@ -341,6 +341,13 @@ var Shop = function () {
 		});
 	};
 
+	var addToCart = function() {
+		$(document).on('click', '.btn-add-to-cart', function(e){
+			e.preventDefault();
+			$('#form_alert').modal('show');
+		});
+	};
+
 	return {
 		init: function () {
 			inputCounter();
@@ -352,6 +359,7 @@ var Shop = function () {
 			quickBuy();
 			alcapPopup();
 			itemAvaliable();
+			addToCart();
 		}
 	};
 }();

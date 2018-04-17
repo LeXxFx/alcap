@@ -9,6 +9,11 @@ body {
     font-family: $font;
     font-size: 17px;
     padding-top: $header-height;
+    &.fancybox-active {
+        #header {
+            padding-right: 17px;
+        }
+    }
 }
 
 .container {

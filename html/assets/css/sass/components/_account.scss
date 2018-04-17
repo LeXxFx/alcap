@@ -1,0 +1,132 @@
+﻿.account {
+    padding: 20px 25px;
+    margin: 0 0 40px 0;
+    background: #fff;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    &__top {
+        margin: -20px 0 30px -25px;
+        span {
+            display: inline-block;
+            background: #1c3079 url(../images/bg_account_top.png) no-repeat 0 0;
+            font-weight: bold;
+            color: $second-color;
+            padding: 10px 25px;
+        }
+    }
+    &__text {
+        margin: 0 0 30px 0;
+    }
+    .form-horizontal {
+        padding: 0 10px;
+        .form-group {
+            .form-control {
+                border: 1px solid #cfcfcf;
+                background: #fcfcfc;
+                vertical-align: middle;
+                border-radius: 0;
+                transition: .3s;
+                &:focus {
+                    border-color: #abc5e3;
+                    background: #fff;
+                }
+                &.has-error {
+                    border-color: #a00808 !important;
+                }
+            }
+        }
+        .form-baton {
+            padding: 30px 0;
+            .col-btn {
+                text-align: right;
+                .btn {
+                    max-width: 220px;
+                    width: 100%;
+                    height: 42px;
+                }
+            }
+        }
+        .form-bottom {
+            font-size: 14px;
+        }
+        a {
+            font-size: 14px;
+            text-decoration: underline;
+            color: $text-color;
+            font-weight: 600;
+            display: inline-block;
+            line-height: 40px;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .form-captcha {
+            .control-label {
+                padding-top: 5px;
+            }
+            &__image {
+                border: 1px solid #cfcfcf;
+                background: #fcfcfc;
+                height: 50%;
+                margin-bottom: 5px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .form-checkbox {
+        input {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            &:checked~span {
+                &:before {
+                    background-position: -65px -87px;
+                }
+            }
+        }
+        span {
+            display: block;
+            font-weight: 300;
+            color: #5b5b5c;
+            position: relative;
+            padding: 3px 0 0 35px;
+            cursor: pointer;
+            &:hover {
+                color: $second-color;
+            }
+            &:before {
+                content: "";
+                display: block;
+                background: #fff url(../images/sprite.png) no-repeat -39px -87px;
+                width: 21px;
+                height: 21px;
+                position: absolute;
+                left: 0;
+                top: 3px;
+            }
+        }
+    }
+    &-login {
+        .form-horizontal {
+            max-width: 540px;
+        }
+    }
+    &-registration {
+        .form-horizontal {
+            max-width: 660px;
+            .control-label {
+                text-align: left;
+            }
+            .form-baton {
+                .col-btn {
+                    .btn {
+                        width: auto;
+                        min-width: 280px;
+                    }
+                }
+            }
+        }
+    }
+}

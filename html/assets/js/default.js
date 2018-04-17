@@ -93,12 +93,17 @@
 		});
 	};
 
+	var stickSidebar = function() {
+		$('.sticky').stick_in_parent({spacer: false});
+	};
+
 	return {
 		init: function () {
 			catalogNavigation();
 			tooltips();
 			scrollbarRail();
 			searchBox();
+			stickSidebar();
 		}
 	};
 }();

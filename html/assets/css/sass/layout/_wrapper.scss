@@ -1,5 +1,25 @@
 .wrapper {
     display: flex;
+    &__top {
+        display: flex;
+        .col-catalog {
+            flex: 0 0 260px;
+            margin: 0 20px 0 0;
+        }
+        .search {
+            flex: 1 1 540px;
+        }
+    }
+    &__body {
+        display: flex;
+        .area-main {
+            flex: 1 1 720px;
+        }
+        .area-sidebar {
+            flex: 0 0 260px;
+            margin: 0 0 0 20px;
+        }
+    }
 }
 
 #content {

@@ -1,6 +1,9 @@
 ﻿.search {
     position: relative;
     max-width: 540px;
+    +.message {
+        margin-top: 20px;
+    }
     &-input {
         height: 42px;
         padding-right: 125px;

@@ -1,0 +1,15 @@
+.message {
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    padding: 12px 25px;
+    margin: 0 0 20px 0;
+    background: #fff;
+    &-info {
+        a {
+            text-decoration: underline;
+            color: $second-color;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
