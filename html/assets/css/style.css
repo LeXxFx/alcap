@@ -271,6 +271,10 @@ body.fancybox-active #header {
   padding-right: 17px;
 }
 
+body > .container {
+  min-height: calc(100vh - 339px);
+}
+
 .container {
   width: 100%;
   max-width: 1130px;
@@ -6090,30 +6094,66 @@ body.modal-open,
   padding: 15px 20px;
 }
 
-.page-cart .cart-list__name {
-  color: #feb703;
-  font-weight: bold;
-  margin: 0 0 15px 0;
+.page-cart .cart-list.products {
+  background: #fff;
+  padding: 0;
+  box-shadow: none;
+  margin: 0;
 }
 
 .page-cart .cart-list .cart-table {
   width: 100%;
 }
 
-.page-cart .cart-list .cart-table th {
+.page-cart .cart-list .cart-table td {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+}
+
+.page-cart .cart-list .cart-table__title td {
+  color: #feb703;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+  padding: 25px 0 15px 0;
+  text-align: left;
+  border: none;
+}
+
+.page-cart .cart-list .cart-table__head td {
   text-align: center;
   font-weight: bold;
   color: #032c7c;
   padding: 10px;
   border: 1px solid #000;
+  background: #f7f7f7;
 }
 
-.page-cart .cart-list .cart-table td {
-  border: 1px solid #000;
+.page-cart .cart-list .cart-table__bottom td.td-empty {
+  border: none;
+}
+
+.page-cart .cart-list .cart-table__bottom td:not(.td-empty) {
+  text-align: center;
+  font-weight: bold;
+  color: #032c7c;
   padding: 10px;
+  border: 1px solid #000;
+  background: #f7f7f7;
+}
+
+.page-cart .cart-list .cart-table__bottom td.cart-sum {
+  text-align: left;
+  padding-left: 25px;
 }
 
 .page-cart .cart-list .cart-table .item-info {
+  text-align: left;
+  padding: 10px;
+  height: auto;
+}
+
+.page-cart .cart-list .cart-table .item-info__inner {
   display: flex;
   align-items: center;
   max-width: 320px;
@@ -6160,12 +6200,114 @@ body.modal-open,
   padding: 1px 5px;
 }
 
+.page-cart .cart-list .cart-table .item-info__main .item-status span.item-status__sale {
+  background: url(../images/bg_info.png) no-repeat right 0;
+}
+
 .page-cart .cart-list .cart-table .item-info__main .item-name {
   line-height: 1.2;
   margin-bottom: 5px;
+  display: block;
+  color: #131313;
+  text-decoration: none;
+}
+
+.page-cart .cart-list .cart-table .item-info__main .item-name:hover {
+  text-decoration: underline;
+  color: #feb703;
 }
 
 .page-cart .cart-list .cart-table .item-info__main .item-measure {
   font-size: 12px;
   color: #5a5a5a;
+}
+
+.page-cart .cart-list .cart-table .item-counter__inner {
+  margin: 0 auto;
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-cart .cart-list .cart-table .item-counter__inner .btn {
+  vertical-align: top;
+  padding: 0;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 19px;
+  border-radius: 0;
+  flex: 0 0 19px;
+  width: 19px;
+  height: 19px;
+  text-align: center;
+  border: none;
+  color: #fff;
+  background: #032c7c;
+  transition: .3s;
+}
+
+.page-cart .cart-list .cart-table .item-counter__inner .btn:hover {
+  background: #feb703;
+}
+
+.page-cart .cart-list .cart-table .item-counter__inner .input-group-text .form-control {
+  background: #f7f7f7;
+  font-size: 12px;
+  font-weight: bold;
+  color: #032c7c;
+  padding: 0;
+  display: inline-block;
+  width: 40px;
+  height: 19px;
+  line-height: 19px;
+  border-radius: 0;
+  border: none;
+  text-align: center;
+  box-shadow: none;
+  margin: 3px 0 0;
+  vertical-align: top;
+}
+
+.page-cart .cart-list .cart-table .item-counter__inner .input-group-text .form-control:disabled {
+  cursor: default;
+}
+
+.page-cart .cart-list .cart-table .item-price .price .old {
+  font-size: 14px;
+  color: #032c7c;
+  text-decoration: line-through;
+}
+
+.page-cart .cart-list .cart-table .item-prop {
+  text-align: left;
+  padding-left: 25px;
+  max-width: 260px;
+}
+
+.page-cart .cart-list .cart-table .item-prop .prop {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.page-cart .cart-list .cart-table .item-prop img {
+  border: 1px solid #111111;
+  border-radius: 4px;
+  margin: 0 10px 0 0;
+  height: 18px;
+}
+
+.page-cart .cart-list .cart-table .item-remove {
+  max-width: 24px;
+  padding: 10px 3px;
+}
+
+.page-cart .cart-list .cart-table .item-remove a {
+  display: inline-block;
+}
+
+.page-cart .cart-list .cart-table .item-remove a .icon {
+  height: 19px;
 }

@@ -14,6 +14,9 @@ body {
             padding-right: 17px;
         }
     }
+    >.container {
+        min-height: calc(100vh - 339px);
+    }
 }
 
 .container {
