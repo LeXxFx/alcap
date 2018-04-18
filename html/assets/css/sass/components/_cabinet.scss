@@ -1,0 +1,119 @@
+﻿.page-cabinet {
+    flex-wrap: wrap;
+    .col-catalog {
+        margin-bottom: 8px;
+    }
+    .slider {
+        max-width: 820px;
+        margin: 0 0 30px 0;
+        &__item {
+            height: 256px;
+            border-radius: 4px;
+            text-align: center;
+            .slide-info {
+                display: block;
+                text-decoration: none;
+                outline: none !important;
+                &__top {
+                    color: #fff;
+                    font-weight: 600;
+                    font-size: 38px;
+                    padding: 10px 20px;
+                    margin: 30px 0;
+                    display: block;
+                    background: url(../images/sl_bg_orange.png) no-repeat center 0;
+                    transition: 1s;
+                }
+                &__text {
+                    display: inline-block;
+                    font-weight: 500;
+                    font-size: 29px;
+                    line-height: 39px;
+                    color: $second-color;
+                    display: inline-block;
+                    background: $primary-color;
+                    height: 50px;
+                    position: relative;
+                    padding: 5px 25px;
+                    transition: 1.2s;
+                    strong {
+                        font-size: 31px;
+                        text-decoration: underline;
+                    }
+                    &:before {
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 50px 10px 0 0;
+                        border-color: transparent $primary-color transparent transparent;
+                        position: absolute;
+                        top: 0;
+                        left: -10px;
+                    }
+                    &:after {
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 50px 10px 0 0;
+                        border-color: $primary-color transparent transparent transparent;
+                        position: absolute;
+                        top: 0;
+                        right: -10px;
+                    }
+                }
+            }
+        }
+        .slick-dots {
+            position: absolute;
+            left: 55px;
+            bottom: 15px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            z-index: 101;
+            li {
+                display: inline-block;
+                color: #5a5a5a;
+                font-size: 12px;
+                line-height: 1;
+                button {
+                    background: none;
+                    border: 1px solid #fff;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    text-indent: -999em;
+                    padding: 0;
+                    margin: 0 2px;
+                    transition: .3s;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                &.slick-active {
+                    button {
+                        background: #fff;
+                    }
+                }
+                span {
+                    display: inline-block;
+                    margin: 0 2px;
+                    position: relative;
+                    top: -2px;
+                }
+            }
+        }
+    }
+}
+
+.cabinet-content {
+    order: 2;
+    flex: 1 1 100%;
+    background: #fff;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 0 0 30px 0;
+}

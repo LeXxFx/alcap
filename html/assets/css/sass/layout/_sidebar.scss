@@ -57,6 +57,97 @@
             }
         }
     }
+    .cabinet-navi {
+        margin: 0 0 30px 0;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                a {
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 1px solid #272727;
+                    color: $primary-color;
+                    font-size: 15px;
+                    font-weight: bold;
+                    text-decoration: none;
+                    padding: 3px 5px;
+                    transition: background-color .3s;
+                    i {
+                        background: url(../images/sprite.png) no-repeat;
+                        display: inline-block;
+                        width: 28px;
+                        height: 25px;
+                        margin: 0 8px 0 0;
+                        &.icon-user {
+                            background-position: -197px -3px;
+                        }
+                        &.icon-history {
+                            background-position: -197px -35px;
+                        }
+                        &.icon-shoose {
+                            background-position: -197px -67px;
+                        }
+                        &.icon-sale {
+                            background-position: -197px -99px;
+                        }
+                        &.icon-docs {
+                            background-position: -197px -133px;
+                        }
+                        &.icon-return {
+                            background-position: -197px -163px;
+                        }
+                        &.icon-export {
+                            background-position: -197px -195px;
+                        }
+                        &.icon-map {
+                            background-position: -197px -228px;
+                        }
+                    }
+                }
+                &:hover {
+                    a {
+                        background: #fff;
+                        color: $second-color;
+                        i {
+                            &.icon-user {
+                                background-position: -229px -3px;
+                            }
+                            &.icon-history {
+                                background-position: -229px -35px;
+                            }
+                            &.icon-shoose {
+                                background-position: -229px -67px;
+                            }
+                            &.icon-sale {
+                                background-position: -229px -99px;
+                            }
+                            &.icon-docs {
+                                background-position: -229px -133px;
+                            }
+                            &.icon-return {
+                                background-position: -229px -163px;
+                            }
+                            &.icon-export {
+                                background-position: -229px -195px;
+                            }
+                            &.icon-map {
+                                background-position: -229px -228px;
+                            }
+                        }
+                    }
+                }
+                &.active {
+                    a {
+                        background: $second-color;
+                        color: $primary-color;
+                        cursor: default;
+                    }
+                }
+            }
+        }
+    }
     .filters-toggle {
         display: none;
         margin: 0 0 15px 0;

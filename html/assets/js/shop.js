@@ -335,9 +335,9 @@ var Shop = function () {
 
 			popup.toggleClass('alcap-popup--show').find('.alcap-popup-inner').slideToggle();
 			if (popup.hasClass('alcap-popup--show')) {
-				that.find('span').text('Закрыть');
+				that.find('span').text('Свернуть');
 			} else {
-				that.find('span').text('Показать');
+				that.find('span').text('Раскрыть');
 			}
 		});
 	}
