@@ -52,7 +52,7 @@
         "autoUpdate": true,         // update scrollbar if content/container size changed
         "debug": false,             // debug mode
         "disableBodyScroll": false, // disable body scroll if mouse over container
-        "duration": 200,            // scroll animate duration in ms
+        "duration": 100,            // scroll animate duration in ms
         "ignoreMobile": false,      // ignore mobile devices
         "ignoreOverlay": false,     // ignore browsers with overlay scrollbars (mobile, MacOS)
         "scrollStep": 30,           // scroll step for scrollbar arrows

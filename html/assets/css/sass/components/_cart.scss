@@ -253,8 +253,88 @@
             .cart-baton {
                 text-align: right;
                 .btn {
-                    width: 220px;
                     margin: 45px 0 0 0;
+                }
+            }
+            .txt-help {
+                padding: 7px;
+                display: inline-block;
+                font-weight: 600;
+            }
+            .btn {
+                width: 220px;
+            }
+            .delivary-list {}
+        }
+    }
+}
+
+.popup-checkout-sum {
+    position: fixed;
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+    left: auto;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1) !important;
+    .quick-buy__title {
+        margin-top: 5px;
+    }
+}
+
+.panel-accordion {
+    padding: 20px 0;
+    .panel {
+        border: none;
+        padding: none;
+        background: none;
+        .panel-heading {
+            background: none;
+            padding: 5px 0 7px 0;
+            a {
+                display: block;
+                text-decoration: none;
+                font-weight: bold;
+                color: $second-color;
+                i {
+                    transition: .3s;
+                }
+                &:hover {
+                    color: $second-color;
+                }
+                &.collapsed {
+                    color: $text-color;
+                    i {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            span {
+                float: right;
+            }
+            +.panel-collapse>.panel-body {
+                border-top-color: #f7f7f7;
+            }
+        }
+        &.level-1 {
+            .panel-heading {
+                a {
+                    text-transform: uppercase;
+                }
+            }
+        }
+        &.level-2 {
+            .panel-heading {
+                a {
+                    padding-left: 20px;
+                }
+            }
+        }
+        &.level-3 {
+            .panel-heading {
+                a {
+                    padding-left: 40px;
                 }
             }
         }

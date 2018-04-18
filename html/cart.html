@@ -1295,16 +1295,25 @@
 				</p>
 				<div class="delivary-list">
 					<div class="checkbox">
-						<input type="checkbox" id="delivary-1" name="delivary-1">
-						<label for="delivary-1">самовывоз</label>
+						<input type="radio" id="delivary-1" name="delivary">
+						<label class="lbl" for="delivary-1">Cамовывоз</label>
 					</div>
 					<div class="checkbox">
-						<input type="checkbox" id="delivary-2" name="delivary-2">
-						<label for="delivary-2">транспортная компания</label>
+						<input type="radio" id="delivary-2" name="delivary">
+						<div class="lbl">
+							<select class="form-control">
+								<option>Транспортная компания</option>
+								<option>GP-Trans</option>
+								<option>DPD</option>
+								<option>Автотрейдинг</option>
+							</select>
+						</div>
 					</div>
 					<div class="checkbox">
-						<input type="checkbox" id="delivary-3" name="delivary-3">
-						<label for="delivary-3">доставка</label>
+						<input type="radio" id="delivary-3" name="delivary">
+						<div class="lbl">
+							<textarea class="form-control" placeholder="Адрес доставки"></textarea>
+						</div>
 					</div>
 				</div>
 				<button class="btn btn-blue">Оформить</button>
@@ -1320,7 +1329,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="alcap-popup alert-counter alert-counter--open">
+	<div class="alcap-popup alert-counter">
 		<div class="alcap-popup-inner">
 			<button class="alcap-popup__close">Закрыть</button>
 			<p>Извините, доступное количество на нашем складе:

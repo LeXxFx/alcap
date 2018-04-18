@@ -160,6 +160,11 @@ var Shop = function () {
 				}
 			});
 		}
+
+		$('.panel').on('show.bs.collapse', function (e) {
+			// fix for galleries inside accordion
+			$(this).find('.gallery-item').resize();
+		});
 	}
 
 	var productsCatalog = function () {
@@ -322,6 +327,19 @@ var Shop = function () {
 
 			that.closest('.alcap-popup').removeClass('alcap-popup--open');
 		});
+
+		$(document).on('click', '.alcap-popup__collapse', function (e) {
+			e.preventDefault();
+			var that = $(this),
+				popup = that.closest('.alcap-popup');
+
+			popup.toggleClass('alcap-popup--show').find('.alcap-popup-inner').slideToggle();
+			if (popup.hasClass('alcap-popup--show')) {
+				that.find('span').text('Закрыть');
+			} else {
+				that.find('span').text('Показать');
+			}
+		});
 	}
 
 	var itemAvaliable = function () {
@@ -341,22 +359,22 @@ var Shop = function () {
 		});
 	};
 
-	var addToCart = function() {
-		$(document).on('click', '.btn-add-to-cart', function(e){
+	var addToCart = function () {
+		$(document).on('click', '.btn-add-to-cart', function (e) {
 			e.preventDefault();
 			$('#form_alert').modal('show');
 		});
 	};
 
-	var delivaryList = function() {
-		$(document).on('click', '.delivary-list .form-control', function(e){
+	var delivaryList = function () {
+		$(document).on('click', '.delivary-list .form-control', function (e) {
 			e.preventDefault();
 			var that = $(this),
-                currentItem = that.closest('.checkbox').find('input[type=radio]');
+				currentItem = that.closest('.checkbox').find('input[type=radio]');
 
 			currentItem.click();
 		});
-		
+
 	}
 
 	return {
