@@ -737,6 +737,13 @@ a {
   #header .header__main nav a strong {
     display: none;
   }
+}
+
+@media screen and (max-width: 767px) {
+  #header {
+    position: relative;
+    height: auto;
+  }
   #header.is-auth .header__main {
     padding: 20px 0;
     align-items: center;
@@ -810,13 +817,6 @@ a {
   #header.is-auth .header__main .account-link a:hover {
     text-decoration: underline;
     color: #032c7c;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  #header {
-    position: relative;
-    height: auto;
   }
   #header .header {
     text-align: center;
@@ -1325,9 +1325,27 @@ body.modal-open,
   flex: 1 1 auto;
 }
 
+@media screen and (max-width: 992px) {
+  .wrapper-wide {
+    display: block;
+  }
+  .wrapper__top .search {
+    font-size: 14px;
+  }
+  .wrapper__body {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .wrapper {
     flex-wrap: wrap;
+  }
+  .wrapper__top {
+    display: block;
+  }
+  .wrapper__top .col-catalog {
+    margin: 0 0 20px 0;
   }
   #content {
     flex: 1 1 100%;
@@ -5640,30 +5658,40 @@ body.modal-open,
   background-position: -38px -57px;
 }
 
-.quick-buy .delivary-list {
+.delivary-list {
   margin: 5px 0 20px 0;
 }
 
-.quick-buy .delivary-list .checkbox label:before {
+.delivary-list .checkbox {
+  margin: 0 0 5px 0;
+}
+
+.delivary-list .checkbox .lbl {
+  font-size: 15px;
+}
+
+.delivary-list .checkbox .lbl:before {
   content: "";
   width: 23px;
   height: 23px;
   border: 1px solid #d9d9d9;
   position: absolute;
-  top: 2px;
+  top: 50%;
+  margin-top: -12px;
   left: 0;
   background: #fff;
   z-index: 1;
   transition: .3s;
 }
 
-.quick-buy .delivary-list .checkbox label:after {
+.delivary-list .checkbox .lbl:after {
   content: "";
   width: 17px;
   height: 17px;
   border: 1px solid #d9d9d9;
   position: absolute;
-  top: 5px;
+  top: 50%;
+  margin-top: -9px;
   left: 3px;
   background: #032c7c;
   z-index: 2;
@@ -5673,14 +5701,35 @@ body.modal-open,
   visibility: hidden;
 }
 
-.quick-buy .delivary-list .checkbox:hover:before {
+.delivary-list .checkbox:hover:before {
   border-color: #032c7c;
 }
 
-.quick-buy .delivary-list .checkbox input[type=checkbox]:checked ~ label:after {
+.delivary-list .checkbox input[type=radio] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.delivary-list .checkbox input[type=radio]:checked ~ .lbl:after {
   transform: scale(1);
   opacity: 1;
   visibility: visible;
+}
+
+.delivary-list .checkbox .form-control {
+  margin-left: 30px;
+  padding: 5px;
+  max-width: 220px;
+  color: #131313;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.delivary-list .checkbox textarea {
+  padding-left: 8px !important;
 }
 
 @media screen and (max-width: 767px) {
@@ -6084,7 +6133,7 @@ body.modal-open,
 
 .page-cart .heading {
   font-size: 28px;
-  margin: 10px 0 30px 0;
+  margin: 10px 0 0;
 }
 
 .page-cart__panel {
@@ -6098,7 +6147,7 @@ body.modal-open,
   background: #fff;
   padding: 0;
   box-shadow: none;
-  margin: 0;
+  margin: 0 0 20px 0;
 }
 
 .page-cart .cart-list .cart-table {
@@ -6310,4 +6359,70 @@ body.modal-open,
 
 .page-cart .cart-list .cart-table .item-remove a .icon {
   height: 19px;
+}
+
+.page-cart .cart-result {
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+
+.page-cart .cart-result p {
+  margin: 0 0 5px 0;
+}
+
+.page-cart .cart-result span {
+  display: inline-block;
+  width: 280px;
+}
+
+.page-cart .cart-result__econom {
+  color: #feb703;
+}
+
+.page-cart .cart-bot__top {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 20px 0;
+}
+
+.page-cart .cart-bot__top .btn-clear-cart {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0 5px 0 0;
+}
+
+.page-cart .cart-bot__top .btn-clear-cart:hover {
+  text-decoration: underline;
+}
+
+.page-cart .cart-bot__body .heading {
+  color: #131313;
+  font-size: 17px;
+  margin: 0 0 10px 0;
+}
+
+.page-cart .cart-bot__body .form-control {
+  border-radius: 0;
+}
+
+.page-cart .cart-bot__body .cart-baton {
+  text-align: right;
+}
+
+.page-cart .cart-bot__body .cart-baton .btn {
+  width: 220px;
+  margin: 45px 0 0 0;
+}
+
+@media screen and (max-width: 992px) {
+  .cart-list {
+    overflow: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cart-page .cart-result span {
+    width: 100%;
+  }
 }

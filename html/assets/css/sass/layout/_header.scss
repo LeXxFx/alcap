@@ -229,6 +229,13 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    #header {
+        position: relative;
+        height: auto;
         &.is-auth {
             .header {
                 &__main {
@@ -307,13 +314,6 @@
                 }
             }
         }
-    }
-}
-
-@media screen and (max-width: $mobile) {
-    #header {
-        position: relative;
-        height: auto;
         .header {
             text-align: center;
             display: block;

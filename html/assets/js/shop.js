@@ -311,7 +311,7 @@ var Shop = function () {
 			$form.removeAttr("style").css({
 				'top': pos.top - ($form.height() / 2 - 30),
 				'left': pos.left - $form.width()
-			}).addClass('alcap-popup--open');
+			}).show().addClass('alcap-popup--open');
 		});
 	}
 
@@ -348,6 +348,17 @@ var Shop = function () {
 		});
 	};
 
+	var delivaryList = function() {
+		$(document).on('click', '.delivary-list .form-control', function(e){
+			e.preventDefault();
+			var that = $(this),
+                currentItem = that.closest('.checkbox').find('input[type=radio]');
+
+			currentItem.click();
+		});
+		
+	}
+
 	return {
 		init: function () {
 			inputCounter();
@@ -360,6 +371,7 @@ var Shop = function () {
 			alcapPopup();
 			itemAvaliable();
 			addToCart();
+			delivaryList();
 		}
 	};
 }();

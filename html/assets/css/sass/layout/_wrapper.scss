@@ -27,9 +27,31 @@
     flex: 1 1 auto;
 }
 
+@media screen and (max-width: $tablet) {
+    .wrapper {
+        &-wide {
+            display: block;
+        }
+        &__top {
+            .search {
+                font-size: 14px;
+            }
+        }
+        &__body {
+            display: block;
+        }
+    }
+}
+
 @media screen and (max-width: $mobile) {
     .wrapper {
         flex-wrap: wrap;
+        &__top {
+            display: block;
+            .col-catalog {
+                margin: 0 0 20px 0;
+            }
+        }
     }
     #content {
         flex: 1 1 100%;
