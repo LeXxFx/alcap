@@ -6477,10 +6477,19 @@ body.modal-open,
   padding: 20px 0;
 }
 
+.panel-accordion .panel-body {
+  padding-right: 0;
+}
+
+.panel-accordion .panel-accordion {
+  padding: 0;
+}
+
 .panel-accordion .panel {
   border: none;
   padding: none;
   background: none;
+  box-shadow: none;
 }
 
 .panel-accordion .panel .panel-heading {
@@ -6500,7 +6509,7 @@ body.modal-open,
 }
 
 .panel-accordion .panel .panel-heading a:hover {
-  color: #feb703;
+  color: #feb703 !important;
 }
 
 .panel-accordion .panel .panel-heading a.collapsed {
@@ -6519,7 +6528,7 @@ body.modal-open,
   border-top-color: #f7f7f7;
 }
 
-.panel-accordion .panel.level-1 .panel-heading a {
+.panel-accordion .panel.level-1 > .panel-heading a {
   text-transform: uppercase;
 }
 

@@ -285,10 +285,17 @@
 
 .panel-accordion {
     padding: 20px 0;
+    .panel-body {
+        padding-right: 0;
+    }
+    .panel-accordion {
+        padding: 0;
+    }
     .panel {
         border: none;
         padding: none;
         background: none;
+        box-shadow: none;
         .panel-heading {
             background: none;
             padding: 5px 0 7px 0;
@@ -301,7 +308,7 @@
                     transition: .3s;
                 }
                 &:hover {
-                    color: $second-color;
+                    color: $second-color !important;
                 }
                 &.collapsed {
                     color: $text-color;
@@ -318,7 +325,7 @@
             }
         }
         &.level-1 {
-            .panel-heading {
+            >.panel-heading {
                 a {
                     text-transform: uppercase;
                 }
