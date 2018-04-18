@@ -110,6 +110,10 @@
                     a {
                         background: #fff;
                         color: $second-color;
+                    }
+                }
+                &:not(.active):hover {
+                    a {
                         i {
                             &.icon-user {
                                 background-position: -229px -3px;

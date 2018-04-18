@@ -47,6 +47,15 @@
                 max-width: 164px;
                 color: #fff;
             }
+            &.item-top-timeout {
+                background: url(../images/bg_timeout.png) no-repeat right 0 /cover;
+                color: $primary-color;
+                padding-right: 15px;
+                line-height: 1.1;
+                i {
+                    margin: 0 10px 0 0;
+                }
+            }
         }
     }
     .item__timer {
