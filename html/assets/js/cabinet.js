@@ -11,12 +11,49 @@
         });
     };
 
+    var carouselList = function () {
+        var carousel = $('.carousel-list');
+        carousel.each(function () {
+            var that = $(this),
+                startCount = 3;
+
+            if (that.data('items') !== undefined) {
+                startCount = parseInt(that.data('items'));
+            }
+
+            that.slick({
+                slidesToShow: startCount,
+                slidesToScroll: startCount,
+                autoplay: false,
+                arrows: false,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            dots: false
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            dots: false
+                        }
+                    }
+                ]
+            });
+        });
+
+    };
+
     return {
         init: function () {
             mainSlider();
-            maskedInput();
-            changeForm();
-            standsSlider();
+            carouselList();
         }
     };
 }();

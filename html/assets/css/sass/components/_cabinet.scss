@@ -116,38 +116,90 @@
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
     padding: 15px;
     margin: 0 0 30px 0;
-}
-
-.top-sales {
     .heading {
         text-align: center;
         font-size: 32px;
         color: #e37f1e;
         margin: 10px 0 30px 0;
     }
+    .product-viewed {
+        .viewed-list {
+            padding: 0 120px;
+            &.carousel-list {
+                display: block !important;
+                max-width: 1200px;
+                margin-bottom: 60px;
+                .product__item {
+                    margin: 0 10px 20px 10px;
+                }
+            }
+        }
+    }
+    .product-promo {
+        .promo-list {
+            padding: 0 120px;
+            margin-top: 40px;
+            &.carousel-list {
+                display: block !important;
+                max-width: 1200px;
+                margin-bottom: 60px;
+                .sales-item {
+                    margin: 40px 20px 20px;
+                }
+            }
+        }
+    }
+}
+
+.top-sales {
     .top-sales-list {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -1%;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 0 -2%;
+        padding: 0 40px;
         .product__item {
-            flex: 0 0 31.333%;
-            margin: 0 1% 50px 1%;
+            flex: 1 1 290px;
+            margin: 0 2% 50px 2%;
             height: auto;
             .item__wrap {
                 min-height: 320px;
             }
             .item__image {
-                height: 180px;
+                height: 270px;
                 font-size: 15px;
             }
             .item-top {
                 &__inner {
-                    max-width: 220px;
+                    max-width: 95%;
                     font-size: 14px;
                     justify-content: flex-start;
                 }
                 .item__stick {
                     max-width: 90px;
+                    padding-left: 20px;
+                }
+                .item__stick-day-sale {
+                    padding: 5px;
+                    background: none;
+                    max-width: 140px;
+                    color: $primary-color;
+                    display: flex;
+                    align-items: center;
+                    line-height: 1;
+                    font-size: 14px;
+                    .icon {
+                        margin: 0 10px 0 0;
+                        flex: 0 0 28px;
+                    }
+                }
+                .item-top__inner {
+                    height: 40px;
+                    +.item-top__inner {
+                        background: none;
+                        margin-top: -10px;
+                    }
                 }
             }
             .item__name {
@@ -164,7 +216,7 @@
             }
             .item__buttons {
                 display: block;
-                padding-top: 40px;
+                padding-top: 15px;
                 .btn-add-to-cart {
                     display: block;
                     margin: 0 auto;
@@ -172,6 +224,47 @@
                     width: 100%;
                     padding: 7px 10px;
                     font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.carousel-list {
+    .slick-dots {
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 1;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            margin: 0 3px;
+            button {
+                background: #feb703;
+                border: 2px solid #feb703;
+                border-radius: 50%;
+                padding: 0;
+                width: 15px;
+                height: 15px;
+                display: inline-block;
+                text-indent: -999em;
+                position: relative;
+                z-index: 2;
+                transition: 0.1s ease;
+                outline: none !important;
+                &:hover {
+                    background: $primary-color;
+                }
+            }
+            &.slick-active {
+                button {
+                    cursor: default;
+                    background: $primary-color;
                 }
             }
         }
