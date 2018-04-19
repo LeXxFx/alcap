@@ -4837,6 +4837,7 @@ body.modal-open,
 
 .product-card .product__item .left-part .item__image .image__preview img {
   max-height: 100%;
+  max-width: 100%;
 }
 
 .product-card .product__item .left-part .item__image .imgs-list {
