@@ -4819,6 +4819,7 @@ body.modal-open,
 
 .product-card .product__item .left-part {
   width: 370px;
+  position: relative;
 }
 
 .product-card .product__item .left-part .item__image {
