@@ -75,7 +75,6 @@ var Shop = function () {
 			}
 			$(this).closest('.amount').parent().find('.addtobasket').each(function () {
 				$(this).attr('data-amount', input.val().split(" ")[0]);
-				console.log($(this));
 			});
 		});
 	};
@@ -161,9 +160,15 @@ var Shop = function () {
 			});
 		}
 
-		$('.panel').on('show.bs.collapse', function (e) {
+		$('#accordion').on('show.bs.collapse', function (e) {
 			// fix for galleries inside accordion
-			$(this).find('.gallery-item').resize();
+			var galleries = $(this).find('.item-gallery');
+console.log('sss');
+			if (galleries.length > 0) {
+				galleries.each(function () {
+					$(this).resize();
+				});
+			}
 		});
 	}
 
