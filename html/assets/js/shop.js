@@ -163,7 +163,6 @@ var Shop = function () {
 		$('#accordion').on('show.bs.collapse', function (e) {
 			// fix for galleries inside accordion
 			var galleries = $(this).find('.item-gallery');
-console.log('sss');
 			if (galleries.length > 0) {
 				galleries.each(function () {
 					$(this).resize();

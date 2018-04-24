@@ -616,12 +616,12 @@
 					<div class="cabinet-navi">
 						<ul>
 							<li>
-								<a href="#">
+								<a href="cabinet.html">
 									<i class="icon-user"></i>
 									Личный кабинет</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="cabinet-history.html">
 									<i class="icon-history"></i>
 									История заказов</a>
 							</li>
@@ -646,7 +646,7 @@
 									Возврат брака</a>
 							</li>
 							<li class="active">
-								<a href="#">
+								<a href="cabinet-export.html">
 									<i class="icon-export"></i>
 									Выгрузка в 1С и в ИМ</a>
 							</li>
@@ -659,54 +659,66 @@
 				</aside>
 			</div>
 			<div class="cabinet-content">
-				<div class="heading">Выгрузка в 1С и в ИМ</div>
-				<p>
-					<strong>Выгрузить каталог товаров на сайт или в социальные сети.</strong>
-				</p>
-				<p>
-					<strong>1. Формат YML</strong>
-					<br> Стандарт YML (Yandex Market Language) разработан Яндексом и основан на стандарте XML. Формат YML предоставляет больше
-					возможностей и преимуществ, чем форматы XLS, CSV, TSV. Ссылка для скачивания каталога:
-					<a href="#">https://sport07.ru/yml_drop/</a>
-				</p>
-				<p>
-					<strong>2. Формат EXCEL</strong>
-					<br> Это удобно, если вы составляете прайс-лист вручную. Кроме того, прямо в программе Microsoft Excel можно проверять и
-					выгружать товары в Маркет.
-					<a href="#">Скачать файл</a> (последнее обновление: 25.02.2018)</p>
-				<p>
-					<strong>3. Формат CSV</strong>
-					<br> Текстовый формат с разделителями (например, CSV, TSV) удобен при генерации прайс-листа из базы данных или редакторов
-					электронных таблиц (например: Exсel, OpenOffice, Google Docs).
-					<a href="#">Скачать файл</a> (последнее обновление: 25.02.2018)</p>
-				<div class="heading">Нужна помощь?</div>
-				<form class="form-horizontal">
-					<div class="form-group">
-						<div class="col-md-6">
-							<textarea class="form-control"></textarea>
-						</div>
-						<div class="col-md-6">
-							<p>Как Вам ответить?</p>
-							<div class="form-group">
-								<div class="checkbox">
-									<input type="radio" id="phone_check" name="contact_check">
-									<label class="lbl" for="phone_check">По телефону</label>
-								</div>
-								<input class="form-control" placeholder="+7 (900) 000-00-00">
-							</div>
-							<div class="form-group">
-								<div class="checkbox">
-									<input type="radio" id="email_check" name="contact_check">
-									<label class="lbl" for="email_check">По электронной почте</label>
-								</div>
-								<input class="form-control" placeholder="ivanov@mail.ru">
-							</div>
-							<div class="form-baton text-right">
-								<button class="btn btn-yellow">Отправить</button>
-							</div>
-						</div>
+				<div class="export-info">
+					<div class="heading">Выгрузка в 1С и в ИМ</div>
+					<div class="post">
+						<p>
+							<strong>Выгрузить каталог товаров на сайт или в социальные сети.</strong>
+						</p>
+						<p>
+							<strong>1. Формат YML</strong>
+							<br> Стандарт YML (Yandex Market Language) разработан Яндексом и основан на стандарте XML. Формат YML предоставляет больше
+							возможностей и преимуществ, чем форматы XLS, CSV, TSV. Ссылка для скачивания каталога:
+							<a href="#">https://sport07.ru/yml_drop/</a>
+						</p>
+						<p>
+							<strong>2. Формат EXCEL</strong>
+							<br> Это удобно, если вы составляете прайс-лист вручную. Кроме того, прямо в программе Microsoft Excel можно проверять
+							и выгружать товары в Маркет.
+							<a href="#">Скачать файл</a> (последнее обновление: 25.02.2018)</p>
+						<p>
+							<strong>3. Формат CSV</strong>
+							<br> Текстовый формат с разделителями (например, CSV, TSV) удобен при генерации прайс-листа из базы данных или редакторов
+							электронных таблиц (например: Exсel, OpenOffice, Google Docs).
+							<a href="#">Скачать файл</a> (последнее обновление: 25.02.2018)</p>
 					</div>
-				</form>
+					<div class="heading">Нужна помощь?</div>
+					<form class="form-horizontal form-contact">
+						<div class="form-group">
+							<div class="col-md-6">
+								<textarea class="form-control" placeholder="Опишите в этом поле Вашу проблему"></textarea>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<div class="col-md-12">
+										<p>Как Вам ответить?</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-12">
+										<div class="radio">
+											<input type="radio" id="phone_check" name="contact_check">
+											<label class="lbl" for="phone_check">По телефону</label>
+											<input class="form-control" placeholder="+7 (900) 000-00-00">
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-12">
+										<div class="radio">
+											<input type="radio" id="email_check" name="contact_check">
+											<label class="lbl" for="email_check">По электронной почте</label>
+											<input class="form-control" placeholder="ivanov@mail.ru">
+										</div>
+									</div>
+								</div>
+								<div class="form-baton text-right">
+									<button class="btn btn-yellow">Отправить</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
