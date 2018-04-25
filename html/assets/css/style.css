@@ -6904,13 +6904,32 @@ body.modal-open,
 }
 
 @media screen and (max-width: 992px) {
-  .cart-list {
+  .page-cart {
     overflow: auto;
+  }
+  .page-cart .cart-list .cart-table td.item-price .price {
+    white-space: nowrap;
+  }
+  .panel-accordion .panel .panel-heading .panel-title {
+    font-size: 14px;
+  }
+  .panel-accordion .panel .panel-heading .panel-title a {
+    position: relative;
+    padding-left: 15px;
+  }
+  .panel-accordion .panel .panel-heading .panel-title a i {
+    position: absolute;
+    left: 0;
+    top: 2px;
+  }
+  .panel-accordion .panel .panel-heading .panel-title span {
+    float: none;
+    color: #878787;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .cart-page .cart-result span {
+  .page-cart .cart-result span {
     width: 100%;
   }
 }

@@ -154,7 +154,7 @@ var Shop = function () {
 						count = that.data('images-count');
 
 					if (count !== undefined) {
-						dots.append('<li><span>+ ' + count + '</span></li>');
+						dots.append('<li><span> ' + count + '</span></li>');
 					}
 				}
 			});
@@ -166,7 +166,7 @@ var Shop = function () {
 			if (galleries.length > 0) {
 				galleries.each(function () {
 					var that = $(this);
-					that.resize();
+					that.find('.slick-active').click();
 				});
 			}
 

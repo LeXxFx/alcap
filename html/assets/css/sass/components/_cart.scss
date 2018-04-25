@@ -349,13 +349,46 @@
 }
 
 @media screen and (max-width: $tablet) {
-    .cart-list {
+    .page-cart {
         overflow: auto;
+        .cart-list {
+            .cart-table {
+                td {
+                    &.item-price {
+                        .price {
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .panel-accordion {
+        .panel {
+            .panel-heading {
+                .panel-title {
+                    font-size: 14px;
+                    a {
+                        position: relative;
+                        padding-left: 15px;
+                        i {
+                            position: absolute;
+                            left: 0;
+                            top: 2px;
+                        }
+                    }
+                    span {
+                        float: none;
+                        color: #878787;
+                    }
+                }
+            }
+        }
     }
 }
 
 @media screen and (max-width: $mobile) {
-    .cart-page {
+    .page-cart {
         .cart-result {
             span {
                 width: 100%;
