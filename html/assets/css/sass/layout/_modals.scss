@@ -325,6 +325,7 @@ body.modal-open,
                 &__suma {
                     font-weight: bold;
                     text-align: right;
+                    font-size: 21px;
                     color: $primary-color;
                 }
                 .btn {
@@ -348,6 +349,8 @@ body.modal-open,
                     margin: 15px 0;
                 }
                 .order-table {
+                    overflow: auto;
+                    
                     .td-acf {
                         display: none;
                     }

@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Личный кабинет</title>
+	<title>Ожидаемые поступления</title>
 	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i&amp;subset=cyrillic" rel="stylesheet">
@@ -123,7 +123,10 @@
 					<a href="#">Главная страница</a>
 				</li>
 				<li>
-					<span>Личный кабинет</span>
+					<a href="cabine.html">Личный кабинет</a>
+				</li>
+				<li>
+					<span>Ожидаемые поступления</span>
 				</li>
 			</ul>
 		</div>
@@ -613,7 +616,7 @@
 						</div>
 						<div class="cabinet-navi">
 							<ul>
-								<li class="active">
+								<li>
 									<a href="cabinet.html">
 										<i class="icon-user"></i>
 										<span>Личный кабинет</span>
@@ -625,8 +628,7 @@
 										<span>История заказов</span>
 									</a>
 								</li>
-
-								<li>
+								<li class="active">
 									<a href="cabinet-wait.html">
 										<i class="icon-shoose"></i>
 										<span>Ожидаемые поступления</span>
@@ -668,565 +670,66 @@
 				</div>
 			</div>
 			<div class="cabinet-content">
-				<section class="top-sales">
-					<div class="heading">Успейте купить товары с невероятными скидками!</div>
-					<div class="top-sales-list">
-						<div class="product-grid__item product__item">
-							<div class="item__wrap">
-								<div class="item-top">
-									<div class="item-top__inner item-top-timeout">
-										<i class="icon icon-sale"></i>
-										Акция закончилась
-									</div>
-								</div>
-								<a href="product.html">
-									<div class="item__image">
-										<img src="demo/img_product5.jpg" alt="" />
-									</div>
-									<div class="item__name">
-										Коврик гимнастический BF-YM02 173*61*0,4 см.
-									</div>
-								</a>
-								<div class="item__price">
-									<span class="old">590</span>
-									<span class="new">390</span>
-									<span class="currency">руб.</span>
-								</div>
-							</div>
-						</div>
-						<div class="product-grid__item product__item">
-							<div class="item__wrap">
-								<div class="item-top">
-									<div class="item-top__inner">
-										<div class="item__stick item__stick-day-sale">
-											<i class="icon icon-sale"></i>
-											<b>Товар дня!!!</b>
-										</div>
-										<div class="item__timer">
-											<i class="icon icon-timer"></i>
-											<div class="soon" data-due="2018-04-21T22:05" data-layout="line" data-format="h,m,s" data-labels-days=":" data-labels-hours=":"
-											 data-labels-minutes=":" data-labels-seconds=" ">
-											</div>
-										</div>
-									</div>
-									<div class="item-top__inner">
-										<div class="item__stick item__stick-discont">
-											<b>-40%</b>
-										</div>
-									</div>
-								</div>
-								<a href="product.html">
-									<div class="item__image">
-										<img src="demo/img_product6.jpg" alt="" />
-									</div>
-									<div class="item__name">
-										Коньки для хоккея с мячом V76 LUX PRO Z (R)
-									</div>
-								</a>
-								<div class="item__price">
-									<span class="old">2590</span>
-									<span class="new">1990</span>
-									<span class="currency">руб.</span>
-								</div>
-								<div class="item__buttons">
-									<button class="btn btn-yellow btn-add-to-cart" title="Положить в корзину">
-										Добавить в корзину
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="product-grid__item product__item">
-							<div class="item__wrap">
-								<div class="item-top">
-									<div class="item-top__inner item-top-timeout">
-										<i class="icon icon-sale"></i>
-										Будет доступен завтра
-									</div>
-								</div>
-								<a href="product.html">
-									<div class="item__image">
-										<img src="demo/img_product7.jpg" alt="" />
-									</div>
-									<div class="item__name">
-										Тренажер Тай Мастер BF-EB01
-									</div>
-								</a>
-								<div class="item__price">
-									<span class="old">1590</span>
-									<span class="new">990</span>
-									<span class="currency">руб.</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section id="stands" class="stands stands-cabinet">
-					<div class="container">
-						<div class="stands__heading">Бесплатно фирменные стенды</div>
-						<p class="stands__desc">для размещения товаров для фитнеса
-							<strong>"BODY-FORM"</strong>
+				<div class="export-info">
+					<div class="heading heading-h2">Выгрузка в 1С и в ИМ</div>
+					<div class="post">
+						<p>
+							<strong>Выгрузить каталог товаров на сайт или в социальные сети.</strong>
 						</p>
-						<div class="stands-list carousel-list">
-							<div class="stands-list__item">
-								<a href="#">
-									<img src="demo/stand1.jpg" alt="">
-									<div class="item-info">
-										<span class="item-model">М1</span>
-										<div class="item-options">
-											<div class="option-item">
-												<div class="option-item__name">ширина</div>
-												<div class="option-item__value">
-													<span>-</span>1,01 м</div>
-											</div>
-											<div class="option-item">
-												<div class="option-item__name">высота</div>
-												<div class="option-item__value">
-													<span>-</span>2,24 м</div>
-											</div>
-											<div class="option-item">
-												<div class="option-item__name">глубина</div>
-												<div class="option-item__value">
-													<span>-</span>0,6 м</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="stands-list__item">
-								<a href="#">
-									<img src="demo/stand2.jpg" alt="">
-									<div class="item-info">
-										<span class="item-model">М2</span>
-										<div class="item-options">
-											<div class="option-item">
-												<div class="option-item__name">ширина</div>
-												<div class="option-item__value">
-													<span>-</span>1,01 м</div>
-											</div>
-											<div class="option-item">
-												<div class="option-item__name">высота</div>
-												<div class="option-item__value">
-													<span>-</span>2,24 м</div>
-											</div>
-											<div class="option-item">
-												<div class="option-item__name">глубина</div>
-												<div class="option-item__value">
-													<span>-</span>0,6 м</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="stands-list__item">
-								<a href="#">
-									<img src="demo/stand3.jpg" alt="">
-									<div class="item-info">
-										<span class="item-model">М3</span>
-										<div class="item-options">
-											<div class="option-item">
-												<div class="option-item__name">ширина</div>
-												<div class="option-item__value">
-													<span>-</span>1,01 м</div>
-											</div>
-											<div class="option-item">
-												<div class="option-item__name">высота</div>
-												<div class="option-item__value">
-													<span>-</span>2,24 м</div>
-											</div>
-											<div class="option-item">
-												<div class="option-item__name">глубина</div>
-												<div class="option-item__value">
-													<span>-</span>0,6 м</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="stands-list__item">
-								<a href="#">
-									<img src="demo/stand1.jpg" alt="">
-									<div class="item-info">
-										<span class="item-model">М1</span>
-										<div class="item-options">
-											<div class="option-item">
-												<div class="option-item__name">ширина</div>
-												<div class="option-item__value">
-													<span>-</span>1,01 м</div>
-											</div>
-											<div class="option-item">
-												<div class="option-item__name">высота</div>
-												<div class="option-item__value">
-													<span>-</span>2,24 м</div>
-											</div>
-											<div class="option-item">
-												<div class="option-item__name">глубина</div>
-												<div class="option-item__value">
-													<span>-</span>0,6 м</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="stands-list__item">
-								<a href="#">
-									<img src="demo/stand2.jpg" alt="">
-									<div class="item-info">
-										<span class="item-model">М2</span>
-										<div class="item-options">
-											<div class="option-item">
-												<div class="option-item__name">ширина</div>
-												<div class="option-item__value">
-													<span>-</span>1,01 м</div>
-											</div>
-											<div class="option-item">
-												<div class="option-item__name">высота</div>
-												<div class="option-item__value">
-													<span>-</span>2,24 м</div>
-											</div>
-											<div class="option-item">
-												<div class="option-item__name">глубина</div>
-												<div class="option-item__value">
-													<span>-</span>0,6 м</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="stands-list__item">
-								<a href="#">
-									<img src="demo/stand3.jpg" alt="">
-									<div class="item-info">
-										<span class="item-model">М3</span>
-										<div class="item-options">
-											<div class="option-item">
-												<div class="option-item__name">ширина</div>
-												<div class="option-item__value">
-													<span>-</span>1,01 м</div>
-											</div>
-											<div class="option-item">
-												<div class="option-item__name">высота</div>
-												<div class="option-item__value">
-													<span>-</span>2,24 м</div>
-											</div>
-											<div class="option-item">
-												<div class="option-item__name">глубина</div>
-												<div class="option-item__value">
-													<span>-</span>0,6 м</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="stands-list__item">
-								<a href="#">
-									<img src="demo/stand1.jpg" alt="">
-									<div class="item-info">
-										<span class="item-model">М1</span>
-										<div class="item-options">
-											<div class="option-item">
-												<div class="option-item__name">ширина</div>
-												<div class="option-item__value">
-													<span>-</span>1,01 м</div>
-											</div>
-											<div class="option-item">
-												<div class="option-item__name">высота</div>
-												<div class="option-item__value">
-													<span>-</span>2,24 м</div>
-											</div>
-											<div class="option-item">
-												<div class="option-item__name">глубина</div>
-												<div class="option-item__value">
-													<span>-</span>0,6 м</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="stands-list__item">
-								<a href="#">
-									<img src="demo/stand2.jpg" alt="">
-									<div class="item-info">
-										<span class="item-model">М2</span>
-										<div class="item-options">
-											<div class="option-item">
-												<div class="option-item__name">ширина</div>
-												<div class="option-item__value">
-													<span>-</span>1,01 м</div>
-											</div>
-											<div class="option-item">
-												<div class="option-item__name">высота</div>
-												<div class="option-item__value">
-													<span>-</span>2,24 м</div>
-											</div>
-											<div class="option-item">
-												<div class="option-item__name">глубина</div>
-												<div class="option-item__value">
-													<span>-</span>0,6 м</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="stands-list__item">
-								<a href="#">
-									<img src="demo/stand3.jpg" alt="">
-									<div class="item-info">
-										<span class="item-model">М3</span>
-										<div class="item-options">
-											<div class="option-item">
-												<div class="option-item__name">ширина</div>
-												<div class="option-item__value">
-													<span>-</span>1,01 м</div>
-											</div>
-											<div class="option-item">
-												<div class="option-item__name">высота</div>
-												<div class="option-item__value">
-													<span>-</span>2,24 м</div>
-											</div>
-											<div class="option-item">
-												<div class="option-item__name">глубина</div>
-												<div class="option-item__value">
-													<span>-</span>0,6 м</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
+						<p>
+							<strong>1. Формат YML</strong>
+							<br> Стандарт YML (Yandex Market Language) разработан Яндексом и основан на стандарте XML. Формат YML предоставляет больше
+							возможностей и преимуществ, чем форматы XLS, CSV, TSV. Ссылка для скачивания каталога:
+							<a href="#">https://sport07.ru/yml_drop/</a>
+						</p>
+						<p>
+							<strong>2. Формат EXCEL</strong>
+							<br> Это удобно, если вы составляете прайс-лист вручную. Кроме того, прямо в программе Microsoft Excel можно проверять
+							и выгружать товары в Маркет.
+							<a href="#">Скачать файл</a> (последнее обновление: 25.02.2018)</p>
+						<p>
+							<strong>3. Формат CSV</strong>
+							<br> Текстовый формат с разделителями (например, CSV, TSV) удобен при генерации прайс-листа из базы данных или редакторов
+							электронных таблиц (например: Exсel, OpenOffice, Google Docs).
+							<a href="#">Скачать файл</a> (последнее обновление: 25.02.2018)</p>
 					</div>
-				</section>
-				<section class="product-promo">
-					<h2 class="heading">Предложения по акции</h2>
-					<div class="promo-list carousel-list">
-						<div class="sales-item">
-							<a href="#">
-								<div class="sales-item__title">
-									<span>Тотальная распродажа!!!</span>
-									<div class="sales-item__value">до - 50%</div>
-								</div>
-								<img src="demo/bb_sale.png">
-								<div class="sales-item__sport">Санки</div>
-							</a>
-						</div>
-						<div class="sales-item">
-							<a href="#">
-								<div class="sales-item__title">
-									<span>Тотальная распродажа!!!</span>
-									<div class="sales-item__value">до - 60%</div>
-								</div>
-								<img src="demo/bb_sale2.png">
-								<div class="sales-item__sport">Хоккей</div>
-							</a>
-						</div>
-						<div class="sales-item">
-							<a href="#">
-								<div class="sales-item__title">
-									<span>Тотальная распродажа!!!</span>
-									<div class="sales-item__value">до - 50%</div>
-								</div>
-								<img src="demo/bb_sale.png">
-								<div class="sales-item__sport">Санки</div>
-							</a>
-						</div>
-						<div class="sales-item">
-							<a href="#">
-								<div class="sales-item__title">
-									<span>Тотальная распродажа!!!</span>
-									<div class="sales-item__value">до - 60%</div>
-								</div>
-								<img src="demo/bb_sale2.png">
-								<div class="sales-item__sport">Хоккей</div>
-							</a>
-						</div>
-						<div class="sales-item">
-							<a href="#">
-								<div class="sales-item__title">
-									<span>Тотальная распродажа!!!</span>
-									<div class="sales-item__value">до - 50%</div>
-								</div>
-								<img src="demo/bb_sale.png">
-								<div class="sales-item__sport">Санки</div>
-							</a>
-						</div>
-						<div class="sales-item">
-							<a href="#">
-								<div class="sales-item__title">
-									<span>Тотальная распродажа!!!</span>
-									<div class="sales-item__value">до - 60%</div>
-								</div>
-								<img src="demo/bb_sale2.png">
-								<div class="sales-item__sport">Хоккей</div>
-							</a>
-						</div>
-					</div>
-				</section>
-				<section class="product-viewed">
-					<h2 class="heading">Вы недавно смотрели</h2>
-					<div class="viewed-list carousel-list" data-items="4">
-						<div class="product-grid__item product__item">
-							<div class="item__wrap">
-								<div class="item-top">
-									<div class="item-top__inner">
-										Распродажа!!!
+					<div class="heading heading-h2">Нужна помощь?</div>
+					<form class="form-horizontal form-contact">
+						<div class="form-group">
+							<div class="col-md-6">
+								<textarea class="form-control" placeholder="Опишите в этом поле Вашу проблему"></textarea>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<div class="col-md-12">
+										<p>Как Вам ответить?</p>
 									</div>
 								</div>
-								<a href="product.html">
-									<div class="item__image">
-										<img src="demo/img_product4.jpg" alt="" />
+								<div class="form-group">
+									<div class="col-md-12">
+										<div class="radio">
+											<input type="radio" id="phone_check" name="contact_check">
+											<label class="lbl" for="phone_check">По телефону</label>
+											<input class="form-control" placeholder="+7 (900) 000-00-00">
+										</div>
 									</div>
-									<div class="item__name">
-										Коньки хоккейные RGX-Next Red
-									</div>
-								</a>
-								<div class="item__price">
-									<span class="old">1805</span>
-									<span class="new">1480</span>
-									<span class="currency">руб.</span>
 								</div>
-								<div class="item__buttons">
-									<button class="btn btn-yellow btn-add-to-cart" title="Положить в корзину">
-										Добавить в корзину
-									</button>
+								<div class="form-group">
+									<div class="col-md-12">
+										<div class="radio">
+											<input type="radio" id="email_check" name="contact_check">
+											<label class="lbl" for="email_check">По электронной почте</label>
+											<input class="form-control" placeholder="ivanov@mail.ru">
+										</div>
+									</div>
+								</div>
+								<div class="form-baton text-right">
+									<button class="btn btn-yellow">Отправить</button>
 								</div>
 							</div>
 						</div>
-						<div class="product-grid__item product__item">
-							<div class="item__wrap">
-								<div class="item-top">
-									<div class="item-top__inner">
-										Распродажа!!!
-									</div>
-								</div>
-								<a href="product.html">
-									<div class="item__image">
-										<img src="demo/img_product2.jpg" alt="" />
-									</div>
-									<div class="item__name">
-										Коньки хоккейные RGX-Next Red
-									</div>
-								</a>
-								<div class="item__price">
-									<span class="old">1805</span>
-									<span class="new">1480</span>
-									<span class="currency">руб.</span>
-								</div>
-								<div class="item__buttons">
-									<button class="btn btn-yellow btn-add-to-cart" title="Положить в корзину">
-										Добавить в корзину
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="product-grid__item product__item">
-							<div class="item__wrap">
-								<div class="item-top">
-									<div class="item-top__inner">
-										Распродажа!!!
-									</div>
-								</div>
-								<a href="product.html">
-									<div class="item__image">
-										<img src="demo/img_product7.jpg" alt="" />
-									</div>
-									<div class="item__name">
-										Коньки хоккейные RGX-Next Red
-									</div>
-								</a>
-								<div class="item__price">
-									<span class="old">1805</span>
-									<span class="new">1480</span>
-									<span class="currency">руб.</span>
-								</div>
-								<div class="item__buttons">
-									<button class="btn btn-yellow btn-add-to-cart" title="Положить в корзину">
-										Добавить в корзину
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="product-grid__item product__item">
-							<div class="item__wrap">
-								<div class="item-top">
-									<div class="item-top__inner">
-										Распродажа!!!
-									</div>
-								</div>
-								<a href="product.html">
-									<div class="item__image">
-										<img src="demo/img_product3.jpg" alt="" />
-									</div>
-									<div class="item__name">
-										Коньки хоккейные RGX-Next Red
-									</div>
-								</a>
-								<div class="item__price">
-									<span class="old">1805</span>
-									<span class="new">1480</span>
-									<span class="currency">руб.</span>
-								</div>
-								<div class="item__buttons">
-									<button class="btn btn-yellow btn-add-to-cart" title="Положить в корзину">
-										Добавить в корзину
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="product-grid__item product__item">
-							<div class="item__wrap">
-								<div class="item-top">
-									<div class="item-top__inner">
-										Распродажа!!!
-									</div>
-								</div>
-								<a href="product.html">
-									<div class="item__image">
-										<img src="demo/img_product8.jpg" alt="" />
-									</div>
-									<div class="item__name">
-										Коньки хоккейные RGX-Next Red
-									</div>
-								</a>
-								<div class="item__price">
-									<span class="old">1805</span>
-									<span class="new">1480</span>
-									<span class="currency">руб.</span>
-								</div>
-								<div class="item__buttons">
-									<button class="btn btn-yellow btn-add-to-cart" title="Положить в корзину">
-										Добавить в корзину
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="product-grid__item product__item">
-							<div class="item__wrap">
-								<div class="item-top">
-									<div class="item-top__inner">
-										Распродажа!!!
-									</div>
-								</div>
-								<a href="product.html">
-									<div class="item__image">
-										<img src="demo/img_product6.jpg" alt="" />
-									</div>
-									<div class="item__name">
-										Коньки хоккейные RGX-Next Red
-									</div>
-								</a>
-								<div class="item__price">
-									<span class="old">1805</span>
-									<span class="new">1480</span>
-									<span class="currency">руб.</span>
-								</div>
-								<div class="item__buttons">
-									<button class="btn btn-yellow btn-add-to-cart" title="Положить в корзину">
-										Добавить в корзину
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>

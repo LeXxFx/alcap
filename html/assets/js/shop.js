@@ -154,7 +154,7 @@ var Shop = function () {
 						count = that.data('images-count');
 
 					if (count !== undefined) {
-						dots.append('<li><span>+ 2</span></li>');
+						dots.append('<li><span>+ ' + count + '</span></li>');
 					}
 				}
 			});
@@ -162,12 +162,14 @@ var Shop = function () {
 
 		$('#accordion').on('show.bs.collapse', function (e) {
 			// fix for galleries inside accordion
-			var galleries = $(this).find('.item-gallery');
+			var galleries = $(e.target).find('> .panel-body > .cart-list .item-gallery');
 			if (galleries.length > 0) {
 				galleries.each(function () {
-					$(this).resize();
+					var that = $(this);
+					that.resize();
 				});
 			}
+
 		});
 	}
 
@@ -341,7 +343,7 @@ var Shop = function () {
 			if (popup.hasClass('alcap-popup--show')) {
 				that.find('span').text('Свернуть');
 			} else {
-				that.find('span').text('Раскрыть');
+				that.find('span').text('Посмотреть заказ');
 			}
 		});
 	}

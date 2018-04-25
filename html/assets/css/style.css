@@ -1198,6 +1198,7 @@ body.modal-open,
 .modal-order .modal-dialog .order-bottom__suma {
   font-weight: bold;
   text-align: right;
+  font-size: 21px;
   color: #032c7c;
 }
 
@@ -1211,6 +1212,9 @@ body.modal-open,
   }
   .modal-order .modal-dialog .order-header {
     margin: 15px 0;
+  }
+  .modal-order .modal-dialog .order-table {
+    overflow: auto;
   }
   .modal-order .modal-dialog .order-table .td-acf {
     display: none;
