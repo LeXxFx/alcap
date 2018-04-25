@@ -233,6 +233,163 @@ body.modal-open,
             }
         }
     }
+    &-order {
+        .modal-dialog {
+            width: 100%;
+            max-width: 880px;
+            margin: 10% auto;
+            .modal-close {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: url(../images/bg_close.png) no-repeat 0 0;
+                width: 109px;
+                height: 32px;
+                color: #fff;
+                text-align: center;
+                border: none;
+                margin: 0;
+                padding: 5px;
+                font-size: 16px;
+                &:hover {
+                    color: $second-color;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+            .order-header {
+                text-align: center;
+                font-weight: bold;
+                color: $primary-color;
+                text-decoration: underline;
+                margin: 0 0 10px 0;
+            }
+            .order-table {
+                table {
+                    width: 100%;
+                    thead {
+                        tr {
+                            th {
+                                white-space: nowrap;
+                                background: #f7f7f7;
+                                color: $primary-color;
+                                font-weight: bold;
+                                padding: 6px 15px;
+                                border: 1px solid #262626;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            td {
+                                padding: 6px 15px;
+                                border: 1px solid #262626;
+                                a {
+                                    color: $text-color;
+                                    &:hover {
+                                        color: $primary-color;
+                                        text-decoration: underline;
+                                    }
+                                }
+                                &.td-name {
+                                    padding: 15px;
+                                    a {
+                                        display: flex;
+                                        max-width: 250px;
+                                        align-items: center;
+                                    }
+                                    img {
+                                        width: 50px;
+                                        margin: 0 10px 0 0;
+                                    }
+                                    span {
+                                        line-height: 1.2;
+                                    }
+                                }
+                                &.td-acf {
+                                    p {
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .order-bottom {
+                padding: 40px 0 0;
+                display: flex;
+                justify-content: space-between;
+                &__suma {
+                    font-weight: bold;
+                    text-align: right;
+                    color: $primary-color;
+                }
+                .btn {
+                    &:hover {
+                        border-color: #222;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .modal {
+        &-order {
+            .modal-dialog {
+                .modal-content {
+                    padding: 30px 10px;
+                }
+                .order-header {
+                    margin: 15px 0;
+                }
+                .order-table {
+                    .td-acf {
+                        display: none;
+                    }
+                    table {
+                        thead {
+                            tr {
+                                th {
+                                    padding: 6px 10px;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                        tbody {
+                            tr {
+                                td {
+                                    padding: 6px 10px;
+                                    font-size: 14px;
+                                    &.td-name {
+                                        padding: 10px;
+                                        a {
+                                            max-width: 100%;
+                                        }
+                                        img {
+                                            width: 30px;
+                                            margin: 0 5px 0 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .order-bottom {
+                    padding: 40px 0 0;
+                    &__suma {}
+                    .btn {
+                        margin: 0 0 15px 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $mobile) {
@@ -272,6 +429,40 @@ body.modal-open,
             }
             .form-horizontal {
                 padding: 0 10px;
+            }
+        }
+        &-order {
+            .modal-dialog {
+                .order-table {
+                    table {
+                        thead tr th {
+                            font-size: 13px;
+                        }
+                        tbody tr td {
+                            font-size: 13px;
+                            &.td-name {
+                                a {
+                                    display: block;
+                                    text-align: center;
+                                    img {
+                                        width: 80px;
+                                        margin: 0 auto 10px auto;
+                                    }
+                                    span {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .order-bottom {
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    .btn {
+                        margin: 0 10px 15px 10px;
+                    }
+                }
             }
         }
     }

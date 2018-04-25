@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Выгрузка в 1С и в ИМ</title>
+	<title>История заказов</title>
 	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i&amp;subset=cyrillic" rel="stylesheet">
@@ -18,6 +18,8 @@
 	<link rel="stylesheet" href="assets/plugins/noUiSlider.10.0.0/nouislider.min.css" />
 	<link rel="stylesheet" href="assets/plugins/magiczoomplus/magiczoomplus.css" />
 	<link rel="stylesheet" href="assets/plugins/jquery.scrollbar/jquery.scrollbar.css" />
+
+	<link rel="stylesheet" href="assets/plugins/jquery-datetimepicker/jquery.datetimepicker.min.css" />
 
 </head>
 
@@ -120,13 +122,13 @@
 		<div class="breadcrumbs">
 			<ul>
 				<li>
-					<a href="#">Главная страница</a>
+					<a href="index.html">Главная страница</a>
 				</li>
 				<li>
-					<a href="cabine.html">Личный кабинет</a>
+					<a href="cabinet.html">Личный кабинет</a>
 				</li>
 				<li>
-					<span>Выгрузка в 1С и в ИМ</span>
+					<span>История заказов</span>
 				</li>
 			</ul>
 		</div>
@@ -622,7 +624,7 @@
 										<span>Личный кабинет</span>
 									</a>
 								</li>
-								<li>
+								<li class="active">
 									<a href="cabinet-history.html">
 										<i class="icon-history"></i>
 										<span>История заказов</span>
@@ -652,7 +654,7 @@
 										<span>Возврат брака</span>
 									</a>
 								</li>
-								<li class="active">
+								<li>
 									<a href="cabinet-export.html">
 										<i class="icon-export"></i>
 										<span>Выгрузка в 1С и в ИМ</span>
@@ -670,66 +672,352 @@
 				</div>
 			</div>
 			<div class="cabinet-content">
-				<div class="export-info">
-					<div class="heading heading-h2">Выгрузка в 1С и в ИМ</div>
-					<div class="post">
-						<p>
-							<strong>Выгрузить каталог товаров на сайт или в социальные сети.</strong>
-						</p>
-						<p>
-							<strong>1. Формат YML</strong>
-							<br> Стандарт YML (Yandex Market Language) разработан Яндексом и основан на стандарте XML. Формат YML предоставляет больше
-							возможностей и преимуществ, чем форматы XLS, CSV, TSV. Ссылка для скачивания каталога:
-							<a href="#">https://sport07.ru/yml_drop/</a>
-						</p>
-						<p>
-							<strong>2. Формат EXCEL</strong>
-							<br> Это удобно, если вы составляете прайс-лист вручную. Кроме того, прямо в программе Microsoft Excel можно проверять
-							и выгружать товары в Маркет.
-							<a href="#">Скачать файл</a> (последнее обновление: 25.02.2018)</p>
-						<p>
-							<strong>3. Формат CSV</strong>
-							<br> Текстовый формат с разделителями (например, CSV, TSV) удобен при генерации прайс-листа из базы данных или редакторов
-							электронных таблиц (например: Exсel, OpenOffice, Google Docs).
-							<a href="#">Скачать файл</a> (последнее обновление: 25.02.2018)</p>
-					</div>
-					<div class="heading heading-h2">Нужна помощь?</div>
-					<form class="form-horizontal form-contact">
-						<div class="form-group">
-							<div class="col-md-6">
-								<textarea class="form-control" placeholder="Опишите в этом поле Вашу проблему"></textarea>
+				<div class="heading heading-h2">История заказов</div>
+				<section class="order-history">
+					<form action="" class="form-horizontal order-history__form">
+						<div class="form-row">
+							<div class="col-item">
+								<label class="control-label wide-label">Код заказа:</label>
+								<div class="input-icon">
+									<input class="form-control" type="text">
+								</div>
 							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<div class="col-md-12">
-										<p>Как Вам ответить?</p>
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-md-12">
-										<div class="radio">
-											<input type="radio" id="phone_check" name="contact_check">
-											<label class="lbl" for="phone_check">По телефону</label>
-											<input class="form-control" placeholder="+7 (900) 000-00-00">
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-md-12">
-										<div class="radio">
-											<input type="radio" id="email_check" name="contact_check">
-											<label class="lbl" for="email_check">По электронной почте</label>
-											<input class="form-control" placeholder="ivanov@mail.ru">
-										</div>
-									</div>
-								</div>
-								<div class="form-baton text-right">
-									<button class="btn btn-yellow">Отправить</button>
+							<div class="col-item col-select">
+								<label class="control-label">Статус:</label>
+								<div>
+									<select class="form-control">
+										<option>Все</option>
+									</select>
 								</div>
 							</div>
 						</div>
+						<div class="form-row">
+							<div class="col-item col-period">
+								<label class="control-label wide-label">Дата заказа:</label>
+								<div class="input-icon">
+									<input class="form-control date-picker" type="text">
+									<i class="icon icon-calendar"></i>
+								</div>
+								<div class="input-icon">
+									<input class="form-control date-picker" type="text">
+									<i class="icon icon-calendar"></i>
+								</div>
+							</div>
+							<div class="col-item col-baton">
+								<button class="btn btn-yellow">Установить</button>
+								<button class="btn btn-grey">Снять</button>
+							</div>
+						</div>
 					</form>
-				</div>
+					<div class="order-history__table">
+						<table>
+							<thead>
+								<tr>
+									<th>
+										Код <span>заказа</span>
+									</th>
+									<th>
+										Дата <span>заказа</span>
+									</th>
+									<th>
+										Сумма
+									</th>
+									<th class="td-status">
+										Статус
+									</th>
+									<th class="td-delivary">
+										Комментарий
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<a data-dismiss="modal" data-toggle="modal" data-target="#order_modal">1253658</a>
+									</td>
+									<td>
+										13.02.2018
+									</td>
+									<td>
+										<div>66 985 р.</div>
+									</td>
+									<td class="td-status">
+										<div>Принят, ожидается оплата</div>
+									</td>
+									<td class="td-delivary">
+										<div>Выбор способа доставки - Самовывоз</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a data-dismiss="modal" data-toggle="modal" data-target="#order_modal">1223656</a>
+									</td>
+									<td>
+										13.02.2018
+									</td>
+									<td>
+										<div>696 985 р.</div>
+									</td>
+									<td class="td-status">
+										<div>Оплачен, ожидается отгрузка</div>
+									</td>
+									<td class="td-delivary">
+										<div>Выбор способа доставки - Курьерская служба</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a data-dismiss="modal" data-toggle="modal" data-target="#order_modal">1213000</a>
+									</td>
+									<td>
+										13.02.2018
+									</td>
+									<td>
+										<div>500 985 р.</div>
+									</td>
+									<td class="td-status">
+										<div>Отгружен</div>
+									</td>
+									<td class="td-delivary">
+										<div>Выбор способа доставки - Самовывоз</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+				<section class="product-promo">
+					<h2 class="heading">Предложения по акции</h2>
+					<div class="promo-list carousel-list">
+						<div class="sales-item">
+							<a href="#">
+								<div class="sales-item__title">
+									<span>Тотальная распродажа!!!</span>
+									<div class="sales-item__value">до - 50%</div>
+								</div>
+								<img src="demo/bb_sale.png">
+								<div class="sales-item__sport">Санки, ледянки, тюбинги и ватрушки</div>
+							</a>
+						</div>
+						<div class="sales-item">
+							<a href="#">
+								<div class="sales-item__title">
+									<span>Тотальная распродажа!!!</span>
+									<div class="sales-item__value">до - 60%</div>
+								</div>
+								<img src="demo/bb_sale2.png">
+								<div class="sales-item__sport">Хоккей</div>
+							</a>
+						</div>
+						<div class="sales-item">
+							<a href="#">
+								<div class="sales-item__title">
+									<span>Тотальная распродажа!!!</span>
+									<div class="sales-item__value">до - 50%</div>
+								</div>
+								<img src="demo/bb_sale.png">
+								<div class="sales-item__sport">Санки</div>
+							</a>
+						</div>
+						<div class="sales-item">
+							<a href="#">
+								<div class="sales-item__title">
+									<span>Тотальная распродажа!!!</span>
+									<div class="sales-item__value">до - 60%</div>
+								</div>
+								<img src="demo/bb_sale2.png">
+								<div class="sales-item__sport">Хоккей</div>
+							</a>
+						</div>
+						<div class="sales-item">
+							<a href="#">
+								<div class="sales-item__title">
+									<span>Тотальная распродажа!!!</span>
+									<div class="sales-item__value">до - 50%</div>
+								</div>
+								<img src="demo/bb_sale.png">
+								<div class="sales-item__sport">Санки</div>
+							</a>
+						</div>
+						<div class="sales-item">
+							<a href="#">
+								<div class="sales-item__title">
+									<span>Тотальная распродажа!!!</span>
+									<div class="sales-item__value">до - 60%</div>
+								</div>
+								<img src="demo/bb_sale2.png">
+								<div class="sales-item__sport">Хоккей</div>
+							</a>
+						</div>
+					</div>
+				</section>
+				<section class="product-viewed">
+					<h2 class="heading heading-h2">Вы недавно смотрели</h2>
+					<div class="viewed-list carousel-list" data-items="4">
+						<div class="product-grid__item product__item">
+							<div class="item__wrap">
+								<div class="item-top">
+									<div class="item-top__inner">
+										Распродажа!!!
+									</div>
+								</div>
+								<a href="product.html">
+									<div class="item__image">
+										<img src="demo/img_product4.jpg" alt="" />
+									</div>
+									<div class="item__name">
+										Коньки хоккейные RGX-Next Red
+									</div>
+								</a>
+								<div class="item__price">
+									<span class="old">1805</span>
+									<span class="new">1480</span>
+									<span class="currency">руб.</span>
+								</div>
+								<div class="item__buttons">
+									<button class="btn btn-yellow btn-add-to-cart" title="Положить в корзину">
+										Добавить в корзину
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-grid__item product__item">
+							<div class="item__wrap">
+								<div class="item-top">
+									<div class="item-top__inner">
+										Распродажа!!!
+									</div>
+								</div>
+								<a href="product.html">
+									<div class="item__image">
+										<img src="demo/img_product2.jpg" alt="" />
+									</div>
+									<div class="item__name">
+										Коньки хоккейные RGX-Next Red
+									</div>
+								</a>
+								<div class="item__price">
+									<span class="old">1805</span>
+									<span class="new">1480</span>
+									<span class="currency">руб.</span>
+								</div>
+								<div class="item__buttons">
+									<button class="btn btn-yellow btn-add-to-cart" title="Положить в корзину">
+										Добавить в корзину
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-grid__item product__item">
+							<div class="item__wrap">
+								<div class="item-top">
+									<div class="item-top__inner">
+										Распродажа!!!
+									</div>
+								</div>
+								<a href="product.html">
+									<div class="item__image">
+										<img src="demo/img_product7.jpg" alt="" />
+									</div>
+									<div class="item__name">
+										Коньки хоккейные RGX-Next Red
+									</div>
+								</a>
+								<div class="item__price">
+									<span class="old">1805</span>
+									<span class="new">1480</span>
+									<span class="currency">руб.</span>
+								</div>
+								<div class="item__buttons">
+									<button class="btn btn-yellow btn-add-to-cart" title="Положить в корзину">
+										Добавить в корзину
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-grid__item product__item">
+							<div class="item__wrap">
+								<div class="item-top">
+									<div class="item-top__inner">
+										Распродажа!!!
+									</div>
+								</div>
+								<a href="product.html">
+									<div class="item__image">
+										<img src="demo/img_product3.jpg" alt="" />
+									</div>
+									<div class="item__name">
+										Коньки хоккейные RGX-Next Red
+									</div>
+								</a>
+								<div class="item__price">
+									<span class="old">1805</span>
+									<span class="new">1480</span>
+									<span class="currency">руб.</span>
+								</div>
+								<div class="item__buttons">
+									<button class="btn btn-yellow btn-add-to-cart" title="Положить в корзину">
+										Добавить в корзину
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-grid__item product__item">
+							<div class="item__wrap">
+								<div class="item-top">
+									<div class="item-top__inner">
+										Распродажа!!!
+									</div>
+								</div>
+								<a href="product.html">
+									<div class="item__image">
+										<img src="demo/img_product8.jpg" alt="" />
+									</div>
+									<div class="item__name">
+										Коньки хоккейные RGX-Next Red
+									</div>
+								</a>
+								<div class="item__price">
+									<span class="old">1805</span>
+									<span class="new">1480</span>
+									<span class="currency">руб.</span>
+								</div>
+								<div class="item__buttons">
+									<button class="btn btn-yellow btn-add-to-cart" title="Положить в корзину">
+										Добавить в корзину
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-grid__item product__item">
+							<div class="item__wrap">
+								<div class="item-top">
+									<div class="item-top__inner">
+										Распродажа!!!
+									</div>
+								</div>
+								<a href="product.html">
+									<div class="item__image">
+										<img src="demo/img_product6.jpg" alt="" />
+									</div>
+									<div class="item__name">
+										Коньки хоккейные RGX-Next Red
+									</div>
+								</a>
+								<div class="item__price">
+									<span class="old">1805</span>
+									<span class="new">1480</span>
+									<span class="currency">руб.</span>
+								</div>
+								<div class="item__buttons">
+									<button class="btn btn-yellow btn-add-to-cart" title="Положить в корзину">
+										Добавить в корзину
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>
 		</div>
 	</div>
@@ -880,6 +1168,77 @@
 		</div>
 	</div>
 
+	<div id="order_modal" class="modal fade modal-order" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="order-header">
+					<div class="heading">Заказ № 1213000 от 11.02.2018</div>
+					<button class="modal-close" data-dismiss="modal" aria-hidden="true">
+						Закрыть
+					</button>
+				</div>
+				<div class="order-table">
+					<table>
+						<thead>
+							<tr>
+								<th>Наименование</th>
+								<th>Цена</th>
+								<th class="td-acf">Свойства</th>
+								<th>Кол-во</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="td-name">
+									<a href="product.html">
+										<img src="demo/img_product7.jpg">
+										<span>Мяч гимнастический BF - CHB01 (22") 55 см. (blue)</span>
+									</a>
+								</td>
+								<td>
+									598 р.
+								</td>
+								<td class="td-acf">
+									<p>
+										<strong>Цвет:</strong> Синий</p>
+									<p>
+										<strong>Размер:</strong> 55 см</p>
+								</td>
+								<td>
+									5 шт.
+								</td>
+							</tr>
+							<tr>
+								<td class="td-name">
+									<a href="product.html">
+										<img src="demo/img_product8.jpg">
+										<span>Мяч гимнастический BF - CHB01 (22") 55 см. (blue)</span>
+									</a>
+								</td>
+								<td>
+									598 р.
+								</td>
+								<td class="td-acf">
+									<p>
+										<strong>Цвет:</strong> Синий</p>
+									<p>
+										<strong>Размер:</strong> 55 см</p>
+								</td>
+								<td>
+									5 шт.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="order-bottom">
+					<a class="btn btn-yellow">Повторить заказ</a>
+					<div class="order-bottom__suma">Итого: 14 188 р.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<script src="assets/js/jquery-2.2.4.min.js"></script>
 	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 	<script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script>
@@ -890,6 +1249,8 @@
 	<script src="assets/plugins/noUiSlider.10.0.0/nouislider.min.js"></script>
 	<script src="assets/plugins/magiczoomplus/magiczoomplus.js"></script>
 	<script src="assets/plugins/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+
+	<script src="assets/plugins/jquery-datetimepicker/jquery.datetimepicker.full.min.js"></script>
 
 	<script src="assets/js/default.js"></script>
 	<script src="assets/js/shop.js"></script>

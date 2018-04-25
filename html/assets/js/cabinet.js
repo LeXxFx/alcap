@@ -50,10 +50,32 @@
 
     };
 
+    var formRadio = function () {
+		$(document).on('click', '.radio .form-control', function (e) {
+			e.preventDefault();
+			var that = $(this),
+				currentItem = that.closest('.radio').find('input[type=radio]');
+
+			currentItem.click();
+		});
+
+    }
+    
+    var runDatePicker = function () {
+        $.datetimepicker.setLocale('ru');
+
+        $('.date-picker').datetimepicker({
+            timepicker: false,
+            format: 'd.m.Y'
+        });
+    };
+
     return {
         init: function () {
             mainSlider();
             carouselList();
+            formRadio();
+            runDatePicker();
         }
     };
 }();

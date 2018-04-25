@@ -375,8 +375,11 @@
         background: url(../images/bg_sale.png) no-repeat right 0;
         max-width: 245px;
         width: 95%;
+        padding: 5px 10px;
         height: 51px;
         font-size: 17px;
+        line-height: 1.2;
+        font-weight: bold;
         text-transform: uppercase;
         color: $second-color;
         text-align: center;
