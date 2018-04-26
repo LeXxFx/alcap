@@ -7144,7 +7144,7 @@ body.modal-open,
   flex: 1 1 auto;
 }
 
-.cabinet-wrapper .main .product__item .item__price .new {
+.cabinet-wrapper .main .product__item .item__price .new.price-special {
   color: #feb703;
   margin-right: 0;
 }

@@ -190,8 +190,10 @@
         .product__item {
             .item__price {
                 .new {
-                    color: $second-color;
-                    margin-right: 0;
+                    &.price-special {
+                        color: $second-color;
+                        margin-right: 0;
+                    }
                     sup {
                         color: #7f7f7f;
                         font-size: 16px;
