@@ -162,7 +162,9 @@ var Shop = function () {
 
 		$('#accordion').on('show.bs.collapse', function (e) {
 			// fix for galleries inside accordion
-			var galleries = $(e.target).find('> .panel-body > .cart-list .item-gallery');
+			var target = $(e.target);
+			
+			var galleries = target.find('> .panel-body > .cart-list .item-gallery');
 			if (galleries.length > 0) {
 				galleries.each(function () {
 					var that = $(this);
@@ -171,6 +173,22 @@ var Shop = function () {
 			}
 
 		});
+
+		$('#accordion').on('shown.bs.collapse', function (e) {
+			var target = $(e.target);
+			scrollPanel(target);
+		});
+
+		$('#accordion').on('hidden.bs.collapse', function (e) {
+			var target = $(e.target);
+			scrollPanel(target);
+		});
+
+		var scrollPanel = function(target) {
+			$("html, body").animate({
+                scrollTop: target.closest('.panel').offset().top - 150
+			}, "slow");
+		}
 	}
 
 	var productsCatalog = function () {
