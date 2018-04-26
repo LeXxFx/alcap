@@ -62,6 +62,7 @@
     }
     
     var runDatePicker = function () {
+        
         $.datetimepicker.setLocale('ru');
 
         $('.date-picker').datetimepicker({

@@ -9,10 +9,12 @@
 		$form = $('.alert-counter'),
 		pos = el.offset();
 
-	$form.removeAttr("style").css({
-		'top': pos.top - ($form.height() + 20),
-		'left': pos.left - ($form.width() / 2 - 40)
-	}).addClass('alcap-popup--open');
+	if (el.data('check') !== false) {
+		$form.removeAttr("style").css({
+			'top': pos.top - ($form.height() + 20),
+			'left': pos.left - ($form.width() / 2 - 40)
+		}).addClass('alcap-popup--open');
+	}
 
 	if (+($trimVal) > $max) {
 		el.val($max);
@@ -163,7 +165,7 @@ var Shop = function () {
 		$('#accordion').on('show.bs.collapse', function (e) {
 			// fix for galleries inside accordion
 			var target = $(e.target);
-			
+
 			var galleries = target.find('> .panel-body > .cart-list .item-gallery');
 			if (galleries.length > 0) {
 				galleries.each(function () {
@@ -184,9 +186,9 @@ var Shop = function () {
 			scrollPanel(target);
 		});
 
-		var scrollPanel = function(target) {
+		var scrollPanel = function (target) {
 			$("html, body").animate({
-                scrollTop: target.closest('.panel').offset().top - 150
+				scrollTop: target.closest('.panel').offset().top - 150
 			}, "slow");
 		}
 	}

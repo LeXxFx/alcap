@@ -313,7 +313,73 @@ body.modal-open,
                                         margin: 0;
                                     }
                                 }
+                                &.item-counter {
+                                    .item-counter__inner {
+                                        margin: 0 auto;
+                                        position: relative;
+                                        white-space: nowrap;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        .btn {
+                                            vertical-align: top;
+                                            padding: 0;
+                                            font-size: 14px;
+                                            font-weight: bold;
+                                            line-height: 19px;
+                                            border-radius: 0;
+                                            flex: 0 0 19px;
+                                            width: 19px;
+                                            height: 19px;
+                                            text-align: center;
+                                            border: none;
+                                            color: #fff;
+                                            background: $primary-color;
+                                            transition: .3s;
+                                            &:hover {
+                                                background: $second-color;
+                                            }
+                                        }
+                                        .input-group-text {
+                                            .form-control {
+                                                background: #f7f7f7;
+                                                font-size: 12px;
+                                                font-weight: bold;
+                                                color: $primary-color;
+                                                padding: 0;
+                                                display: inline-block;
+                                                width: 40px;
+                                                height: 19px;
+                                                line-height: 19px;
+                                                border-radius: 0;
+                                                border: none;
+                                                text-align: center;
+                                                box-shadow: none;
+                                                margin: 3px 0 0;
+                                                vertical-align: top;
+                                                &:disabled {
+                                                    cursor: default;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
+                        }
+                    }
+                }
+                &__bottom {
+                    td {
+                        &.td-empty {
+                            border: none;
+                        }
+                        &:not(.td-empty) {
+                            text-align: center;
+                            font-weight: bold;
+                            color: $primary-color;
+                            padding: 10px;
+                            border: 1px solid #000;
+                            background: #f7f7f7;
                         }
                     }
                 }
@@ -322,6 +388,7 @@ body.modal-open,
                 padding: 40px 0 0;
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
                 &__suma {
                     font-weight: bold;
                     text-align: right;
@@ -329,9 +396,104 @@ body.modal-open,
                     color: $primary-color;
                 }
                 .btn {
+                    height: 42px;
                     &:hover {
                         border-color: #222;
                     }
+                }
+            }
+        }
+    }
+    &-order {
+        .modal-dialog {
+            width: 100%;
+            max-width: 1000px;
+            margin: 10% auto;
+            .form-return {
+                margin: 50px 0 0 0;
+                padding: 0 0 30px 0;
+                border-bottom: 1px solid #e6e6e6;
+                .control-label {
+                    font-weight: bold;
+                    font-size: 15px;
+                    color: $primary-color;
+                    font-style: italic;
+                }
+                .form-control {
+                    border: 1px solid #e6e6e6;
+                    border-radius: 0;
+                    padding: 5px 10px;
+                    box-shadow: none;
+                    &:focus {
+                        border-color: #b1c4e1;
+                    }
+                }
+                textarea {
+                    height: 80px;
+                }
+                .files {
+                    padding: 35px 0 0;
+                    display: flex;
+                    justify-content: flex-start;
+                    .file-item {
+                        margin: 0 5px 10px 5px;
+                        width: 65px;
+                        height: 70px;
+                        border: 1px solid #d8d8d8;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        &__link {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            .icon-empty-photo {
+                                background: url(../images/sprite.png) no-repeat 0 -117px;
+                                width: 40px;
+                                height: 33px;
+                                display: block;
+                            }
+                            &:hover {
+                                .icon-empty-photo {
+                                    background-position: -40px -117px;
+                                }
+                            }
+                        }
+                        &__remove {
+                            width: 14px;
+                            height: 14px;
+                            font-size: 11px;
+                            color: #565656;
+                            border: 1px solid #565656;
+                            border-radius: 50%;
+                            display: inline-block;
+                            line-height: 12px;
+                            text-align: center;
+                            text-decoration: none;
+                            position: absolute;
+                            top: 2px;
+                            right: 2px;
+                            &:hover {
+                                border-color: $second-color;
+                                color: $second-color;
+                            }
+                        }
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                            width: auto;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+            .return-bottom {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                .btn {
+                    margin: 20px 5%;
                 }
             }
         }
@@ -350,7 +512,6 @@ body.modal-open,
                 }
                 .order-table {
                     overflow: auto;
-                    
                     .td-acf {
                         display: none;
                     }

@@ -70,6 +70,21 @@ a {
     background: #e6e6e6 url(../images/bg_sport.jpg) no-repeat center top;
 }
 
+.load-more {
+    color: $second-color;
+    text-align: center;
+    font-weight: bold;
+    background: url(../images/catalog_title.png) no-repeat 0 0 / cover;
+    width: 220px;
+    height: 40px;
+    display: inline-block;
+    padding: 8px 10px;
+    &:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
 @media screen and (max-width: $mobile) {
     body {
         padding-top: 0;
