@@ -833,7 +833,7 @@
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: $tablet) {
     .product-grid {
         justify-content: center;
         &__item {
@@ -847,14 +847,14 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: $mobile) {
     .product-grid {
         display: flex;
         flex-wrap: wrap;
         &__item {
             vertical-align: top;
             height: auto;
-            flex: 1 1 260px;
+            flex: 1 0 260px;
             .item {
                 &__wrap {
                     height: auto;

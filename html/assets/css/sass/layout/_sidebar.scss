@@ -1,4 +1,4 @@
-#sidebar {
+#sidebar, .sidebar {
     flex: 0 0 260px;
     order: 0;
     margin: 0 20px 0 0;
@@ -390,7 +390,7 @@
 }
 
 @media screen and (max-width: 992px) {
-    #sidebar {
+    #sidebar, .sidebar {
         flex: 1 1 260px;
         .catalog-navi {
             ul {
@@ -407,7 +407,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    #sidebar {
+    #sidebar, .sidebar {
         flex: 1 1 100%;
         margin: 0;
         .sales-item {
