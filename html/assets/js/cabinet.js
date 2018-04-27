@@ -51,18 +51,18 @@
     };
 
     var formRadio = function () {
-		$(document).on('click', '.radio .form-control', function (e) {
-			e.preventDefault();
-			var that = $(this),
-				currentItem = that.closest('.radio').find('input[type=radio]');
+        $(document).on('click', '.radio .form-control', function (e) {
+            e.preventDefault();
+            var that = $(this),
+                currentItem = that.closest('.radio').find('input[type=radio]');
 
-			currentItem.click();
-		});
+            currentItem.click();
+        });
 
     }
-    
+
     var runDatePicker = function () {
-        
+
         $.datetimepicker.setLocale('ru');
 
         $('.date-picker').datetimepicker({
@@ -71,12 +71,33 @@
         });
     };
 
+    var waitList = function () {
+        $('.wait-inner').on('shown.bs.collapse', function (e) {
+            var target = $(e.target);
+            target.closest('.wait-item').addClass('wait-item--open');
+        });
+
+        $('.wait-inner').on('hidden.bs.collapse', function (e) {
+            var target = $(e.target);
+            target.closest('.wait-item').removeClass('wait-item--open');
+        });
+    }
+
+    var confirmPreOrder = function() {
+        $(document).on('click', '.btn-confirm-preorder', function(e){
+			e.preventDefault();
+			$('#form_alert').modal('show');
+        });
+    }
+
     return {
         init: function () {
             mainSlider();
             carouselList();
             formRadio();
             runDatePicker();
+            waitList();
+            confirmPreOrder();
         }
     };
 }();

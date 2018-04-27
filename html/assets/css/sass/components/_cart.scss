@@ -211,6 +211,16 @@
                 }
             }
         }
+        .price-help {
+            color: #aeaeae;
+            position: relative;
+            cursor: pointer;
+            + .popover {
+                .popover-content {
+                    padding: 4px 5px;
+                }
+            }
+        }
     }
     .cart-result {
         font-weight: bold;

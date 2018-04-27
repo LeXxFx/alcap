@@ -5865,7 +5865,7 @@ body.modal-open,
   background: #fff;
   opacity: 0;
   left: 0;
-  top: 100%;
+  top: 0;
   visibility: hidden;
   max-width: 100%;
   transition: background-color .3s, visibility .3s, opacity .3s, transform .3s;
@@ -6940,6 +6940,16 @@ body.modal-open,
   height: 19px;
 }
 
+.page-cart .cart-list .price-help {
+  color: #aeaeae;
+  position: relative;
+  cursor: pointer;
+}
+
+.page-cart .cart-list .price-help + .popover .popover-content {
+  padding: 4px 5px;
+}
+
 .page-cart .cart-result {
   font-weight: bold;
   margin: 0 0 20px 0;
@@ -7377,6 +7387,7 @@ body.modal-open,
   font-weight: bold;
   color: #222;
   text-decoration: none;
+  margin: 0;
 }
 
 .cabinet-wrapper .sidebar .waits__list .wait-item strong {
@@ -7792,6 +7803,232 @@ body.modal-open,
   font-weight: bold;
 }
 
+.waits .heading {
+  text-align: left;
+  font-size: 24px;
+}
+
+.waits__back {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.waits__back a {
+  color: #032c7c;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.waits__back a i {
+  font-size: 24px;
+  float: left;
+  margin: -1px 10px 0 0;
+}
+
+.waits__back a:hover {
+  color: #feb703;
+}
+
+.waits .wait-item {
+  margin-bottom: 10px;
+}
+
+.waits .wait-item__panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px;
+  background: #f7f7f7;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  transition: .1s;
+}
+
+.waits .wait-item__panel .order-details {
+  flex: 0 0 335px;
+  border-right: 1px solid #e5e5e5;
+}
+
+.waits .wait-item__panel .order-details a {
+  font-weight: bold;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.waits .wait-item__panel .order-details a i {
+  margin-right: 10px;
+  width: 22px;
+  height: 22px;
+  background: url(../images/sprite.png) no-repeat -130px -87px;
+}
+
+.waits .wait-item__panel .order-status {
+  flex: 0 0 200px;
+  text-align: center;
+  border-right: 1px solid #e5e5e5;
+}
+
+.waits .wait-item__panel .order-status strong {
+  color: #feb703;
+}
+
+.waits .wait-item__panel .order-status a {
+  color: #032c7c;
+  text-decoration: underline;
+}
+
+.waits .wait-item__panel .order-status a:hover {
+  text-decoration: none;
+  color: #feb703;
+}
+
+.waits .wait-item__panel .order-info {
+  flex: 1 1 auto;
+  margin-left: 30px;
+  color: #032c7c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.waits .wait-item__panel .order-info .btn-create {
+  font-weight: bold;
+  color: #032c7c;
+  text-decoration: underline;
+}
+
+.waits .wait-item__panel .order-info .btn-create:hover {
+  text-decoration: none;
+}
+
+.waits .wait-item__panel .order-info__value a {
+  color: #032c7c;
+  text-decoration: underline;
+}
+
+.waits .wait-item__panel .order-info__value a:hover {
+  text-decoration: none;
+  color: #feb703;
+}
+
+.waits .wait-item__panel .order-info__batons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.waits .wait-item__panel .order-info__batons span {
+  display: inline-block;
+  width: 1px;
+  height: 23px;
+  background: #d4d4d4;
+  margin: 0 15px;
+}
+
+.waits .wait-item__panel .order-info__batons a {
+  display: inline-block;
+}
+
+.waits .wait-item__panel .order-info__batons a i {
+  background: url(../images/sprite.png) no-repeat;
+  display: block;
+}
+
+.waits .wait-item__panel .order-info__batons a i.i-letter {
+  background-position: -94px -117px;
+  width: 22px;
+  height: 17px;
+  margin-top: 3px;
+}
+
+.waits .wait-item__panel .order-info__batons a i.i-letter:hover {
+  background-position: -94px -136px;
+}
+
+.waits .wait-item__panel .order-info__batons a i.i-print {
+  background-position: -122px -115px;
+  width: 21px;
+  height: 19px;
+  margin-top: 2px;
+}
+
+.waits .wait-item__panel .order-info__batons a i.i-print:hover {
+  background-position: -122px -134px;
+}
+
+.waits .wait-item .wait-inner .page-cart {
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.waits .wait-item .wait-inner .page-cart .cart-list {
+  margin-bottom: 0 !important;
+}
+
+.waits .wait-item .wait-inner__bottom {
+  padding-bottom: 20px;
+}
+
+.waits .wait-item .wait-inner__bottom .bottom-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.waits .wait-item .wait-inner__bottom .bottom-row .btn {
+  color: #032c7c;
+}
+
+.waits .wait-item .wait-inner__bottom .bottom-row .btn i {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.waits .wait-item .wait-inner__bottom p {
+  text-align: center;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.waits .wait-item--open .wait-item__panel {
+  background: #032c7c;
+  color: #fff;
+}
+
+.waits .wait-item--open .wait-item__panel .order-details a {
+  color: #fff;
+}
+
+.waits .wait-item--open .wait-item__panel .order-details a i {
+  background-position: -156px -87px;
+}
+
+.waits .wait-item--open .wait-item__panel .order-status a {
+  color: #fff;
+}
+
+.waits .wait-item--open .wait-item__panel .order-info {
+  color: #fff;
+}
+
+.waits .wait-item--open .wait-item__panel .order-info .btn-create {
+  color: #fff;
+}
+
+.waits .wait-item--open .wait-item__panel .order-info__value a {
+  color: #fff;
+}
+
+.waits .wait-item--open .wait-item__panel .order-info__batons a i.i-letter {
+  background-position: -94px -155px;
+}
+
+.waits .wait-item--open .wait-item__panel .order-info__batons a i.i-print {
+  background-position: -122px -153px;
+}
+
 @media screen and (max-width: 1200px) {
   .order-history__table {
     font-size: 14px;
@@ -7801,6 +8038,15 @@ body.modal-open,
   }
   .order-history__table table tbody tr td.td-delivary > div {
     max-width: 250px;
+  }
+  .waits .wait-item__panel {
+    font-size: 14px;
+  }
+  .waits .wait-item__panel .order-details {
+    flex: 0 0 250px;
+  }
+  .waits .wait-item__panel .order-status {
+    flex: 0 0 140px;
   }
 }
 
@@ -7863,6 +8109,24 @@ body.modal-open,
   }
   .order-history__table table tbody tr td.td-delivary > div {
     max-width: 100%;
+  }
+  .waits .wait-item__panel {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  .waits .wait-item__panel .order-details {
+    flex: 0 0 250px;
+    border: none;
+  }
+  .waits .wait-item__panel .order-status {
+    flex: 0 0 140px;
+    border: none;
+    text-align: right;
+  }
+  .waits .wait-item__panel .order-info {
+    flex: 0 0 100%;
+    margin: 0;
+    padding: 15px 0 0;
   }
 }
 
@@ -7966,5 +8230,49 @@ body.modal-open,
   }
   .docs {
     margin: 0 0 35px 0;
+  }
+  .waits .heading {
+    font-size: 18px;
+    text-align: center;
+  }
+  .waits__back {
+    text-align: center;
+  }
+  .waits__back a {
+    font-size: 13px;
+  }
+  .waits__back a i {
+    font-size: 20px;
+  }
+  .waits .wait-item__panel .order-details {
+    flex: 0 0 100%;
+  }
+  .waits .wait-item__panel .order-status {
+    flex: 0 0 100%;
+    padding: 15px 0 0;
+    text-align: left;
+  }
+  .waits .wait-item__panel .order-info {
+    flex-wrap: wrap;
+  }
+  .waits .wait-item__panel .order-info__value {
+    flex: 0 0 100%;
+    margin-bottom: 15px;
+  }
+  .waits .wait-item .wait-inner__bottom .bottom-row {
+    flex-wrap: wrap;
+    font-size: 14px;
+    text-align: center;
+    justify-content: center;
+  }
+  .waits .wait-item .wait-inner__bottom .bottom-row .btn {
+    font-size: 14px;
+  }
+  .waits .wait-item .wait-inner__bottom .bottom-row strong {
+    display: block;
+    margin: 0 0 10px 0;
+  }
+  .waits .wait-item .wait-inner__bottom p {
+    margin: 20px 0;
   }
 }

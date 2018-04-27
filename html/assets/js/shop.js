@@ -176,20 +176,20 @@ var Shop = function () {
 
 		});
 
-		$('#accordion').on('shown.bs.collapse', function (e) {
+		$('#accordion').on('show.bs.collapse', function (e) {
 			var target = $(e.target);
 			scrollPanel(target);
 		});
 
-		$('#accordion').on('hidden.bs.collapse', function (e) {
+		$('#accordion').on('hide.bs.collapse', function (e) {
 			var target = $(e.target);
 			scrollPanel(target);
 		});
 
-		var scrollPanel = function (target) {
+		function scrollPanel(target) {
 			$("html, body").animate({
-				scrollTop: target.closest('.panel').offset().top - 150
-			}, "slow");
+				scrollTop: target.closest('.panel').offset().top - 90
+			}, "fast");
 		}
 	}
 
