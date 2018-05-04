@@ -1,4 +1,14 @@
-﻿.page-cart {
+﻿%table-line {
+    height: 30px;
+    padding: 5px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.page-cart {
     .heading {
         font-size: 28px;
         margin: 10px 0 0;
@@ -126,12 +136,9 @@
             }
             .item-counter {
                 &__inner {
+                    @extend %table-line;
                     margin: 0 auto;
                     position: relative;
-                    white-space: nowrap;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                     .btn {
                         vertical-align: top;
                         padding: 0;
@@ -177,6 +184,7 @@
             }
             .item-price {
                 .price {
+                    @extend %table-line;
                     .old {
                         font-size: 14px;
                         color: $primary-color;
@@ -186,12 +194,14 @@
             }
             .item-prop {
                 text-align: left;
-                padding-left: 25px;
                 max-width: 260px;
                 .prop {
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
+                    padding: 5px 0;
+                    font-size: 14px;
+                    p {
+                        margin: 0;
+                        font-size: 14px;
+                    }
                 }
                 img {
                     border: 1px solid #111111;
@@ -201,8 +211,11 @@
                 }
             }
             .item-remove {
-                max-width: 24px;
-                padding: 10px 3px;
+                max-width: 30px;
+                padding: 10px 2px;
+                &-row {
+                    @extend %table-line;
+                }
                 a {
                     display: inline-block;
                     .icon {
@@ -210,12 +223,24 @@
                     }
                 }
             }
+            .sum {
+                @extend %table-line;
+            }
+            div.prop-x2 {
+                height: 50px !important;
+            }
+            div.prop-x3 {
+                height: 70px !important;
+            }
+            div.prop-x4 {
+                height: 90px !important;
+            }
         }
         .price-help {
             color: #aeaeae;
             position: relative;
             cursor: pointer;
-            + .popover {
+            +.popover {
                 .popover-content {
                     padding: 4px 5px;
                 }

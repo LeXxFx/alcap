@@ -176,17 +176,18 @@ var Shop = function () {
 
 		});
 
-		$('#accordion').on('show.bs.collapse', function (e) {
+		$('#accordion').on('shown.bs.collapse', function (e) {
 			var target = $(e.target);
-			scrollPanel(target);
+			scrollPanel(target.closest('.panel'));
 		});
 
-		$('#accordion').on('hide.bs.collapse', function (e) {
+		/*$('#accordion').on('hide.bs.collapse', function (e) {
 			var target = $(e.target);
 			scrollPanel(target);
-		});
+		});*/
 
 		function scrollPanel(target) {
+			console.log(target);
 			$("html, body").animate({
 				scrollTop: target.closest('.panel').offset().top - 90
 			}, "fast");
@@ -228,7 +229,6 @@ var Shop = function () {
 			});
 		}
 	};
-
 
 	function switchImage(image, zoom_size) {
 		var that = image,
@@ -388,8 +388,60 @@ var Shop = function () {
 	var addToCart = function () {
 		$(document).on('click', '.btn-add-to-cart', function (e) {
 			e.preventDefault();
-			$('#form_alert').modal('show');
+
+			var that = $(this),
+				product = that.closest('.product__item'),
+				cart = $('.header .short-cart');
+
+			var itemImg = product.find(".image__preview img").eq(0);
+			if (itemImg.length === 0) {
+				if ($('.product-single').length > 0) {
+					itemImg = $('.product-single').find(".image__preview img").eq(0);
+				} else if (product.find('.gallery-item.slick-active').length > 0) {
+					itemImg = product.find('.gallery-item.slick-active img').eq(0);
+				}
+			}
+
+			if (itemImg.length > 0) {
+				flyToElement($(itemImg), cart);
+			} else {
+				$('#form_alert').modal('show');
+			}
 		});
+
+		function flyToElement(flyer, flyingTo) {
+			var $func = $(this);
+			var divider = 3;
+			var flyerClone = $(flyer).clone();
+			$(flyerClone).css({
+				position: 'absolute',
+				top: $(flyer).offset().top + "px",
+				left: $(flyer).offset().left + "px",
+				opacity: 1,
+				'z-index': 1000,
+				'max-width': 250
+			});
+			$('body').append($(flyerClone));
+			var gotoX = $(flyingTo).offset().left + ($(flyingTo).width() / 2) - ($(flyer).width() / divider) / 2;
+			var gotoY = $(flyingTo).offset().top + ($(flyingTo).height() / 2) - ($(flyer).height() / divider) / 2;
+
+			$(flyerClone).animate({
+				opacity: 0.4,
+				left: gotoX,
+				top: gotoY,
+				width: $(flyer).width() / divider,
+				height: $(flyer).height() / divider
+			}, 700,
+				function () {
+					$(flyingTo).fadeOut('fast', function () {
+						$(flyingTo).fadeIn('fast', function () {
+							$(flyerClone).fadeOut('fast', function () {
+								$(flyerClone).remove();
+							});
+						});
+					});
+				});
+		}
 	};
 
 	var delivaryList = function () {
