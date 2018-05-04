@@ -181,6 +181,11 @@ var Shop = function () {
 			scrollPanel(target.closest('.panel'));
 		});
 
+		$('#accordion').on('show.bs.collapse', function (e) {
+			var target = $(e.target);
+			$( "#tes222t" ).clone().appendTo(target);
+		});
+
 		/*$('#accordion').on('hide.bs.collapse', function (e) {
 			var target = $(e.target);
 			scrollPanel(target);
