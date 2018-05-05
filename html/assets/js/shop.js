@@ -181,18 +181,7 @@ var Shop = function () {
 			scrollPanel(target.closest('.panel'));
 		});
 
-		$('#accordion').on('show.bs.collapse', function (e) {
-			var target = $(e.target);
-			$( "#tes222t" ).clone().appendTo(target);
-		});
-
-		/*$('#accordion').on('hide.bs.collapse', function (e) {
-			var target = $(e.target);
-			scrollPanel(target);
-		});*/
-
 		function scrollPanel(target) {
-			console.log(target);
 			$("html, body").animate({
 				scrollTop: target.closest('.panel').offset().top - 90
 			}, "fast");
