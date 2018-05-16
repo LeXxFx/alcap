@@ -130,13 +130,13 @@
         padding-left: 0;
         margin-bottom: 5px;
         font-weight: bold;
-        font-size: 15px;
+        font-size: 18px;
         color: $primary-color;
-        height: 75px;
+        height: 65px;
         >span {
             display: inline-block;
             &.new {
-                font-size: 50px;
+                font-size: 38px;
                 line-height: 1;
                 margin: 0 5px 0 5px;
                 position: relative;
@@ -144,6 +144,8 @@
             }
             &.old {
                 text-decoration: line-through;
+                font-style: italic;
+                font-weight: bold;
                 +.new {
                     color: $second-color;
                 }
@@ -273,10 +275,11 @@
     .item_lockout {
         position: relative;
         overflow: hidden;
-        height: 75px;
+        height: 65px;
         margin-bottom: 5px;
+        font-size: 15px;
         >div {
-            line-height: 1.1;
+            line-height: 1.2;
             position: absolute;
             top: 0;
             left: 0;
@@ -287,7 +290,7 @@
             justify-content: center;
             align-content: center;
             align-items: center;
-            padding: 10px 25px;
+            padding: 5px 25px;
             transition: .3s;
             &.message-visible {
                 background: url(../images/bg_visible.png) no-repeat 0 0 / cover;
@@ -403,7 +406,7 @@
             }
         }
         .item__name {
-            height: 48px;
+            height: 58px;
             overflow: hidden;
             font-size: 16px;
             font-weight: bold;
