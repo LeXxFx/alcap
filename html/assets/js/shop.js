@@ -227,6 +227,7 @@ var Shop = function () {
 	function switchImage(image, zoom_size) {
 		var that = image,
 			target = that.closest('.item__image').find('.image__preview'),
+			galleryId = 'gallery' + target.data('product-id');
 			newSrc = that.attr('href'),
 			$zoom = 450;
 
@@ -241,13 +242,13 @@ var Shop = function () {
 		target.removeClass('image__preview--init').html('').addClass('image__preview--loading');
 
 		if (that.data('source') == 'image') {
-			target.html('<a id="gallery" class="MagicZoomPlus" rel="preload-selectors-small:false;preload-selectors-big:false;initialize-on:mouseover;smoothing-speed:70;fps:40;selectors-effect:false;show-title:false;loading-msg:Загрузка...;background-opacity:10;zoom-width:' + $zoom + ';zoom-height:' + $zoom + ';zoom-distance:5;hint-text:;selectors-class:current;buttons:hide;caption-source:span;" ' +
+			target.html('<a id="' + galleryId + '" class="MagicZoomPlus" rel="preload-selectors-small:false;preload-selectors-big:false;initialize-on:mouseover;smoothing-speed:70;fps:40;selectors-effect:false;show-title:false;loading-msg:Загрузка...;background-opacity:10;zoom-width:' + $zoom + ';zoom-height:' + $zoom + ';zoom-distance:5;hint-text:;selectors-class:current;buttons:hide;caption-source:span;" ' +
 				'href="' + newSrc + '"><img /></a>').find('img').attr('src', newSrc).load(function () {
 					target.removeClass('image__preview--loading');
 					target.find('img').fadeIn('fast');
 				});
 
-			MagicZoomPlus.start('gallery');
+			MagicZoomPlus.start(galleryId);
 
 		};
 	}
