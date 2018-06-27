@@ -413,7 +413,7 @@ var Shop = function () {
 				top: $(flyer).offset().top + "px",
 				left: $(flyer).offset().left + "px",
 				opacity: 1,
-				'z-index': 1000,
+				'z-index': 10000,
 				'max-width': 250
 			});
 			$('body').append($(flyerClone));

@@ -30,6 +30,8 @@
                 &.name {
                     font-weight: 600;
                     color: $primary-color;
+                    height: 24px;
+                    overflow: hidden;
                 }
             }
             span {
