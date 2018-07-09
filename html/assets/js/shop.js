@@ -372,7 +372,7 @@ var Shop = function () {
 				part = 11,
 				value = 1;
 
-			if (procent > 0) {
+			if (procent > part) {
 				value = Math.floor(procent / part);
 			}
 

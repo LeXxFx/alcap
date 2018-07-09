@@ -293,7 +293,7 @@
 									</div>
 									<div class="item__avaliable">
 										<p>Наличие:</p>
-										<div class="avaliable" data-procent="65">
+										<div class="avaliable" data-procent="2">
 											<div class="avaliable__indicator"></div>
 										</div>
 									</div>
@@ -412,6 +412,10 @@
 										<button type="button" class="btn btn-plus btn-number" data-type="plus" data-field="quant[2]">
 											+
 										</button>
+									</div>
+									<div class="item__complect-price">
+										<span>Комплект:</span>
+										<span>10 шт</span>
 									</div>
 									<div class="item__buttons">
 										<button class="btn btn-add-to-cart" title="Купить в один клик">
@@ -1223,7 +1227,31 @@
 				</a>
 				<div class="alert-top">Ваш заказ успешно оформлен.</div>
 				<div class="alert-top alert-top--blue">Ваша заяка принята.</div>
-				<p>Ваш заказ подтверждён и уже собирается на нашем складе.<br> Благодарим Вас за выбор Альфа Каприз.</p>
+				<p>Ваш заказ подтверждён и уже собирается на нашем складе.
+					<br> Благодарим Вас за выбор Альфа Каприз.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-form" id="form_info" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<a class="btn-close" data-dismiss="modal" aria-hidden="true">
+					<i class="icon icon-close"></i>
+				</a>
+				<div class="form-top">Инф сообщение</div>
+				<div class="form-name"></div>
+				<form class="form-horizontal form-simple">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Поле для ввода" />
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Поле для ввода" />
+					</div>
+					<div class="form-baton">
+						<button class="btn">Отправить</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -1247,6 +1275,8 @@
 		$(document).ready(function ($) {
 			Main.init();
 			Shop.init();
+
+			$('#form_info').modal('show');
 		});
 	</script>
 </body>

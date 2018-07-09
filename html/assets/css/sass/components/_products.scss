@@ -321,6 +321,16 @@
             }
         }
     }
+    .item__complect-price {
+        text-align: center;
+        padding: 0 5px 10px 5px;
+        font-size: 13px;
+        font-weight: bold;
+        span {
+            display: inline-block;
+            margin: 0 6px 6px 6px;
+        }
+    }
     .panel-price {
         padding: 10px 25px 10px 25px;
         background: #f1f1f1;

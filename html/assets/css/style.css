@@ -925,6 +925,10 @@ body.modal-open,
   left: 10px;
 }
 
+.modal-content .form-horizontal.form-simple .form-group .form-control {
+  padding-left: 10px;
+}
+
 .modal-content .form-horizontal .btn {
   width: 100%;
   background: #feb703;
@@ -4417,6 +4421,18 @@ body.modal-open,
   visibility: visible;
 }
 
+.product__item .item__complect-price {
+  text-align: center;
+  padding: 0 5px 10px 5px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.product__item .item__complect-price span {
+  display: inline-block;
+  margin: 0 6px 6px 6px;
+}
+
 .product__item .panel-price {
   padding: 10px 25px 10px 25px;
   background: #f1f1f1;
@@ -5217,14 +5233,14 @@ body.modal-open,
 
 .product-card .product__item .item__info .item__input-counter {
   display: none;
-  text-align: left;
+  text-align: center;
   margin: 0 0 10px 0;
-  max-width: 160px;
 }
 
 .product-card .product__item .item__info .item__input-counter .counter-name {
   font-size: 16px;
   color: #feb703;
+  text-align: left;
 }
 
 .product-card .product__item .item__info .item__name {
@@ -6693,7 +6709,6 @@ body.modal-open,
   position: absolute;
   top: 1px;
   right: 1px;
-  border-left: 1px solid #222;
   z-index: 3;
 }
 

@@ -146,12 +146,12 @@
             }
             .item__input-counter {
                 display: none;
-                text-align: left;
+                text-align: center;
                 margin: 0 0 10px 0;
-                max-width: 160px;
                 .counter-name {
                     font-size: 16px;
                     color: $second-color;
+                    text-align: left;
                 }
             }
             .item__name {

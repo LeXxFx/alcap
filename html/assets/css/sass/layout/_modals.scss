@@ -64,6 +64,13 @@ body.modal-open,
                     }
                 }
             }
+            &.form-simple {
+                .form-group {
+                    .form-control {
+                        padding-left: 10px;
+                    }
+                }
+            }
             .btn {
                 width: 100%;
                 background: #feb703;
