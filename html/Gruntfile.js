@@ -40,13 +40,30 @@ module.exports = function(grunt) {
 				files: '<%= project.assets %>/css/sass/**/*.{scss,sass}',
 				tasks: ['sass:dev']
 			}
-		}
+		},
+
+		browserSync: {
+            dev: {
+                bsFiles: {
+                    src : [
+                        '<%= project.assets %>/css/*.css',
+                        '<%= project.assets %>/js/*.js',
+                        '*.html'
+                    ]
+                },
+                options: {
+                    watchTask: true,
+                    server: './'
+                }
+            }
+        }
 	});
 
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-browser-sync');
 
 	grunt.registerTask('build', ['sass:dist']);
 
-	grunt.registerTask('default', ['build', 'watch']);
+	grunt.registerTask('default', ['browserSync', 'build', 'watch']);
 };

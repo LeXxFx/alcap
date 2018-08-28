@@ -450,6 +450,14 @@ var Shop = function () {
 
 	}
 
+	var productPreview = function () {
+		$(document).on('click', '.page-cart .item-name', function (e) {
+			e.preventDefault();
+			$('.product-preview').modal('show');
+		});
+
+	}
+
 	return {
 		init: function () {
 			inputCounter();
@@ -463,6 +471,7 @@ var Shop = function () {
 			itemAvaliable();
 			addToCart();
 			delivaryList();
+			productPreview();
 		}
 	};
 }();
