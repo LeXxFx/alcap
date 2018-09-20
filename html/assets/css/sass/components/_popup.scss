@@ -94,6 +94,24 @@
 .quick-buy {
     width: 310px;
     transform: scale(0.5);
+    &-top {
+        border-bottom: 1px solid #ddd;
+        >div {
+            display: inline-block;
+            border: none;
+            >i {
+                float: none;
+            }
+        }
+        a {
+            float: right;
+            margin: 6px 10px 0;
+            color: $primary-color;
+            &:hover {
+                color: $second-color;
+            }
+        }
+    }
     &__title {
         color: $second-color;
         font-size: 21px;

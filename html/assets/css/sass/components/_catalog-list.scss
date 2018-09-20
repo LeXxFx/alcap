@@ -78,6 +78,17 @@
             @extend %open_submenu;
         }
     }
+    &.col-catalog--shown {
+        overflow: inherit;
+        >.btn {
+            >b {
+                transform: rotate(180deg);
+            }
+        }
+        .catalog-menu {
+            @extend %open_submenu;
+        }
+    }
     .catalog-menu {
         width: 100%;
         background: #fff;
@@ -326,16 +337,32 @@
                 }
             }
         }
+        &.col-catalog--shown {
+            min-width: 240px;
+            >.btn {
+                b {
+                    margin: -3px -10px 0 0;
+                }
+            }
+            .catalog-menu {
+                display: block !important;
+                >ul>li>a {
+                }
+            }
+        }
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: $mobile) {
     .col-catalog {
         >.btn {
             background-size: cover;
         }
         .catalog-menu {
             position: static;
+        }
+        &.col-catalog--shown {
+            min-width: 180px;
         }
     }
 }

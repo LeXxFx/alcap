@@ -228,7 +228,7 @@ var Shop = function () {
 		var that = image,
 			target = that.closest('.item__image').find('.image__preview'),
 			galleryId = 'gallery' + target.data('product-id');
-			newSrc = that.attr('href'),
+		newSrc = that.attr('href'),
 			$zoom = 450;
 
 		if (zoom_size !== undefined) {
@@ -339,6 +339,12 @@ var Shop = function () {
 				'left': pos.left - $form.width()
 			}).show().addClass('alcap-popup--open');
 		});
+
+		$('.quick-buy-close').on('click', function (e) {
+			e.preventDefault();
+
+			$(this).closest('.quick-buy').remove();
+		});
 	}
 
 	var alcapPopup = function () {
@@ -369,14 +375,19 @@ var Shop = function () {
 		progress.each(function () {
 			var that = $(this),
 				procent = that.data('procent'),
-				part = 11,
+				part = 10,
 				value = 1;
 
 			if (procent > part) {
-				value = Math.floor(procent / part);
+				value = Math.ceil(procent / part);
+				if (procent >= 60) {
+					value = 9;
+				}
+			} else if (procent === 0) {
+				value = 0;
 			}
 
-			that.find('div').animate({ width: part * value + 'px' });
+			that.find('div').animate({ width: (part + 1) * value + 'px' });
 		});
 	};
 

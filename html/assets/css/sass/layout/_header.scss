@@ -203,9 +203,7 @@
                         justify-content: flex-end;
                         a {
                             flex: 0 0 auto;
-                            &:last-child {
-                                display: none;
-                            }
+                            font-size: 12px;
                         }
                     }
                 }

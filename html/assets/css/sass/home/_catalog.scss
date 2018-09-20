@@ -55,18 +55,35 @@
     }
 }
 
+@media screen and (max-width: $small-desktop) {
+    .catalog {
+        .catalog-list {
+            margin: 0 -10px;
+            &__item {
+                flex: 0 0 calc(33.333% - 20px);
+                margin: 0 10px 20px 10px;
+                img {
+                    width: 100%;
+                }
+                a .item-title {
+                    font-size: 12px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width: $mobile) {
     .catalog {
         .catalog-list {
-            margin: 0 -2%;
             &__item {
-                flex: 1 1 45%;
-                margin: 0 1% 20px 1%;
+                flex: 0 0 calc(50% - 20px);
                 text-align: center;
+                display: block;
                 a {
-                    margin: 0 auto;
                     img {
                         width: 100%;
+                        height: auto;
                     }
                     .item-title {
                         font-size: 12px;

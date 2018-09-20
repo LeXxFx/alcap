@@ -1,4 +1,20 @@
 ﻿var Main = function () {
+	var runGoTop = function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 1200) {
+                $('#scroll-top').fadeIn()
+            } else {
+                $('#scroll-top').fadeOut()
+            }
+        });
+        $('#scroll-top').on('click', function (e) {
+            $("html, body").animate({
+                scrollTop: 0
+            }, "slow");
+            e.preventDefault();
+        });
+	};
+
 	var catalogNavigation = function () {
 		var timer,
 			timeIn = [],
@@ -102,6 +118,7 @@
 
 	return {
 		init: function () {
+			runGoTop();
 			catalogNavigation();
 			tooltips();
 			scrollbarRail();
