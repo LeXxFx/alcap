@@ -6028,6 +6028,32 @@ body.modal-open,
   transform: scale(1) !important;
 }
 
+.alert-input {
+  width: 330px;
+  transform: scale(0.5);
+}
+
+.alert-input .alcap-popup-inner {
+  padding: 30px 20px 25px 20px;
+}
+
+.alert-input p {
+  margin: 0 0 20px 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.alert-input p strong {
+  color: #032c7c;
+}
+
+.alert-input .btn {
+  display: block;
+  margin: 0 auto;
+  width: 220px;
+  height: 42px;
+}
+
 .alert-counter {
   width: 330px;
   transform: scale(0.5);
