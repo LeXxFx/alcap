@@ -7015,11 +7015,88 @@ body.modal-open,
   margin-bottom: 5px;
 }
 
-.page-cart .cart-list .cart-table .item-info__main .item-status span {
+.page-cart .cart-list .cart-table .item-info__main .item-status span.item-status__AL_STOCK {
+  display: inline-block;
+  height: 22px;
+  min-width: 100px;
+  background: url(../images/bg_info_orange.png) no-repeat right 0;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  padding: 1px 5px;
+}
+
+.page-cart .cart-list .cart-table .item-info__main .item-status span.item-status__AL_BESTSELLER {
+  display: inline-block;
+  height: 22px;
+  min-width: 100px;
+  background: url(../images/bg_info_blue1.png) no-repeat right 0;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  padding: 1px 5px;
+}
+
+.page-cart .cart-list .cart-table .item-info__main .item-status span.item-status__AL_BLACK_FRIDAY {
+  display: inline-block;
+  height: 22px;
+  min-width: 100px;
+  background: url(../images/bg_info_black.png) no-repeat right 0;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  padding: 1px 5px;
+}
+
+.page-cart .cart-list .cart-table .item-info__main .item-status span.item-status__AL_NEW_PRODUCT {
+  display: inline-block;
+  height: 22px;
+  min-width: 100px;
+  background: url(../images/bg_info_green.png) no-repeat right 0;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  padding: 1px 5px;
+}
+
+.page-cart .cart-list .cart-table .item-info__main .item-status span.item-status__AL_OWN_PRODUCTION {
   display: inline-block;
   height: 22px;
   min-width: 100px;
   background: url(../images/bg_info_blue.png) no-repeat right 0;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  padding: 1px 5px;
+}
+
+.page-cart .cart-list .cart-table .item-info__main .item-status span.item-status__AL_REDUCED_PRICE {
+  display: inline-block;
+  height: 22px;
+  min-width: 100px;
+  background: url(../images/bg_info_pink.png) no-repeat right 0;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  padding: 1px 5px;
+}
+
+.page-cart .cart-list .cart-table .item-info__main .item-status span.item-status__AL_RHINESTONES {
+  display: inline-block;
+  height: 22px;
+  min-width: 100px;
+  background: url(../images/bg_info_grey.png) no-repeat right 0;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  padding: 1px 5px;
+}
+
+.page-cart .cart-list .cart-table .item-info__main .item-status span.item-status__AL_SALE {
+  display: inline-block;
+  height: 22px;
+  min-width: 100px;
+  background: url(../images/bg_info_red.png) no-repeat right 0;
   font-size: 13px;
   font-weight: bold;
   color: #fff;
