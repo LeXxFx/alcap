@@ -158,6 +158,14 @@
     }
     .item__buttons {
         margin-bottom: 17px;
+        p {
+            margin: 0 5px 5px 5px;
+            padding: 5px;
+            background: #e3eef7;
+            border: 1px solid $primary-color;
+            font-size: 12px;
+            color: $primary-color;
+        }
         .btn {
             width: 100%;
             max-width: 220px;
@@ -430,8 +438,8 @@
             animation: anim .2s ease-in-out;
             opacity: 0;
             border-top: 1px solid $second-color;
-            padding: 30px 15px 10px 15px;
-            margin: 25px 10px 0 10px;
+            padding: 30px 0 10px 0;
+            margin: 25px 5px 0 5px;
             .prop {
                 .name {
                     text-align: center;
@@ -486,7 +494,7 @@
         }
     }
     .item__buttons {
-        margin: 0 -20px;
+        margin: 0;
     }
 }
 
@@ -753,6 +761,9 @@
                 margin: 0 0 10px 0;
             }
             .item__buttons {
+                p {
+                    margin: 0 7px 5px 7px;
+                }
                 .btn {
                     width: 100%;
                     margin: 0 0 10px 0;

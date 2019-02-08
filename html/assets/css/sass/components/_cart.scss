@@ -73,6 +73,20 @@
                 border: 1px solid #000;
                 padding: 10px;
                 text-align: center;
+                .price {
+                    font-weight: bold;
+                    color: $second-color;
+                    span:not(.old) {
+                        margin: 0 3px;
+                        display: inline-block;
+                        font-size: 16px;
+                    }
+                    span.old {
+                        color: $primary-color;
+                        font-weight: 400;
+                        font-size: 14px;
+                    }
+                }
             }
             &__title {
                 td {
@@ -148,13 +162,13 @@
                             display: inline-block;
                             height: 22px;
                             min-width: 100px;
-                            background: url(../images/bg_info_blue.png) no-repeat right 0;
+                            background: url(../images/bg_info_blue.png) no-repeat right 0 / cover;
                             font-size: 13px;
                             font-weight: bold;
                             color: #fff;
                             padding: 1px 5px;
                             &.item-status__sale {
-                                background: url(../images/bg_info.png) no-repeat right 0;
+                                background: url(../images/bg_info.png) no-repeat right 0 / cover;
                             }
                         }
                     }
