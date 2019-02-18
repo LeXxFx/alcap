@@ -25,6 +25,12 @@
 #content {
     order: 1;
     flex: 1 1 auto;
+    .heading {
+        margin: 0 0 30px 0;
+        &:after {
+            display: none;
+        }
+    }
 }
 
 @media screen and (max-width: $tablet) {
