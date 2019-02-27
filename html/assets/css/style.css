@@ -4136,16 +4136,19 @@ body.modal-open,
   z-index: 100;
 }
 
+/************ изменения начало ************/
 .product__item .item-top__inner {
   background: url(../images/bg_info.png) no-repeat right 0/cover;
-  height: 33px;
+  height: auto;
   display: flex;
+  padding-left: 5px;
   max-width: 240px;
   font-weight: bold;
   color: #032c7c;
   justify-content: center;
   align-items: center;
 }
+/************ изменения конец ************/
 
 .product__item .item-top__inner.item-top-novelty_blue {
   background: url(../images/bg_info_blue.png) no-repeat right 0/cover;
@@ -4262,17 +4265,20 @@ body.modal-open,
   font-weight: bold;
 }
 
+/************** начало изменений ****************/
 .product__item .item__stick {
   display: block;
   flex: 1 1 114px;
-  height: 33px;
+  height: 35px;
   text-align: center;
   padding: 7px 10px 5px 45px;
   font-size: 15px;
   color: #feb703;
   line-height: 1.1;
   background: url(../images/bg_info_blue.png) no-repeat right 0/cover;
+  margin-left: -5px;
 }
+/*************** конец изменений *****************/
 
 .product__item .item__stick .num {
   display: block;
@@ -5855,15 +5861,22 @@ body.modal-open,
   background: #d9d9d9;
 }
 
+/************ изменения начало ************/
 .auth-info__manager .manager-contacts p {
   margin: 0;
   font-size: 14px;
+  clear: both;
 }
 
 .auth-info__manager .manager-contacts p span {
   float: right;
   font-weight: bold;
+  max-width: 238px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
+/************ изменения конец ************/
 
 .auth-info__manager:hover .manager-contacts {
   opacity: 1;
