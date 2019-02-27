@@ -242,6 +242,28 @@
     }
 }
 
+.alert-input {
+    width: 330px;
+    transform: scale(0.5);
+    .alcap-popup-inner {
+        padding: 30px 20px 25px 20px;
+    }
+    p {
+        margin: 0 0 20px 0;
+        text-align: center;
+        font-weight: 600;
+        strong {
+            color: #032c7c;
+        }
+    }
+    .btn {
+        display: block;
+        margin: 0 auto;
+        width: 220px;
+        height: 42px;
+    }
+}
+
 @media screen and (max-width: $mobile) {
     .quick-buy {
         display: none;
