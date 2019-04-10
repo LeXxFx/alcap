@@ -9,11 +9,13 @@ body {
     font-family: $font;
     font-size: 17px;
     padding-top: $header-height;
+
     &.fancybox-active {
         #header {
             padding-right: 17px;
         }
     }
+
     >.container {
         min-height: 1400px;
     }
@@ -38,6 +40,7 @@ a {
     &:focus {
         outline: none;
     }
+
     &-blue {
         background: url(../images/catalog_title.png) no-repeat 0 0;
         color: #fff;
@@ -47,10 +50,12 @@ a {
         font-weight: bold;
         padding: 7px 15px;
         transition: .3s;
+
         &:hover {
             color: $second-color;
         }
     }
+
     &-yellow {
         background: $second-color;
         color: $text-color;
@@ -60,6 +65,7 @@ a {
         font-weight: bold;
         padding: 7px 15px;
         transition: .3s;
+
         &:hover {
             background: darken($second-color, 5%);
         }
@@ -79,9 +85,39 @@ a {
     height: 40px;
     display: inline-block;
     padding: 8px 10px;
+
     &:hover {
         text-decoration: none;
         color: #fff;
+    }
+}
+
+.waiting {
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.3);
+        z-index: 100;
+    }
+
+    &:after {
+        font-family: "FontAwesome";
+        content: "\f110";
+        font-size: 32px;
+        font-weight: bold;
+        color: $primary-color;
+        z-index: 105;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -16px 0 0 -16px;
+        animation: fa-spin 2s infinite linear;
     }
 }
 
@@ -102,6 +138,7 @@ a {
     display: none;
     z-index: 1000;
     transition: .3s;
+
     &:hover {
         background: $second-color;
     }
@@ -111,9 +148,11 @@ a {
     body {
         padding-top: 0;
     }
+
     .heading {
         font-size: 24px;
         margin: 0 0 30px 0;
+
         &:after {
             top: 20px;
         }
