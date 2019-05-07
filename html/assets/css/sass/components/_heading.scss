@@ -28,12 +28,16 @@
     position: relative;
     margin: 0 0 50px 0;
 
-    span {
+    span, h1, h2, h3 {
         display: inline-block;
         background: #e6e6e6;
+        margin: 0;
         padding: 0 15px;
         position: relative;
         z-index: 1;
+        font-size: 37px;
+        line-height: 1.2;
+        font-weight: 600;
     }
 
     &:after {
