@@ -144,6 +144,30 @@ a {
     }
 }
 
+.alert {
+    &-alcap {
+        background: #fff;
+        border: 1px solid #feb703;
+        border-radius: 3px;
+        padding: 15px;
+        color: $primary-color;
+        margin: 15px 0;
+        position: relative;
+
+        h2 {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0 0 10px 0;
+        }
+    }
+
+    .alert__close {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+}
+
 @media screen and (max-width: $mobile) {
     body {
         padding-top: 0;

@@ -1,5 +1,7 @@
 'use strict';
 
+const sass = require('node-sass');
+
 module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -14,7 +16,8 @@ module.exports = function(grunt) {
 			dev: {
 				options: {
 					outputStyle: 'expanded',
-					compass: false
+					implementation: sass,
+					sourceMap: true
 				},
 				files: {
 					'<%= project.css %>':'<%= project.sass %>'
@@ -23,7 +26,8 @@ module.exports = function(grunt) {
 			dist: {
 				options: {
 					outputStyle: 'compressed',
-					compass: false
+					implementation: sass,
+					sourceMap: true
 				},
 				files: {
 					'<%= project.css %>':'<%= project.sass %>'

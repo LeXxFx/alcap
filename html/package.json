@@ -1,15 +1,17 @@
 {
 	"name": "akoncat",
 	"version": "1.0.1",
+	"description": "",
+	"repository": "",
+	"license": "MIT",
 	"devDependencies": {
-		"grunt": "~1.0.1",
-		"grunt-browser-sync": "^2.2.0",
-		"grunt-contrib-watch": "~1.0.0",
-		"grunt-sass": "~2.0.0",
-		"node-sass": "~4.5.3",
-		"smooth-scroll": "12.1.5"
+		"node-sass": "~4.13.1",
+		"grunt": "~1.1.0",
+		"grunt-contrib-watch": "^1.1.0",
+		"grunt-sass": "^3.1.0",
+		"grunt-browser-sync": "^2.2.0"
 	},
 	"dependencies": {
-		"npm": "^6.7.0"
+		"npm": "^6.14.2"
 	}
 }
